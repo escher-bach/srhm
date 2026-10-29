@@ -1,0 +1,59 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "device": "cuda"}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.5579, "r2_oracle": 0.7113, "ll_per_leaf": -0.6314, "tau": 0.3097, "secs_total": 35.4}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.6462, "r2_oracle": 0.7113, "ll_per_leaf": -0.5997, "tau": 0.2731, "secs_total": 35.4}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.6579, "r2_oracle": 0.7113, "ll_per_leaf": -0.5899, "tau": 0.2424, "secs_total": 35.4}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.5179, "r2_oracle": 0.7113, "ll_per_leaf": -0.5599, "tau": 0.194, "secs_total": 35.5}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.5599, "r2_oracle": 0.7113, "ll_per_leaf": -0.6408, "tau": 0.3076, "secs_total": 34.2}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.6725, "r2_oracle": 0.7113, "ll_per_leaf": -0.6011, "tau": 0.2468, "secs_total": 34.2}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.6762, "r2_oracle": 0.7113, "ll_per_leaf": -0.5902, "tau": 0.2072, "secs_total": 34.2}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.4658, "r2_oracle": 0.7113, "ll_per_leaf": -0.5615, "tau": 0.1598, "secs_total": 34.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.12, "r2_oracle": 0.1368, "ll_per_leaf": -0.5065, "tau": 0.2819, "secs_total": 37.6}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.1079, "r2_oracle": 0.1368, "ll_per_leaf": -0.4993, "tau": 0.2824, "secs_total": 37.6}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.1172, "r2_oracle": 0.1368, "ll_per_leaf": -0.4968, "tau": 0.2583, "secs_total": 37.6}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.0854, "r2_oracle": 0.1368, "ll_per_leaf": -0.4837, "tau": 0.1932, "secs_total": 37.7}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.1123, "r2_oracle": 0.1368, "ll_per_leaf": -0.5023, "tau": 0.2796, "secs_total": 37.2}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.0911, "r2_oracle": 0.1368, "ll_per_leaf": -0.4959, "tau": 0.2667, "secs_total": 37.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.0839, "r2_oracle": 0.1368, "ll_per_leaf": -0.4943, "tau": 0.2509, "secs_total": 37.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.0619, "r2_oracle": 0.1368, "ll_per_leaf": -0.4838, "tau": 0.203, "secs_total": 37.4}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.54, "r2_oracle": 0.7113, "ll_per_leaf": -0.6332, "tau": 0.3069, "secs_total": 35.0}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.6714, "r2_oracle": 0.7113, "ll_per_leaf": -0.6048, "tau": 0.2675, "secs_total": 35.0}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.6825, "r2_oracle": 0.7113, "ll_per_leaf": -0.5999, "tau": 0.2552, "secs_total": 35.1}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.6854, "r2_oracle": 0.7113, "ll_per_leaf": -0.5975, "tau": 0.2335, "secs_total": 35.1}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.5609, "r2_oracle": 0.7113, "ll_per_leaf": -0.6439, "tau": 0.3106, "secs_total": 34.0}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.6623, "r2_oracle": 0.7113, "ll_per_leaf": -0.6072, "tau": 0.2682, "secs_total": 34.0}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.636, "r2_oracle": 0.7113, "ll_per_leaf": -0.6002, "tau": 0.2552, "secs_total": 34.0}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.6462, "r2_oracle": 0.7113, "ll_per_leaf": -0.5949, "tau": 0.2271, "secs_total": 34.1}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.1252, "r2_oracle": 0.1368, "ll_per_leaf": -0.5161, "tau": 0.286, "secs_total": 37.8}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.1188, "r2_oracle": 0.1368, "ll_per_leaf": -0.5101, "tau": 0.2782, "secs_total": 37.9}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.121, "r2_oracle": 0.1368, "ll_per_leaf": -0.5095, "tau": 0.2713, "secs_total": 37.9}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.1204, "r2_oracle": 0.1368, "ll_per_leaf": -0.5086, "tau": 0.2551, "secs_total": 38.0}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.1275, "r2_oracle": 0.1368, "ll_per_leaf": -0.5153, "tau": 0.2844, "secs_total": 38.1}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.1141, "r2_oracle": 0.1368, "ll_per_leaf": -0.5095, "tau": 0.2797, "secs_total": 38.1}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.1167, "r2_oracle": 0.1368, "ll_per_leaf": -0.5089, "tau": 0.2663, "secs_total": 38.1}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.1203, "r2_oracle": 0.1368, "ll_per_leaf": -0.5079, "tau": 0.2514, "secs_total": 38.2}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.5493, "r2_oracle": 0.7113, "ll_per_leaf": -0.6366, "tau": 0.3091, "secs_total": 44.3}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.6871, "r2_oracle": 0.7113, "ll_per_leaf": -0.6079, "tau": 0.2689, "secs_total": 44.3}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.6984, "r2_oracle": 0.7113, "ll_per_leaf": -0.6045, "tau": 0.2622, "secs_total": 44.4}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.6963, "r2_oracle": 0.7113, "ll_per_leaf": -0.6039, "tau": 0.2563, "secs_total": 44.4}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 64, "init": "coarse_to_fine", "r2": 0.6972, "r2_oracle": 0.7113, "ll_per_leaf": -0.6034, "tau": 0.2473, "secs_total": 44.5}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.557, "r2_oracle": 0.7113, "ll_per_leaf": -0.6448, "tau": 0.3121, "secs_total": 43.5}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.662, "r2_oracle": 0.7113, "ll_per_leaf": -0.6098, "tau": 0.2683, "secs_total": 43.6}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.6543, "r2_oracle": 0.7113, "ll_per_leaf": -0.6033, "tau": 0.2615, "secs_total": 43.6}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.6591, "r2_oracle": 0.7113, "ll_per_leaf": -0.6014, "tau": 0.2543, "secs_total": 43.7}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 64, "init": "coarse_to_fine", "r2": 0.6566, "r2_oracle": 0.7113, "ll_per_leaf": -0.5999, "tau": 0.2389, "secs_total": 43.8}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 4, "init": "coarse_to_fine", "r2": 0.1293, "r2_oracle": 0.1368, "ll_per_leaf": -0.5131, "tau": 0.2832, "secs_total": 47.0}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 8, "init": "coarse_to_fine", "r2": 0.1088, "r2_oracle": 0.1368, "ll_per_leaf": -0.5071, "tau": 0.2813, "secs_total": 47.0}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 16, "init": "coarse_to_fine", "r2": 0.1098, "r2_oracle": 0.1368, "ll_per_leaf": -0.5068, "tau": 0.2775, "secs_total": 47.1}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 32, "init": "coarse_to_fine", "r2": 0.1119, "r2_oracle": 0.1368, "ll_per_leaf": -0.5067, "tau": 0.2728, "secs_total": 47.1}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 64, "init": "coarse_to_fine", "r2": 0.1118, "r2_oracle": 0.1368, "ll_per_leaf": -0.5065, "tau": 0.2675, "secs_total": 47.3}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 4, "init": "coarse_to_fine", "r2": 0.1293, "r2_oracle": 0.1368, "ll_per_leaf": -0.5113, "tau": 0.2845, "secs_total": 47.3}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 8, "init": "coarse_to_fine", "r2": 0.1123, "r2_oracle": 0.1368, "ll_per_leaf": -0.5054, "tau": 0.2814, "secs_total": 47.4}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 16, "init": "coarse_to_fine", "r2": 0.1124, "r2_oracle": 0.1368, "ll_per_leaf": -0.5051, "tau": 0.2735, "secs_total": 47.4}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 32, "init": "coarse_to_fine", "r2": 0.1161, "r2_oracle": 0.1368, "ll_per_leaf": -0.5048, "tau": 0.2639, "secs_total": 47.5}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 64, "init": "coarse_to_fine", "r2": 0.1145, "r2_oracle": 0.1368, "ll_per_leaf": -0.5046, "tau": 0.2556, "secs_total": 47.6}
+{"event": "done"}

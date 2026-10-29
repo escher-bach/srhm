@@ -1,0 +1,7 @@
+oracle BP on depth-5 test set: 0.724
+learn from ONE unlabelled tree of depth L' (zero labels), 5 seeds each
+    L'=5:    243 leaves,    81 bottom grids | kernel err (up to relabel)=0.218  labels pinned 0/5  root acc=0.260
+    L'=6:    729 leaves,   243 bottom grids | kernel err (up to relabel)=0.076  labels pinned 3/5  root acc=0.473
+    L'=7:   2187 leaves,   729 bottom grids | kernel err (up to relabel)=0.044  labels pinned 2/5  root acc=0.401
+    L'=8:   6561 leaves,  2187 bottom grids | kernel err (up to relabel)=0.025  labels pinned 5/5  root acc=0.706
+    L'=9:  19683 leaves,  6561 bottom grids | kernel err (up to relabel)=0.013  labels pinned 5/5  root acc=0.722

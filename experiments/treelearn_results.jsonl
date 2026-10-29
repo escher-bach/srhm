@@ -1,0 +1,66 @@
+{"data": "K1", "predicted": {"2": 0.07648, "1": 0.16251, "0": 0.2593}, "measured": {"0": 0.25764, "1": 0.16253, "2": 0.0757}, "ratio": {"0": 0.9936, "1": 1.0001, "2": 0.9899}, "dhat_bias": -0.000903, "dhat_bias_se": 0.001124, "t": 0.7}
+{"data": "K2", "n_star": 4.85, "success_by_n": {"2": 0.0, "3": 0.0, "5": 0.0, "10": 0.0, "20": 0.0, "80": 0.0}, "success_realised_distances": 0.0, "t": 4.0}
+{"data": "K3", "n": 2, "flat": 2.0119, "true": 1.8294, "learned": 2.0823, "learned_top": 2.061, "gamma": -0.386, "gamma_top": -0.269, "t": 0.9}
+{"data": "K3", "n": 5, "flat": 1.655, "true": 1.5218, "learned": 1.662, "learned_top": 1.6726, "gamma": -0.053, "gamma_top": -0.132, "t": 1.7}
+{"data": "K3", "n": 10, "flat": 1.4337, "true": 1.3569, "learned": 1.436, "learned_top": 1.4389, "gamma": -0.03, "gamma_top": -0.068, "t": 2.5}
+{"data": "K3", "n": 20, "flat": 1.3385, "true": 1.3002, "learned": 1.3337, "learned_top": 1.3377, "gamma": 0.125, "gamma_top": 0.02, "t": 4.6}
+{"data": "K3", "n": 40, "flat": 1.2567, "true": 1.2407, "learned": 1.2539, "learned_top": 1.2546, "gamma": 0.172, "gamma_top": 0.129, "t": 6.7}
+{"data": "K3", "n": 160, "flat": 1.2313, "true": 1.2292, "learned": 1.231, "learned_top": 1.2311, "gamma": 0.134, "gamma_top": 0.107, "t": 9.5}
+{"data": "K4", "n": 5, "R": 1, "exact_recovery": 0.0, "flat": 1.6227, "true": 1.4906, "learned": 1.6293, "gamma": -0.051, "t": 0.3}
+{"data": "K4", "n": 5, "R": 4, "exact_recovery": 0.0, "flat": 1.6574, "true": 1.5199, "learned": 1.606, "gamma": 0.373, "t": 1.5}
+{"data": "K4", "n": 5, "R": 16, "exact_recovery": 0.067, "flat": 1.654, "true": 1.5207, "learned": 1.5363, "gamma": 0.883, "t": 5.8}
+{"data": "K4", "n": 5, "R": 64, "exact_recovery": 1.0, "flat": 1.6425, "true": 1.51, "learned": 1.51, "gamma": 1.0, "t": 14.7}
+{"data": "K4", "n": 2, "R": 1, "exact_recovery": 0.0, "flat": 1.9532, "true": 1.7629, "learned": 2.0388, "gamma": -0.45, "t": 15.5}
+{"data": "K4", "n": 2, "R": 16, "exact_recovery": 0.0, "flat": 1.9783, "true": 1.8133, "learned": 1.9018, "gamma": 0.464, "t": 22.1}
+{"data": "K4", "n": 2, "R": 64, "exact_recovery": 0.1, "flat": 1.9499, "true": 1.779, "learned": 1.7983, "gamma": 0.887, "t": 30.9}
+{"data": "K4", "n": 2, "R": 256, "exact_recovery": 1.0, "flat": 1.9673, "true": 1.7884, "learned": 1.7884, "gamma": 1.0, "t": 48.7}
+{"data": "order_step", "step": 1, "gains": {"prev": 0.07241, "lastx": 0.0652, "pos": 0.05633, "prev2": 0.02338, "tp": 0.01463, "gpt": 0.01351, "uncle": 0.00618, "ppos": 0.00341}, "t": 23.6}
+{"data": "order_step", "step": 2, "gains": {"tp": 0.02121, "gpt": 0.02004, "lastx": 0.01394, "prev2": 0.01079, "uncle": 0.0077, "pos": 0.00708, "ppos": 0.00436}, "t": 38.0}
+{"data": "order_step", "step": 3, "gains": {"lastx": 0.01613, "gpt": 0.0143, "prev2": 0.01257, "pos": 0.00919, "uncle": 0.00744, "ppos": 0.00429}, "t": 50.5}
+{"data": "order_step", "step": 4, "gains": {"gpt": 0.01588, "prev2": 0.01256, "pos": 0.00926, "uncle": 0.00792, "ppos": 0.00472}, "t": 61.4}
+{"data": "order_step", "step": 5, "gains": {"prev2": 0.01283, "pos": 0.00996, "uncle": 0.00871, "ppos": 0.00558}, "t": 70.1}
+{"data": "order_step", "step": 6, "gains": {"uncle": 0.08578, "ppos": 0.00571, "pos": 0.00169}, "t": 76.6}
+{"data": "order", "order": ["prev", "tp", "lastx", "gpt", "prev2", "uncle"], "t": 76.8}
+{"data": "order_eval", "features": ["prev"], "finest_rows": 3664, "alpha": [1.0, 32.0, 64.0], "val": 1.44201, "test": 1.55144, "t": 82.5}
+{"data": "order_eval", "features": ["prev", "tp"], "finest_rows": 14514, "alpha": [1.0, 16.0, 64.0, 512.0], "val": 1.38391, "test": 1.49449, "t": 91.4}
+{"data": "order_eval", "features": ["prev", "tp", "lastx"], "finest_rows": 32162, "alpha": [1.0, 32.0, 64.0, 1024.0, 256.0], "val": 1.36765, "test": 1.47325, "t": 104.4}
+{"data": "order_eval", "features": ["prev", "tp", "lastx", "gpt"], "finest_rows": 63426, "alpha": [1.0, 32.0, 64.0, 1024.0, 512.0, 256.0], "val": 1.33791, "test": 1.45657, "t": 124.5}
+{"data": "order_eval", "features": ["prev", "tp", "lastx", "gpt", "prev2"], "finest_rows": 88228, "alpha": [1.0, 32.0, 64.0, 1024.0, 1024.0, 1024.0, 256.0], "val": 1.32984, "test": 1.44764, "t": 154.6}
+{"data": "order_eval", "features": ["prev", "tp", "lastx", "gpt", "prev2", "uncle"], "finest_rows": 138438, "alpha": [1.0, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25], "val": -15.28262, "test": -14.65577, "t": 182.1}
+{"data": "order_step", "corpus": "stdlib", "step": 1, "gains": {"prev": 0.07241, "lastx": 0.0652, "pos": 0.05633, "prev2": 0.02338, "tp": 0.01463, "gpt": 0.01351, "uncle": 0.00618, "ppos": 0.00341}, "t": 23.6}
+{"data": "order_step", "corpus": "stdlib", "step": 2, "gains": {"tp": 0.02121, "gpt": 0.02004, "lastx": 0.01394, "prev2": 0.01079, "uncle": 0.0077, "pos": 0.00708, "ppos": 0.00436}, "t": 38.9}
+{"data": "order_step", "corpus": "stdlib", "step": 3, "gains": {"lastx": 0.01613, "gpt": 0.0143, "prev2": 0.01257, "pos": 0.00919, "uncle": 0.00744, "ppos": 0.00429}, "t": 52.1}
+{"data": "order_step", "corpus": "stdlib", "step": 4, "gains": {"gpt": 0.01588, "prev2": 0.01256, "pos": 0.00926, "uncle": 0.00792, "ppos": 0.00472}, "t": 63.1}
+{"data": "order_step", "corpus": "stdlib", "step": 5, "gains": {"prev2": 0.01283, "pos": 0.00996, "uncle": 0.00871, "ppos": 0.00558}, "t": 71.9}
+{"data": "order_step", "corpus": "stdlib", "step": 6, "gains": {"uncle": 0.00896, "ppos": 0.00571, "pos": 0.00169}, "t": 79.1}
+{"data": "order_step", "corpus": "stdlib", "step": 7, "gains": {"ppos": 0.0019, "pos": 0.00175}, "t": 84.4}
+{"data": "order_step", "corpus": "stdlib", "step": 8, "gains": {"pos": 0.00172}, "t": 87.5}
+{"data": "order", "corpus": "stdlib", "order": ["prev", "tp", "lastx", "gpt", "prev2", "uncle", "ppos", "pos"], "t": 88.5}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev"], "finest_rows": 3664, "alpha": [1.0, 32.0, 64.0], "val": 1.44201, "test": 1.55144, "t": 93.8}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp"], "finest_rows": 14514, "alpha": [1.0, 16.0, 64.0, 512.0], "val": 1.38391, "test": 1.49449, "t": 103.5}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx"], "finest_rows": 32162, "alpha": [1.0, 32.0, 64.0, 1024.0, 256.0], "val": 1.36765, "test": 1.47325, "t": 119.9}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx", "gpt"], "finest_rows": 63426, "alpha": [1.0, 32.0, 64.0, 1024.0, 512.0, 256.0], "val": 1.33791, "test": 1.45657, "t": 144.9}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx", "gpt", "prev2"], "finest_rows": 88228, "alpha": [1.0, 32.0, 64.0, 1024.0, 1024.0, 1024.0, 256.0], "val": 1.32984, "test": 1.44764, "t": 180.3}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx", "gpt", "prev2", "uncle"], "finest_rows": 122974, "alpha": [1.0, 32.0, 64.0, 1024.0, 512.0, 1024.0, 512.0, 512.0], "val": 1.32497, "test": 1.44204, "t": 230.9}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx", "gpt", "prev2", "uncle", "ppos"], "finest_rows": 139778, "alpha": [1.0, 32.0, 64.0, 1024.0, 1024.0, 1024.0, 1024.0, 1024.0, 512.0], "val": 1.32348, "test": 1.44227, "t": 314.9}
+{"data": "order_eval", "corpus": "stdlib", "features": ["prev", "tp", "lastx", "gpt", "prev2", "uncle", "ppos", "pos"], "finest_rows": 146405, "alpha": [1.0, 32.0, 64.0, 1024.0, 1024.0, 1024.0, 1024.0, 1024.0, 512.0, 1024.0], "val": 1.3233, "test": 1.44223, "t": 440.2}
+{"data": "values", "files": 849, "seed": 0, "train_units": 2454384, "plain": 1.49449, "shared": 1.49395, "untied": 1.49256, "merged_values": 544, "alpha_shared": [1.0, 32.0, 64.0, 1024.0, 1024.0, 64.0, 512.0], "alpha_untied": [1.0, 32.0, 64.0, 1024.0, 1024.0, 128.0, 512.0], "t": 103.2}
+{"data": "clusters16", "clusters": [["AnnAssign", "Break", "Continue", "Pass", "Raise", "Return"], ["Assert", "Assign", "AsyncFunctionDef", "AsyncWith", "Attribute", "AugAssign", "Await", "BinOp", "BoolOp", "C:NoneType", "C:bool", "C:bytes", "C:complex", "C:ellipsis"], ["Eq", "Gt", "GtE", "In", "Is", "IsNot", "Lt", "LtE", "NotEq", "NotIn"], ["N:ET", "N:InvalidOperation", "N:_testcapi", "N:_testinternalcapi", "N:codecs", "N:compile", "N:ctypes", "N:curses", "N:errno", "N:eval", "N:ord", "N:os", "N:posix", "N:print"], ["N:SystemError", "N:UnicodeDecodeError", "N:con", "N:sorted"]], "t": 103.4}
+{"data": "values", "files": 256, "seed": 0, "train_units": 679033, "plain": 1.61089, "shared": 1.6117, "untied": 1.60763, "merged_values": 445, "alpha_shared": [1.0, 128.0, 1024.0, 1024.0, 256.0, 256.0, 512.0], "alpha_untied": [1.0, 64.0, 128.0, 1024.0, 1024.0, 1024.0, 512.0], "t": 186.8}
+{"data": "values", "files": 256, "seed": 1, "train_units": 662610, "plain": 1.60525, "shared": 1.60549, "untied": 1.60232, "merged_values": 448, "alpha_shared": [1.0, 64.0, 1024.0, 1024.0, 512.0, 128.0, 512.0], "alpha_untied": [1.0, 64.0, 64.0, 1024.0, 1024.0, 512.0, 512.0], "t": 263.2}
+{"data": "values", "files": 64, "seed": 0, "train_units": 130022, "plain": 1.83345, "shared": 1.83397, "untied": 1.82723, "merged_values": 284, "alpha_shared": [1.0, 128.0, 1024.0, 1024.0, 64.0, 128.0, 1024.0], "alpha_untied": [1.0, 64.0, 64.0, 1024.0, 1024.0, 1024.0, 1024.0], "t": 332.0}
+{"data": "values", "files": 64, "seed": 1, "train_units": 126045, "plain": 1.87588, "shared": 1.87006, "untied": 1.86312, "merged_values": 281, "alpha_shared": [1.0, 64.0, 256.0, 1024.0, 64.0, 1024.0, 512.0], "alpha_untied": [1.0, 64.0, 64.0, 512.0, 1024.0, 1024.0, 256.0], "t": 394.6}
+{"data": "values", "files": 16, "seed": 0, "train_units": 42751, "plain": 2.12108, "shared": 2.11695, "untied": 2.11279, "merged_values": 150, "alpha_shared": [1.0, 64.0, 128.0, 64.0, 256.0, 256.0, 1024.0], "alpha_untied": [1.0, 64.0, 64.0, 128.0, 1024.0, 1024.0, 1024.0], "t": 457.4}
+{"data": "values", "files": 16, "seed": 1, "train_units": 23096, "plain": 2.26074, "shared": 2.2558, "untied": 2.25641, "merged_values": 121, "alpha_shared": [1.0, 64.0, 1024.0, 128.0, 128.0, 128.0, 256.0], "alpha_untied": [1.0, 32.0, 64.0, 128.0, 1024.0, 1024.0, 256.0], "t": 516.7}
+{"data": "combined", "files": 849, "features": 2, "ctx": 1.49449, "both": 0.99502, "alpha_scope": [4.0, 4.0, 8.0, "inf"], "t": 81.6}
+{"data": "combined", "files": 849, "features": 4, "ctx": 1.45657, "both": 0.95915, "alpha_scope": [4.0, 2.0, 8.0, "inf"], "t": 174.2}
+{"data": "combined", "files": 849, "features": 6, "ctx": 1.44204, "both": 0.94155, "alpha_scope": [4.0, 2.0, 4.0, "inf"], "t": 292.5}
+{"data": "combined", "files": 64, "features": 2, "ctx": 1.83345, "both": 1.09256, "alpha_scope": [4.0, 4.0, 8.0, "inf"], "t": 338.4}
+{"data": "combined", "files": 64, "features": 4, "ctx": 1.81258, "both": 1.08468, "alpha_scope": [2.0, 4.0, 8.0, "inf"], "t": 407.8}
+{"data": "combined", "files": 64, "features": 6, "ctx": 1.80636, "both": 1.08601, "alpha_scope": [2.0, 2.0, 4.0, "inf"], "t": 499.7}
+{"data": "combined", "files": 16, "features": 2, "ctx": 2.12108, "both": 1.18442, "alpha_scope": [4.0, 4.0, 8.0, "inf"], "t": 543.9}
+{"data": "combined", "files": 16, "features": 4, "ctx": 2.1009, "both": 1.19328, "alpha_scope": [2.0, 4.0, 8.0, "inf"], "t": 618.4}
+{"data": "combined", "files": 16, "features": 6, "ctx": 2.09584, "both": 1.20732, "alpha_scope": [2.0, 2.0, 4.0, "inf"], "t": 715.1}
+{"data": "combined", "files": 1, "features": 2, "ctx": 2.75269, "both": 1.36622, "alpha_scope": [2.0, 4.0, 8.0, "inf"], "t": 773.8}
+{"data": "combined", "files": 1, "features": 4, "ctx": 2.72716, "both": 1.42332, "alpha_scope": [2.0, 2.0, 8.0, "inf"], "t": 842.8}
+{"data": "combined", "files": 1, "features": 6, "ctx": 2.72572, "both": 1.47202, "alpha_scope": [2.0, 2.0, 4.0, "inf"], "t": 922.4}

@@ -1,0 +1,60 @@
+{
+ "pink_1/f2": {
+  "0": {
+   "kurtosis": 3.83,
+   "energy": 2.638,
+   "detail_energy": 3.036,
+   "n": 7200
+  },
+  "1": {
+   "kurtosis": 3.84,
+   "energy": 2.278,
+   "detail_energy": 2.737,
+   "n": 7200
+  },
+  "2": {
+   "kurtosis": 3.9,
+   "energy": 2.079,
+   "detail_energy": 2.546,
+   "n": 7200
+  },
+  "3": {
+   "kurtosis": 3.83,
+   "energy": 2.043,
+   "detail_energy": 2.505,
+   "n": 5586
+  },
+  "4": {
+   "kurtosis": 3.83,
+   "energy": 2.255,
+   "detail_energy": 2.448,
+   "n": 1144
+  }
+ },
+ "kodak": {
+  "0": {
+   "kurtosis": 8.48,
+   "energy": 2.153,
+   "detail_energy": 2.556,
+   "n": 7200
+  },
+  "1": {
+   "kurtosis": 8.46,
+   "energy": 2.438,
+   "detail_energy": 2.769,
+   "n": 5748
+  },
+  "2": {
+   "kurtosis": 9.91,
+   "energy": 2.36,
+   "detail_energy": 2.384,
+   "n": 1579
+  },
+  "3": {
+   "kurtosis": 6.83,
+   "energy": 2.416,
+   "detail_energy": 1.679,
+   "n": 365
+  }
+ }
+}

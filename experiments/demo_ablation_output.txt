@@ -1,0 +1,5 @@
+(A') ablation: max-abs kernel error (up to relabelling), mean of 5 seeds
+       81 grids: from   1 trees err=0.146 | independent err=0.171
+      405 grids: from   5 trees err=0.054 | independent err=0.060
+     1620 grids: from  20 trees err=0.026 | independent err=0.034
+     8100 grids: from 100 trees err=0.017 | independent err=0.013

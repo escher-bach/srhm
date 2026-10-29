@@ -1,0 +1,10 @@
+1) one deep tree (L=11, n_2=3^9=19683): empirical context vs Lambda_n beta_t
+   mean L1(muhat_t, mu_t) = 0.2666;  pure-sampling-noise baseline = 0.2552  (ratio 1.04)
+   theory:    L1(mu_t1, mu_t2) = 0.0e+00;  next-closest pair 0.0000 (near-synonyms: both beliefs are almost the same point mass), median 1.086
+   empirical: L1(muhat_t1, muhat_t2) = 0.279 (noise-only expectation 0.294; N=298,121); pairs closer than t1,t2: 23 of 351
+2) packaging: fixed n_2 = 3^6 = 729 height-2 grids, split into U trees of depth L
+   U=  1 trees, L=8:  mean L1*sqrt(N_t) = 2.096 +- 0.018
+   U=  3 trees, L=7:  mean L1*sqrt(N_t) = 2.061 +- 0.019
+   U=  9 trees, L=6:  mean L1*sqrt(N_t) = 2.082 +- 0.016
+   U= 27 trees, L=5:  mean L1*sqrt(N_t) = 2.145 +- 0.020
+   U= 81 trees, L=4:  mean L1*sqrt(N_t) = 2.125 +- 0.017

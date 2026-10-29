@@ -1,0 +1,30 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"dev": "cuda", "pool": 849, "test_units": 2692632, "val_units": 40019, "t": 1.3}
+{"stage": true, "files": 64, "seed": 0, "H": 2, "em_iters": 40, "val": 1.94028, "test": 1.9832, "t": 3.9}
+{"stage": true, "files": 64, "seed": 0, "H": 4, "em_iters": 40, "val": 1.90857, "test": 1.96263, "t": 5.6}
+{"stage": true, "files": 64, "seed": 0, "H": 8, "em_iters": 40, "val": 1.91932, "test": 1.96813, "t": 7.3}
+{"stage": true, "files": 64, "seed": 0, "H": 16, "em_iters": 40, "val": 1.92384, "test": 1.97136, "t": 9.2}
+{"stage": true, "files": 64, "seed": 0, "H": 32, "em_iters": 40, "val": 1.92214, "test": 1.96701, "t": 11.9}
+{"stage": true, "files": 64, "seed": 0, "H": 64, "em_iters": 40, "val": 1.91525, "test": 1.95844, "t": 18.7}
+{"stage": true, "files": 64, "seed": 0, "H": 128, "em_iters": 40, "val": 1.89844, "test": 1.93233, "t": 39.8}
+{"files": 64, "seed": 0, "train_units": 130022, "by_H": {"1": {"val": 1.95472, "test": 2.01462, "train": 1.49749}, "2": {"val": 1.94028, "test": 1.9832, "train": 1.41743}, "4": {"val": 1.90857, "test": 1.96263, "train": 1.32881}, "8": {"val": 1.91932, "test": 1.96813, "train": 1.25033}, "16": {"val": 1.92384, "test": 1.97136, "train": 1.15639}, "32": {"val": 1.92214, "test": 1.96701, "train": 1.0591}, "64": {"val": 1.91525, "test": 1.95844, "train": 0.96573}, "128": {"val": 1.89844, "test": 1.93233, "train": 0.88801}}, "best_H": 128, "best_test": 1.93233, "t": 39.8}
+{"stage": true, "files": 64, "seed": 1, "H": 2, "em_iters": 40, "val": 1.90613, "test": 2.01699, "t": 42.0}
+{"stage": true, "files": 64, "seed": 1, "H": 4, "em_iters": 40, "val": 1.85688, "test": 1.99144, "t": 44.0}
+{"stage": true, "files": 64, "seed": 1, "H": 8, "em_iters": 40, "val": 1.8673, "test": 1.99389, "t": 46.1}
+{"stage": true, "files": 64, "seed": 1, "H": 16, "em_iters": 40, "val": 1.87508, "test": 1.99775, "t": 48.1}
+{"stage": true, "files": 64, "seed": 1, "H": 32, "em_iters": 40, "val": 1.87551, "test": 1.99182, "t": 50.8}
+{"stage": true, "files": 64, "seed": 1, "H": 64, "em_iters": 40, "val": 1.87465, "test": 1.97595, "t": 57.4}
+{"stage": true, "files": 64, "seed": 1, "H": 128, "em_iters": 40, "val": 1.8457, "test": 1.94909, "t": 77.5}
+{"files": 64, "seed": 1, "train_units": 126045, "by_H": {"1": {"val": 1.92539, "test": 2.05386, "train": 1.4571}, "2": {"val": 1.90613, "test": 2.01699, "train": 1.34281}, "4": {"val": 1.85688, "test": 1.99144, "train": 1.26145}, "8": {"val": 1.8673, "test": 1.99389, "train": 1.1828}, "16": {"val": 1.87508, "test": 1.99775, "train": 1.10376}, "32": {"val": 1.87551, "test": 1.99182, "train": 1.01985}, "64": {"val": 1.87465, "test": 1.97595, "train": 0.93763}, "128": {"val": 1.8457, "test": 1.94909, "train": 0.86739}}, "best_H": 128, "best_test": 1.94909, "t": 77.5}
+{"stage": true, "files": 849, "seed": 0, "H": 2, "em_iters": 40, "val": 1.58803, "test": 1.68238, "t": 85.5}
+{"stage": true, "files": 849, "seed": 0, "H": 4, "em_iters": 40, "val": 1.54718, "test": 1.63273, "t": 93.2}
+{"stage": true, "files": 849, "seed": 0, "H": 8, "em_iters": 40, "val": 1.52283, "test": 1.59978, "t": 107.9}
+{"stage": true, "files": 849, "seed": 0, "H": 16, "em_iters": 40, "val": 1.49712, "test": 1.57398, "t": 129.3}
+{"stage": true, "files": 849, "seed": 0, "H": 32, "em_iters": 40, "val": 1.47872, "test": 1.55349, "t": 167.6}
+{"stage": true, "files": 849, "seed": 0, "H": 64, "em_iters": 40, "val": 1.4707, "test": 1.54426, "t": 271.9}
+{"stage": true, "files": 849, "seed": 0, "H": 128, "em_iters": 40, "val": 1.45681, "test": 1.53712, "t": 562.3}
+{"files": 849, "seed": 0, "train_units": 2454384, "by_H": {"1": {"val": 1.61809, "test": 1.73113, "train": 1.61416}, "2": {"val": 1.58803, "test": 1.68238, "train": 1.55762}, "4": {"val": 1.54718, "test": 1.63273, "train": 1.49647}, "8": {"val": 1.52283, "test": 1.59978, "train": 1.44572}, "16": {"val": 1.49712, "test": 1.57398, "train": 1.38779}, "32": {"val": 1.47872, "test": 1.55349, "train": 1.32462}, "64": {"val": 1.4707, "test": 1.54426, "train": 1.25538}, "128": {"val": 1.45681, "test": 1.53712, "train": 1.18012}}, "best_H": 128, "best_test": 1.53712, "t": 562.3}

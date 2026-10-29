@@ -1,0 +1,10 @@
+{"kernel": 0, "L": 3, "r2_additive": 0.7341, "r2_oracle": 0.7402, "ratio": 0.992}
+{"kernel": 0, "L": 4, "r2_additive": 0.7255, "r2_oracle": 0.7318, "ratio": 0.991}
+{"kernel": 0, "L": 5, "r2_additive": 0.7164, "r2_oracle": 0.7261, "ratio": 0.987}
+{"kernel": 0, "L": 6, "r2_additive": 0.7024, "r2_oracle": 0.7237, "ratio": 0.971}
+{"kernel": 0, "L": 7, "r2_additive": 0.6262, "r2_oracle": 0.7227, "ratio": 0.866}
+{"kernel": 1, "L": 3, "r2_additive": 0.3298, "r2_oracle": 0.3372, "ratio": 0.978}
+{"kernel": 1, "L": 4, "r2_additive": 0.2424, "r2_oracle": 0.2584, "ratio": 0.938}
+{"kernel": 1, "L": 5, "r2_additive": 0.1593, "r2_oracle": 0.1857, "ratio": 0.858}
+{"kernel": 1, "L": 6, "r2_additive": 0.077, "r2_oracle": 0.153, "ratio": 0.503}
+{"kernel": 1, "L": 7, "r2_additive": -0.1423, "r2_oracle": 0.1245, "ratio": -1.143}

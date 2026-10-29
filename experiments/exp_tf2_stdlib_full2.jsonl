@@ -1,0 +1,9 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"dev": "cuda", "corpus": "stdlib", "stage": "full", "pool": 849, "test_units": 2692632, "val_units": 40019, "C": 613, "T": 145, "t": 1.6}
+{"cfg": true, "files": 849, "seed": 0, "size": "medium", "drop": 0.1, "lr": 0.0005, "max_steps": 6000, "val": 0.82397, "steps": 5250, "test": 0.91408, "t": 467.6}
+{"cfg": true, "files": 849, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.0005, "max_steps": 8000, "val": 0.81195, "steps": 8000, "test": 0.90184, "t": 1166.4}
+{"result": true, "corpus": "stdlib", "files": 849, "seed": 0, "train_units": 2454384, "size": "medium", "drop": 0.3, "lr": 0.0005, "val": 0.81195, "test": 0.90184, "steps": 8000, "t": 1166.4}

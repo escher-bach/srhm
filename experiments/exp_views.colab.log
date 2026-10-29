@@ -1,0 +1,15 @@
+[colab] Creating session 'pa-0930-165652-707'...
+[colab] Session READY (pa-0930-165652-707). Executing exp_views_bundle.py...
+[colab] Stopping session 'pa-0930-165652-707'...
+[colab] Session terminated.
+[safe_run] cleanup: stopping pa-0930-165652-707
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Session 'pa-0930-165652-707' not found.
+[safe_run] server audit:
+
+
+[colab] No active sessions found on server.

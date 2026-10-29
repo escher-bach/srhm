@@ -1,0 +1,152 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "mode": "sweep", "dev": "cuda", "budget": 4800.0, "t": 0.0}
+{"event": "data", "src": "hf", "n_train": 50000, "n_test": 10000, "t": 11.4}
+{"event": "train", "tag": "N64s0", "step": 0, "train_bpd": 5.9903, "secs": 0.9, "t": 17.5}
+{"event": "train", "tag": "N64s0", "step": 500, "train_bpd": 5.02, "secs": 10.4, "t": 27.1}
+{"event": "train", "tag": "N64s0", "step": 1000, "train_bpd": 4.92, "secs": 20.0, "t": 36.6}
+{"event": "train", "tag": "N64s0", "step": 1500, "train_bpd": 4.8696, "secs": 29.6, "t": 46.3}
+{"event": "train", "tag": "N64s0", "step": 2000, "train_bpd": 4.8436, "secs": 39.3, "t": 56.0}
+{"event": "train", "tag": "N64s0", "step": 2500, "train_bpd": 4.8328, "secs": 49.1, "t": 65.7}
+{"event": "train", "tag": "N64s0", "step": 2999, "train_bpd": 4.8306, "secs": 58.9, "t": 75.5}
+{"event": "eval", "tag": "sweep_N64_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.4139, "per_height_bits": {"c0": -2.7868, "c1": -2.1657, "c2": -1.6253, "c3": -1.0708, "root": -0.319}, "test_logp": 5506.74, "bayes_head": {"50000": 0.1818}, "logistic_head": {"50000": 0.309}, "root_belief_entropy": 0.082, "t": 77.6}
+{"event": "train", "tag": "N64s0u", "step": 0, "train_bpd": 6.0186, "secs": 0.0, "t": 77.6}
+{"event": "train", "tag": "N64s0u", "step": 500, "train_bpd": 4.7314, "secs": 9.5, "t": 87.2}
+{"event": "train", "tag": "N64s0u", "step": 1000, "train_bpd": 4.5279, "secs": 19.0, "t": 96.6}
+{"event": "train", "tag": "N64s0u", "step": 1500, "train_bpd": 4.425, "secs": 28.6, "t": 106.2}
+{"event": "train", "tag": "N64s0u", "step": 2000, "train_bpd": 4.3597, "secs": 38.1, "t": 115.7}
+{"event": "train", "tag": "N64s0u", "step": 2500, "train_bpd": 4.3219, "secs": 47.6, "t": 125.2}
+{"event": "train", "tag": "N64s0u", "step": 2999, "train_bpd": 4.3104, "secs": 57.1, "t": 134.7}
+{"event": "eval", "tag": "sweep_N64_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 29.8718, "per_height_bits": {"c0": -2.6947, "c1": -0.3052, "c2": 502.385, "c3": 34.2422, "root": -0.1307}, "test_logp": -46572.65, "bayes_head": {"50000": 0.1916}, "logistic_head": {"50000": 0.3041}, "root_belief_entropy": 0.125, "t": 136.7}
+{"event": "train", "tag": "N64s1", "step": 0, "train_bpd": 6.0692, "secs": 0.0, "t": 136.7}
+{"event": "train", "tag": "N64s1", "step": 500, "train_bpd": 5.1301, "secs": 9.6, "t": 146.3}
+{"event": "train", "tag": "N64s1", "step": 1000, "train_bpd": 5.0396, "secs": 18.9, "t": 155.6}
+{"event": "train", "tag": "N64s1", "step": 1500, "train_bpd": 4.9936, "secs": 28.5, "t": 165.2}
+{"event": "train", "tag": "N64s1", "step": 2000, "train_bpd": 4.9691, "secs": 37.9, "t": 174.6}
+{"event": "train", "tag": "N64s1", "step": 2500, "train_bpd": 4.9585, "secs": 47.4, "t": 184.1}
+{"event": "train", "tag": "N64s1", "step": 2999, "train_bpd": 4.9562, "secs": 56.8, "t": 193.4}
+{"event": "eval", "tag": "sweep_N64_s1", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.4164, "per_height_bits": {"c0": -2.789, "c1": -2.1531, "c2": -1.597, "c3": -1.0135, "root": -0.3731}, "test_logp": 5501.44, "bayes_head": {"50000": 0.1643}, "logistic_head": {"50000": 0.3078}, "root_belief_entropy": 0.115, "t": 195.4}
+{"event": "train", "tag": "N64s1u", "step": 0, "train_bpd": 6.2912, "secs": 0.0, "t": 195.4}
+{"event": "train", "tag": "N64s1u", "step": 500, "train_bpd": 4.824, "secs": 9.6, "t": 205.0}
+{"event": "train", "tag": "N64s1u", "step": 1000, "train_bpd": 4.6349, "secs": 19.2, "t": 214.6}
+{"event": "train", "tag": "N64s1u", "step": 1500, "train_bpd": 4.5371, "secs": 28.6, "t": 224.0}
+{"event": "train", "tag": "N64s1u", "step": 2000, "train_bpd": 4.4761, "secs": 38.0, "t": 233.4}
+{"event": "train", "tag": "N64s1u", "step": 2500, "train_bpd": 4.4404, "secs": 47.5, "t": 242.9}
+{"event": "train", "tag": "N64s1u", "step": 2999, "train_bpd": 4.4293, "secs": 57.0, "t": 252.4}
+{"event": "eval", "tag": "sweep_N64_s1u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 109.1405, "per_height_bits": {"c0": -2.6861, "c1": 0.6367, "c2": 1786.7991, "c3": 1645.3586, "root": -0.5225}, "test_logp": -215363.41, "bayes_head": {"50000": 0.1693}, "logistic_head": {"50000": 0.3123}, "root_belief_entropy": 0.365, "t": 254.3}
+{"event": "train", "tag": "N256s0", "step": 0, "train_bpd": 6.1316, "secs": 0.0, "t": 254.3}
+{"event": "train", "tag": "N256s0", "step": 500, "train_bpd": 5.2551, "secs": 10.7, "t": 265.0}
+{"event": "train", "tag": "N256s0", "step": 1000, "train_bpd": 5.1794, "secs": 21.4, "t": 275.7}
+{"event": "train", "tag": "N256s0", "step": 1500, "train_bpd": 5.1334, "secs": 32.0, "t": 286.3}
+{"event": "train", "tag": "N256s0", "step": 2000, "train_bpd": 5.088, "secs": 42.6, "t": 296.9}
+{"event": "train", "tag": "N256s0", "step": 2500, "train_bpd": 5.0918, "secs": 53.3, "t": 307.5}
+{"event": "train", "tag": "N256s0", "step": 2999, "train_bpd": 5.0923, "secs": 63.9, "t": 318.2}
+{"event": "eval", "tag": "sweep_N256_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.182, "per_height_bits": {"c0": -3.0105, "c1": -2.4048, "c2": -1.8811, "c3": -1.3526, "root": -1.3381}, "test_logp": 6000.58, "bayes_head": {"50000": 0.1954}, "logistic_head": {"50000": 0.3271}, "root_belief_entropy": 0.199, "t": 320.1}
+{"event": "train", "tag": "N256s0u", "step": 0, "train_bpd": 6.1449, "secs": 0.0, "t": 320.2}
+{"event": "train", "tag": "N256s0u", "step": 500, "train_bpd": 5.1952, "secs": 10.8, "t": 330.9}
+{"event": "train", "tag": "N256s0u", "step": 1000, "train_bpd": 5.087, "secs": 21.4, "t": 341.5}
+{"event": "train", "tag": "N256s0u", "step": 1500, "train_bpd": 5.0417, "secs": 32.0, "t": 352.2}
+{"event": "train", "tag": "N256s0u", "step": 2000, "train_bpd": 5.0027, "secs": 42.6, "t": 362.8}
+{"event": "train", "tag": "N256s0u", "step": 2500, "train_bpd": 4.9834, "secs": 53.3, "t": 373.5}
+{"event": "train", "tag": "N256s0u", "step": 2999, "train_bpd": 4.9828, "secs": 63.9, "t": 384.1}
+{"event": "eval", "tag": "sweep_N256_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.3478, "per_height_bits": {"c0": -3.0044, "c1": -2.1865, "c2": -1.1232, "c3": 5.8753, "root": -1.298}, "test_logp": 5647.39, "bayes_head": {"50000": 0.214}, "logistic_head": {"50000": 0.315}, "root_belief_entropy": 0.226, "t": 386.0}
+{"event": "train", "tag": "N256s1", "step": 0, "train_bpd": 6.0692, "secs": 0.0, "t": 386.1}
+{"event": "train", "tag": "N256s1", "step": 500, "train_bpd": 5.271, "secs": 10.6, "t": 396.6}
+{"event": "train", "tag": "N256s1", "step": 1000, "train_bpd": 5.176, "secs": 21.1, "t": 407.2}
+{"event": "train", "tag": "N256s1", "step": 1500, "train_bpd": 5.1231, "secs": 31.9, "t": 417.9}
+{"event": "train", "tag": "N256s1", "step": 2000, "train_bpd": 5.0945, "secs": 42.5, "t": 428.6}
+{"event": "train", "tag": "N256s1", "step": 2500, "train_bpd": 5.0845, "secs": 53.1, "t": 439.2}
+{"event": "train", "tag": "N256s1", "step": 2999, "train_bpd": 5.0804, "secs": 63.7, "t": 449.7}
+{"event": "eval", "tag": "sweep_N256_s1", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.1736, "per_height_bits": {"c0": -3.0197, "c1": -2.4112, "c2": -1.8856, "c3": -1.3632, "root": -1.3216}, "test_logp": 6018.41, "bayes_head": {"50000": 0.1919}, "logistic_head": {"50000": 0.3108}, "root_belief_entropy": 0.183, "t": 451.6}
+{"event": "train", "tag": "N256s1u", "step": 0, "train_bpd": 6.3199, "secs": 0.0, "t": 451.6}
+{"event": "train", "tag": "N256s1u", "step": 500, "train_bpd": 5.2221, "secs": 10.6, "t": 462.2}
+{"event": "train", "tag": "N256s1u", "step": 1000, "train_bpd": 5.1209, "secs": 21.1, "t": 472.7}
+{"event": "train", "tag": "N256s1u", "step": 1500, "train_bpd": 5.0509, "secs": 31.7, "t": 483.4}
+{"event": "train", "tag": "N256s1u", "step": 2000, "train_bpd": 5.0174, "secs": 42.4, "t": 494.0}
+{"event": "train", "tag": "N256s1u", "step": 2500, "train_bpd": 4.9819, "secs": 53.0, "t": 504.7}
+{"event": "train", "tag": "N256s1u", "step": 2999, "train_bpd": 4.9805, "secs": 63.7, "t": 515.4}
+{"event": "eval", "tag": "sweep_N256_s1u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.3531, "per_height_bits": {"c0": -3.0058, "c1": -2.1969, "c2": -0.9924, "c3": 6.0605, "root": -1.3197}, "test_logp": 5636.18, "bayes_head": {"50000": 0.2057}, "logistic_head": {"50000": 0.3132}, "root_belief_entropy": 0.242, "t": 517.3}
+{"event": "train", "tag": "N1024s0", "step": 0, "train_bpd": 6.1135, "secs": 0.0, "t": 517.3}
+{"event": "train", "tag": "N1024s0", "step": 500, "train_bpd": 5.3069, "secs": 10.8, "t": 528.1}
+{"event": "train", "tag": "N1024s0", "step": 1000, "train_bpd": 5.2076, "secs": 21.5, "t": 538.8}
+{"event": "train", "tag": "N1024s0", "step": 1500, "train_bpd": 5.1625, "secs": 32.1, "t": 549.4}
+{"event": "train", "tag": "N1024s0", "step": 2000, "train_bpd": 5.134, "secs": 42.8, "t": 560.1}
+{"event": "train", "tag": "N1024s0", "step": 2500, "train_bpd": 5.1217, "secs": 53.5, "t": 570.8}
+{"event": "train", "tag": "N1024s0", "step": 2999, "train_bpd": 5.1119, "secs": 64.2, "t": 581.4}
+{"event": "eval", "tag": "sweep_N1024_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.1316, "per_height_bits": {"c0": -3.0595, "c1": -2.4568, "c2": -1.9338, "c3": -1.4278, "root": -1.4569}, "test_logp": 6107.8, "bayes_head": {"50000": 0.1559}, "logistic_head": {"50000": 0.3193}, "root_belief_entropy": 0.098, "t": 583.4}
+{"event": "train", "tag": "N1024s0u", "step": 0, "train_bpd": 6.1054, "secs": 0.0, "t": 583.4}
+{"event": "train", "tag": "N1024s0u", "step": 500, "train_bpd": 5.2613, "secs": 10.7, "t": 594.1}
+{"event": "train", "tag": "N1024s0u", "step": 1000, "train_bpd": 5.1802, "secs": 21.7, "t": 605.1}
+{"event": "train", "tag": "N1024s0u", "step": 1500, "train_bpd": 5.1265, "secs": 32.5, "t": 615.9}
+{"event": "train", "tag": "N1024s0u", "step": 2000, "train_bpd": 5.0931, "secs": 43.2, "t": 626.6}
+{"event": "train", "tag": "N1024s0u", "step": 2500, "train_bpd": 5.0818, "secs": 54.0, "t": 637.4}
+{"event": "train", "tag": "N1024s0u", "step": 2999, "train_bpd": 5.0857, "secs": 64.7, "t": 648.1}
+{"event": "eval", "tag": "sweep_N1024_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.1333, "per_height_bits": {"c0": -3.0728, "c1": -2.44, "c2": -1.8283, "c3": -1.1227, "root": -1.4724}, "test_logp": 6104.17, "bayes_head": {"50000": 0.2283}, "logistic_head": {"50000": 0.3309}, "root_belief_entropy": 0.301, "t": 650.0}
+{"event": "train", "tag": "N1024s1", "step": 0, "train_bpd": 6.1264, "secs": 0.0, "t": 650.0}
+{"event": "train", "tag": "N1024s1", "step": 500, "train_bpd": 5.296, "secs": 10.8, "t": 660.8}
+{"event": "train", "tag": "N1024s1", "step": 1000, "train_bpd": 5.2091, "secs": 21.5, "t": 671.5}
+{"event": "train", "tag": "N1024s1", "step": 1500, "train_bpd": 5.1562, "secs": 32.3, "t": 682.3}
+{"event": "train", "tag": "N1024s1", "step": 2000, "train_bpd": 5.1307, "secs": 43.0, "t": 693.0}
+{"event": "train", "tag": "N1024s1", "step": 2500, "train_bpd": 5.1145, "secs": 53.7, "t": 703.7}
+{"event": "train", "tag": "N1024s1", "step": 2999, "train_bpd": 5.1116, "secs": 64.4, "t": 714.4}
+{"event": "eval", "tag": "sweep_N1024_s1", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.122, "per_height_bits": {"c0": -3.0696, "c1": -2.4647, "c2": -1.9427, "c3": -1.4361, "root": -1.4948}, "test_logp": 6128.36, "bayes_head": {"50000": 0.1564}, "logistic_head": {"50000": 0.3249}, "root_belief_entropy": 0.103, "t": 716.3}
+{"event": "train", "tag": "N1024s1u", "step": 0, "train_bpd": 6.3323, "secs": 0.0, "t": 716.4}
+{"event": "train", "tag": "N1024s1u", "step": 500, "train_bpd": 5.283, "secs": 10.9, "t": 727.2}
+{"event": "train", "tag": "N1024s1u", "step": 1000, "train_bpd": 5.1968, "secs": 21.5, "t": 737.8}
+{"event": "train", "tag": "N1024s1u", "step": 1500, "train_bpd": 5.1453, "secs": 32.0, "t": 748.4}
+{"event": "train", "tag": "N1024s1u", "step": 2000, "train_bpd": 5.1036, "secs": 42.7, "t": 759.0}
+{"event": "train", "tag": "N1024s1u", "step": 2500, "train_bpd": 5.0825, "secs": 53.4, "t": 769.7}
+{"event": "train", "tag": "N1024s1u", "step": 2999, "train_bpd": 5.0817, "secs": 64.1, "t": 780.4}
+{"event": "eval", "tag": "sweep_N1024_s1u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.1322, "per_height_bits": {"c0": -3.0781, "c1": -2.4267, "c2": -1.8065, "c3": -1.1779, "root": -1.4672}, "test_logp": 6106.52, "bayes_head": {"50000": 0.2246}, "logistic_head": {"50000": 0.3265}, "root_belief_entropy": 0.298, "t": 782.3}
+{"event": "train", "tag": "N4096s0", "step": 0, "train_bpd": 6.091, "secs": 0.0, "t": 782.4}
+{"event": "train", "tag": "N4096s0", "step": 500, "train_bpd": 5.3108, "secs": 10.7, "t": 793.0}
+{"event": "train", "tag": "N4096s0", "step": 1000, "train_bpd": 5.2319, "secs": 21.3, "t": 803.6}
+{"event": "train", "tag": "N4096s0", "step": 1500, "train_bpd": 5.1741, "secs": 32.0, "t": 814.3}
+{"event": "train", "tag": "N4096s0", "step": 2000, "train_bpd": 5.1524, "secs": 42.6, "t": 824.9}
+{"event": "train", "tag": "N4096s0", "step": 2500, "train_bpd": 5.1309, "secs": 53.3, "t": 835.6}
+{"event": "train", "tag": "N4096s0", "step": 2999, "train_bpd": 5.1361, "secs": 63.9, "t": 846.2}
+{"event": "eval", "tag": "sweep_N4096_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.1279, "per_height_bits": {"c0": -3.0638, "c1": -2.459, "c2": -1.9359, "c3": -1.4185, "root": -1.4795}, "test_logp": 6115.61, "bayes_head": {"50000": 0.19}, "logistic_head": {"50000": 0.3328}, "root_belief_entropy": 0.196, "t": 848.2}
+{"event": "train", "tag": "N4096s0u", "step": 0, "train_bpd": 6.0987, "secs": 0.0, "t": 848.2}
+{"event": "train", "tag": "N4096s0u", "step": 500, "train_bpd": 5.2937, "secs": 10.7, "t": 858.9}
+{"event": "train", "tag": "N4096s0u", "step": 1000, "train_bpd": 5.2048, "secs": 21.4, "t": 869.6}
+{"event": "train", "tag": "N4096s0u", "step": 1500, "train_bpd": 5.1436, "secs": 32.1, "t": 880.3}
+{"event": "train", "tag": "N4096s0u", "step": 2000, "train_bpd": 5.1138, "secs": 42.7, "t": 890.9}
+{"event": "train", "tag": "N4096s0u", "step": 2500, "train_bpd": 5.11, "secs": 53.3, "t": 901.5}
+{"event": "train", "tag": "N4096s0u", "step": 2999, "train_bpd": 5.1011, "secs": 64.0, "t": 912.1}
+{"event": "eval", "tag": "sweep_N4096_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.0983, "per_height_bits": {"c0": -3.0909, "c1": -2.4912, "c2": -1.9715, "c3": -1.5373, "root": -1.5175}, "test_logp": 6178.66, "bayes_head": {"50000": 0.244}, "logistic_head": {"50000": 0.3448}, "root_belief_entropy": 0.327, "t": 914.1}
+{"event": "train", "tag": "N16384s0", "step": 0, "train_bpd": 6.1035, "secs": 0.0, "t": 914.1}
+{"event": "train", "tag": "N16384s0", "step": 500, "train_bpd": 5.2948, "secs": 10.7, "t": 924.7}
+{"event": "train", "tag": "N16384s0", "step": 1000, "train_bpd": 5.2199, "secs": 21.3, "t": 935.4}
+{"event": "train", "tag": "N16384s0", "step": 1500, "train_bpd": 5.1691, "secs": 32.0, "t": 946.1}
+{"event": "train", "tag": "N16384s0", "step": 2000, "train_bpd": 5.1328, "secs": 42.6, "t": 956.7}
+{"event": "train", "tag": "N16384s0", "step": 2500, "train_bpd": 5.1115, "secs": 53.2, "t": 967.3}
+{"event": "train", "tag": "N16384s0", "step": 2999, "train_bpd": 5.1195, "secs": 63.8, "t": 977.9}
+{"event": "eval", "tag": "sweep_N16384_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.1143, "per_height_bits": {"c0": -3.077, "c1": -2.473, "c2": -1.9509, "c3": -1.4426, "root": -1.5075}, "test_logp": 6144.58, "bayes_head": {"50000": 0.1655}, "logistic_head": {"50000": 0.3345}, "root_belief_entropy": 0.135, "t": 979.8}
+{"event": "train", "tag": "N16384s0u", "step": 0, "train_bpd": 6.1841, "secs": 0.0, "t": 979.8}
+{"event": "train", "tag": "N16384s0u", "step": 500, "train_bpd": 5.2827, "secs": 10.7, "t": 990.5}
+{"event": "train", "tag": "N16384s0u", "step": 1000, "train_bpd": 5.1947, "secs": 21.3, "t": 1001.1}
+{"event": "train", "tag": "N16384s0u", "step": 1500, "train_bpd": 5.149, "secs": 31.9, "t": 1011.7}
+{"event": "train", "tag": "N16384s0u", "step": 2000, "train_bpd": 5.1018, "secs": 42.6, "t": 1022.3}
+{"event": "train", "tag": "N16384s0u", "step": 2500, "train_bpd": 5.0937, "secs": 53.2, "t": 1033.0}
+{"event": "train", "tag": "N16384s0u", "step": 2999, "train_bpd": 5.0976, "secs": 63.9, "t": 1043.7}
+{"event": "eval", "tag": "sweep_N16384_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.0931, "per_height_bits": {"c0": -3.0927, "c1": -2.4993, "c2": -2.0008, "c3": -1.6162, "root": -1.5255}, "test_logp": 6189.71, "bayes_head": {"50000": 0.2546}, "logistic_head": {"50000": 0.3448}, "root_belief_entropy": 0.357, "t": 1045.6}
+{"event": "train", "tag": "N50000s0", "step": 0, "train_bpd": 6.0958, "secs": 0.0, "t": 1045.6}
+{"event": "train", "tag": "N50000s0", "step": 500, "train_bpd": 5.2904, "secs": 10.6, "t": 1056.2}
+{"event": "train", "tag": "N50000s0", "step": 1000, "train_bpd": 5.2111, "secs": 21.2, "t": 1066.8}
+{"event": "train", "tag": "N50000s0", "step": 1500, "train_bpd": 5.1523, "secs": 31.9, "t": 1077.5}
+{"event": "train", "tag": "N50000s0", "step": 2000, "train_bpd": 5.1289, "secs": 42.7, "t": 1088.3}
+{"event": "train", "tag": "N50000s0", "step": 2500, "train_bpd": 5.115, "secs": 53.3, "t": 1098.9}
+{"event": "train", "tag": "N50000s0", "step": 2999, "train_bpd": 5.1105, "secs": 64.1, "t": 1109.8}
+{"event": "eval", "tag": "sweep_N50000_s0", "H": 16, "untied": false, "nparams": 26032, "test_bpd": 5.1138, "per_height_bits": {"c0": -3.0775, "c1": -2.4743, "c2": -1.9534, "c3": -1.4364, "root": -1.4782}, "test_logp": 6145.73, "bayes_head": {"50000": 0.1861}, "logistic_head": {"50000": 0.3379}, "root_belief_entropy": 0.18, "t": 1111.7}
+{"event": "train", "tag": "N50000s0u", "step": 0, "train_bpd": 6.0976, "secs": 0.0, "t": 1111.7}
+{"event": "train", "tag": "N50000s0u", "step": 500, "train_bpd": 5.2899, "secs": 10.7, "t": 1122.4}
+{"event": "train", "tag": "N50000s0u", "step": 1000, "train_bpd": 5.1901, "secs": 21.4, "t": 1133.1}
+{"event": "train", "tag": "N50000s0u", "step": 1500, "train_bpd": 5.1375, "secs": 32.1, "t": 1143.8}
+{"event": "train", "tag": "N50000s0u", "step": 2000, "train_bpd": 5.1096, "secs": 42.7, "t": 1154.4}
+{"event": "train", "tag": "N50000s0u", "step": 2500, "train_bpd": 5.0972, "secs": 53.4, "t": 1165.1}
+{"event": "train", "tag": "N50000s0u", "step": 2999, "train_bpd": 5.0907, "secs": 64.1, "t": 1175.7}
+{"event": "eval", "tag": "sweep_N50000_s0u", "H": 16, "untied": true, "nparams": 99760, "test_bpd": 5.0934, "per_height_bits": {"c0": -3.0925, "c1": -2.4977, "c2": -2.0039, "c3": -1.627, "root": -1.5258}, "test_logp": 6189.26, "bayes_head": {"50000": 0.2413}, "logistic_head": {"50000": 0.3475}, "root_belief_entropy": 0.332, "t": 1177.7}
+{"event": "done", "t": 1177.7}

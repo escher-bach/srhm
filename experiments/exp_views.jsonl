@@ -1,0 +1,52 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "dev": "cuda", "budget": 6000.0, "steps": 3000, "t": 0.0}
+{"event": "data", "src": "hf", "n_train": 50000, "n_test": 10000, "t": 11.3}
+{"event": "train", "tag": "R", "step": 0, "train_bpd": 6.1322, "secs": 0.9, "t": 17.5}
+{"event": "train", "tag": "R", "step": 500, "train_bpd": 5.2992, "secs": 11.6, "t": 28.2}
+{"event": "train", "tag": "R", "step": 1000, "train_bpd": 5.2185, "secs": 22.7, "t": 39.3}
+{"event": "train", "tag": "R", "step": 1500, "train_bpd": 5.1707, "secs": 33.7, "t": 50.3}
+{"event": "train", "tag": "R", "step": 2000, "train_bpd": 5.1437, "secs": 44.7, "t": 61.3}
+{"event": "train", "tag": "R", "step": 2500, "train_bpd": 5.1233, "secs": 55.7, "t": 72.2}
+{"event": "train", "tag": "R", "step": 2999, "train_bpd": 5.1222, "secs": 66.5, "t": 83.1}
+{"event": "eval", "tag": "R_IT16", "K": 1, "family": "none", "test_bpd": 5.1196, "bayes_head": {"100": 0.1484, "1000": 0.1657, "50000": 0.1763}, "logistic_state": {"1000": 0.272, "50000": 0.294}, "logistic_state_thumb": 0.3374, "state_entropy": 0.152, "state_usage": [0.001, 0.0, 0.013, 0.0, 0.0, 0.024, 0.001, 0.005, 0.0, 0.205, 0.0, 0.73, 0.004, 0.016, 0.0, 0.001], "invariance_tv": {"geo": 0.0868, "col": 0.2311, "other_image": 0.4208}, "colour_r2": 0.9454, "t": 87.0}
+{"event": "plan", "tag": "A", "K": 1, "family": "none", "nparams": 41648, "t": 87.0}
+{"event": "train", "tag": "A", "step": 0, "train_bpd_per_view": 6.0271, "secs": 0.1, "t": 87.1}
+{"event": "train", "tag": "A", "step": 500, "train_bpd_per_view": 5.2961, "secs": 11.8, "t": 98.8}
+{"event": "train", "tag": "A", "step": 1000, "train_bpd_per_view": 5.1996, "secs": 23.6, "t": 110.6}
+{"event": "train", "tag": "A", "step": 1500, "train_bpd_per_view": 5.1548, "secs": 35.5, "t": 122.6}
+{"event": "train", "tag": "A", "step": 2000, "train_bpd_per_view": 5.1187, "secs": 47.4, "t": 134.5}
+{"event": "train", "tag": "A", "step": 2500, "train_bpd_per_view": 5.1162, "secs": 59.3, "t": 146.3}
+{"event": "train", "tag": "A", "step": 2999, "train_bpd_per_view": 5.1101, "secs": 71.0, "t": 158.1}
+{"event": "eval", "tag": "A_SG16x16_K1_none", "K": 1, "family": "none", "test_bpd": 5.1081, "bayes_head": {"100": 0.1368, "1000": 0.1899, "50000": 0.1902}, "logistic_state": {"1000": 0.2246, "50000": 0.2299}, "logistic_state_thumb": 0.3489, "state_entropy": 0.032, "state_usage": [0.45, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.271, 0.279, 0.0, 0.0], "invariance_tv": {"geo": 0.1406, "col": 0.2159, "other_image": 0.647}, "colour_r2": 0.1257, "t": 163.4}
+{"event": "plan", "tag": "B", "K": 2, "family": "geo", "nparams": 41648, "t": 163.4}
+{"event": "train", "tag": "B", "step": 0, "train_bpd_per_view": 6.0941, "secs": 0.0, "t": 163.4}
+{"event": "train", "tag": "B", "step": 500, "train_bpd_per_view": 5.2891, "secs": 23.2, "t": 186.6}
+{"event": "train", "tag": "B", "step": 1000, "train_bpd_per_view": 5.2054, "secs": 46.4, "t": 209.7}
+{"event": "train", "tag": "B", "step": 1500, "train_bpd_per_view": 5.1697, "secs": 69.6, "t": 233.0}
+{"event": "train", "tag": "B", "step": 2000, "train_bpd_per_view": 5.1342, "secs": 92.8, "t": 256.2}
+{"event": "train", "tag": "B", "step": 2500, "train_bpd_per_view": 5.1191, "secs": 116.0, "t": 279.4}
+{"event": "train", "tag": "B", "step": 2999, "train_bpd_per_view": 5.1235, "secs": 139.1, "t": 302.5}
+{"event": "eval", "tag": "B_SG16x16_K2_geo", "K": 2, "family": "geo", "test_bpd": 5.1135, "bayes_head": {"100": 0.1462, "1000": 0.1896, "50000": 0.1896}, "logistic_state": {"1000": 0.2259, "50000": 0.2349}, "logistic_state_thumb": 0.3467, "state_entropy": 0.035, "state_usage": [0.395, 0.314, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.291, 0.0, 0.0, 0.0], "invariance_tv": {"geo": 0.1542, "col": 0.2366, "other_image": 0.6654}, "colour_r2": 0.1267, "t": 307.8}
+{"event": "plan", "tag": "C", "K": 2, "family": "geo+col", "nparams": 41648, "t": 307.8}
+{"event": "train", "tag": "C", "step": 0, "train_bpd_per_view": 5.9126, "secs": 0.0, "t": 307.9}
+{"event": "train", "tag": "C", "step": 500, "train_bpd_per_view": 5.1603, "secs": 23.5, "t": 331.4}
+{"event": "train", "tag": "C", "step": 1000, "train_bpd_per_view": 5.0519, "secs": 47.0, "t": 354.8}
+{"event": "train", "tag": "C", "step": 1500, "train_bpd_per_view": 5.0149, "secs": 70.5, "t": 378.4}
+{"event": "train", "tag": "C", "step": 2000, "train_bpd_per_view": 4.9808, "secs": 94.1, "t": 401.9}
+{"event": "train", "tag": "C", "step": 2500, "train_bpd_per_view": 4.9708, "secs": 117.6, "t": 425.4}
+{"event": "train", "tag": "C", "step": 2999, "train_bpd_per_view": 4.9702, "secs": 141.0, "t": 448.8}
+{"event": "eval", "tag": "C_SG16x16_K2_geo+col", "K": 2, "family": "geo+col", "test_bpd": 5.1281, "bayes_head": {"100": 0.1425, "1000": 0.1483, "50000": 0.1537}, "logistic_state": {"1000": 0.173, "50000": 0.1854}, "logistic_state_thumb": 0.3161, "state_entropy": 0.01, "state_usage": [0.217, 0.783, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "invariance_tv": {"geo": 0.0539, "col": 0.1191, "other_image": 0.3414}, "colour_r2": 0.128, "t": 454.1}
+{"event": "plan", "tag": "D", "K": 4, "family": "geo+col", "nparams": 41648, "t": 454.1}
+{"event": "train", "tag": "D", "step": 0, "train_bpd_per_view": 6.0204, "secs": 0.1, "t": 454.2}
+{"event": "train", "tag": "D", "step": 500, "train_bpd_per_view": 5.1388, "secs": 47.1, "t": 501.2}
+{"event": "train", "tag": "D", "step": 1000, "train_bpd_per_view": 5.0433, "secs": 94.1, "t": 548.3}
+{"event": "train", "tag": "D", "step": 1500, "train_bpd_per_view": 5.0021, "secs": 141.1, "t": 595.3}
+{"event": "train", "tag": "D", "step": 2000, "train_bpd_per_view": 4.9682, "secs": 188.1, "t": 642.2}
+{"event": "train", "tag": "D", "step": 2500, "train_bpd_per_view": 4.9636, "secs": 235.1, "t": 689.2}
+{"event": "train", "tag": "D", "step": 2999, "train_bpd_per_view": 4.9523, "secs": 282.0, "t": 736.1}
+{"event": "eval", "tag": "D_SG16x16_K4_geo+col", "K": 4, "family": "geo+col", "test_bpd": 5.1191, "bayes_head": {"100": 0.1457, "1000": 0.1515, "50000": 0.1583}, "logistic_state": {"1000": 0.1893, "50000": 0.2}, "logistic_state_thumb": 0.3238, "state_entropy": 0.012, "state_usage": [0.0, 0.747, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.253, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "invariance_tv": {"geo": 0.0654, "col": 0.1052, "other_image": 0.3938}, "colour_r2": -5.979232308140632e+23, "t": 741.5}
+{"event": "done", "t": 741.5}

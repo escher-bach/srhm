@@ -1,0 +1,49 @@
+{"dev": "cuda", "corpus": "scipy", "stage": "small", "pool": 436, "test_units": 1259217, "val_units": 35981, "C": 351, "T": 118, "t": 0.9}
+{"cfg": true, "files": 1, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.001, "val": 2.30501, "steps": 500, "test": 2.31602, "t": 14.3}
+{"cfg": true, "files": 1, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.0003, "val": 2.28727, "steps": 700, "test": 2.30008, "t": 23.5}
+{"cfg": true, "files": 1, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.001, "val": 2.36853, "steps": 550, "t": 30.3}
+{"cfg": true, "files": 1, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.0003, "val": 2.35878, "steps": 700, "t": 39.0}
+{"cfg": true, "files": 1, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.001, "val": 2.28905, "steps": 400, "t": 52.4}
+{"cfg": true, "files": 1, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.27621, "steps": 500, "test": 2.25815, "t": 71.1}
+{"cfg": true, "files": 1, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.001, "val": 2.35205, "steps": 450, "t": 86.3}
+{"cfg": true, "files": 1, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0003, "val": 2.32559, "steps": 500, "t": 103.1}
+{"result": true, "corpus": "scipy", "files": 1, "seed": 0, "train_units": 12792, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.27621, "test": 2.25815, "steps": 500, "t": 103.2}
+{"cfg": true, "files": 1, "seed": 1, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 3.32596, "steps": 400, "test": 3.46507, "t": 118.4}
+{"result": true, "corpus": "scipy", "files": 1, "seed": 1, "train_units": 320, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 3.32596, "test": 3.46507, "steps": 400, "t": 118.5}
+{"cfg": true, "files": 4, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.001, "val": 2.69942, "steps": 450, "test": 2.73487, "t": 124.6}
+{"cfg": true, "files": 4, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.0003, "val": 2.66866, "steps": 550, "test": 2.71075, "t": 132.0}
+{"cfg": true, "files": 4, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.001, "val": 2.76148, "steps": 450, "t": 137.4}
+{"cfg": true, "files": 4, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.0003, "val": 2.7564, "steps": 550, "t": 144.2}
+{"cfg": true, "files": 4, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.001, "val": 2.77077, "steps": 400, "t": 157.7}
+{"cfg": true, "files": 4, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.64776, "steps": 450, "test": 2.68884, "t": 174.9}
+{"cfg": true, "files": 4, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.001, "val": 2.73631, "steps": 400, "t": 188.5}
+{"cfg": true, "files": 4, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0003, "val": 2.6707, "steps": 450, "t": 203.9}
+{"result": true, "corpus": "scipy", "files": 4, "seed": 0, "train_units": 1786, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.64776, "test": 2.68884, "steps": 450, "t": 203.9}
+{"cfg": true, "files": 4, "seed": 1, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.13024, "steps": 500, "test": 2.21534, "t": 222.9}
+{"result": true, "corpus": "scipy", "files": 4, "seed": 1, "train_units": 8878, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 2.13024, "test": 2.21534, "steps": 500, "t": 222.9}
+{"cfg": true, "files": 16, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.001, "val": 1.92435, "steps": 550, "test": 1.9386, "t": 230.2}
+{"cfg": true, "files": 16, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.0003, "val": 1.92587, "steps": 850, "t": 240.5}
+{"cfg": true, "files": 16, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.001, "val": 1.96884, "steps": 600, "t": 247.7}
+{"cfg": true, "files": 16, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.0003, "val": 1.98398, "steps": 950, "t": 259.2}
+{"cfg": true, "files": 16, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.001, "val": 1.90109, "steps": 450, "test": 1.91044, "t": 276.5}
+{"cfg": true, "files": 16, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 1.89374, "steps": 550, "test": 1.90311, "t": 297.3}
+{"cfg": true, "files": 16, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.001, "val": 1.94589, "steps": 450, "t": 312.7}
+{"cfg": true, "files": 16, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0003, "val": 1.92001, "steps": 600, "t": 333.2}
+{"result": true, "corpus": "scipy", "files": 16, "seed": 0, "train_units": 25439, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 1.89374, "test": 1.90311, "steps": 550, "t": 333.2}
+{"cfg": true, "files": 16, "seed": 1, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 1.78823, "steps": 650, "test": 1.80529, "t": 357.4}
+{"result": true, "corpus": "scipy", "files": 16, "seed": 1, "train_units": 61321, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 1.78823, "test": 1.80529, "steps": 650, "t": 357.4}
+{"cfg": true, "files": 64, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.001, "val": 1.57161, "steps": 1100, "test": 1.60919, "t": 371.2}
+{"cfg": true, "files": 64, "seed": 0, "size": "tiny", "drop": 0.1, "lr": 0.0003, "val": 1.58916, "steps": 1800, "t": 392.5}
+{"cfg": true, "files": 64, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.001, "val": 1.59501, "steps": 1300, "t": 407.9}
+{"cfg": true, "files": 64, "seed": 0, "size": "tiny", "drop": 0.3, "lr": 0.0003, "val": 1.62594, "steps": 2100, "t": 432.7}
+{"cfg": true, "files": 64, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.001, "val": 1.55393, "steps": 900, "test": 1.59946, "t": 464.9}
+{"cfg": true, "files": 64, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.0003, "val": 1.5542, "steps": 1100, "t": 502.0}
+{"cfg": true, "files": 64, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.001, "val": 1.58099, "steps": 900, "t": 532.3}
+{"cfg": true, "files": 64, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0003, "val": 1.57957, "steps": 1200, "t": 572.7}
+{"cfg": true, "files": 64, "seed": 0, "size": "medium", "drop": 0.1, "lr": 0.001, "val": 1.53901, "steps": 800, "test": 1.57252, "t": 644.9}
+{"cfg": true, "files": 64, "seed": 0, "size": "medium", "drop": 0.1, "lr": 0.0003, "val": 1.53861, "steps": 1000, "test": 1.56482, "t": 734.0}
+{"cfg": true, "files": 64, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.001, "val": 1.56531, "steps": 900, "t": 810.5}
+{"cfg": true, "files": 64, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.0003, "val": 1.5555, "steps": 1100, "t": 903.8}
+{"result": true, "corpus": "scipy", "files": 64, "seed": 0, "train_units": 164741, "size": "medium", "drop": 0.1, "lr": 0.0003, "val": 1.53861, "test": 1.56482, "steps": 1000, "t": 903.9}
+{"cfg": true, "files": 64, "seed": 1, "size": "medium", "drop": 0.1, "lr": 0.0003, "val": 1.42693, "steps": 1200, "test": 1.48253, "t": 1009.9}
+{"result": true, "corpus": "scipy", "files": 64, "seed": 1, "train_units": 210898, "size": "medium", "drop": 0.1, "lr": 0.0003, "val": 1.42693, "test": 1.48253, "steps": 1200, "t": 1010.0}

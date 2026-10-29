@@ -1,0 +1,6 @@
+{"exp": "cnn", "tied": true, "L": 2, "P": 32, "acc": 0.2523749992251396, "secs": 8.9}
+{"exp": "cnn", "tied": true, "L": 2, "P": 64, "acc": 0.34862498939037323, "secs": 7.4}
+{"exp": "cnn", "tied": true, "L": 2, "P": 128, "acc": 0.5258750021457672, "secs": 16.8}
+{"exp": "cnn", "tied": true, "L": 2, "P": 256, "acc": 0.8297500014305115, "secs": 37.5}
+{"exp": "cnn", "tied": true, "L": 2, "P": 512, "acc": 0.949874997138977, "secs": 44.0}
+{"exp": "cnn", "tied": true, "L": 2, "P": 1024, "acc": 1.0, "secs": 43.9}

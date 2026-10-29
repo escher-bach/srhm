@@ -1,0 +1,6 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"budget_seconds": 600, "torch": "2.11.0+cu128", "cuda": true, "gpu": "NVIDIA L4", "matmul_ms": 191.8, "disk_free_gb": 202.2, "secs": 4.6}

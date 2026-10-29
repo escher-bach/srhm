@@ -1,0 +1,7 @@
+{"exp": "cnn", "tied": false, "L": 3, "P": 32, "acc": 0.16324999928474426, "secs": 4.1}
+{"exp": "cnn", "tied": false, "L": 3, "P": 64, "acc": 0.16849999874830246, "secs": 2.9}
+{"exp": "cnn", "tied": false, "L": 3, "P": 128, "acc": 0.20162499696016312, "secs": 7.6}
+{"exp": "cnn", "tied": false, "L": 3, "P": 256, "acc": 0.2749999910593033, "secs": 34.6}
+{"exp": "cnn", "tied": false, "L": 3, "P": 512, "acc": 0.392875000834465, "secs": 63.4}
+{"exp": "cnn", "tied": false, "L": 3, "P": 1024, "acc": 0.7693749964237213, "secs": 65.6}
+{"exp": "cnn", "tied": false, "L": 3, "P": 2048, "acc": 0.9946250021457672, "secs": 63.7}

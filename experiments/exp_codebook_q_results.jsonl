@@ -1,0 +1,71 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "device": "cuda"}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7059, "r2_oracle": 0.7113, "ll_per_leaf": -1.0618, "secs_total": 42.8}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.7107, "r2_oracle": 0.7113, "ll_per_leaf": -1.7008, "secs_total": 42.8}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.705, "r2_oracle": 0.7113, "ll_per_leaf": -2.3629, "secs_total": 42.8}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.7071, "r2_oracle": 0.7113, "ll_per_leaf": -2.9942, "secs_total": 42.8}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.701, "r2_oracle": 0.7113, "ll_per_leaf": -3.5078, "secs_total": 42.9}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7062, "r2_oracle": 0.7113, "ll_per_leaf": -1.0681, "secs_total": 35.3}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.7082, "r2_oracle": 0.7113, "ll_per_leaf": -1.7104, "secs_total": 35.3}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.709, "r2_oracle": 0.7113, "ll_per_leaf": -2.3736, "secs_total": 35.3}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.707, "r2_oracle": 0.7113, "ll_per_leaf": -3.0045, "secs_total": 35.4}
+{"kernel": 0, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.7032, "r2_oracle": 0.7113, "ll_per_leaf": -3.5219, "secs_total": 35.4}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.1128, "r2_oracle": 0.1368, "ll_per_leaf": -1.2231, "secs_total": 50.2}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1235, "r2_oracle": 0.1368, "ll_per_leaf": -1.8888, "secs_total": 50.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.1119, "r2_oracle": 0.1368, "ll_per_leaf": -2.5563, "secs_total": 50.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.0834, "r2_oracle": 0.1368, "ll_per_leaf": -3.1733, "secs_total": 50.3}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.0115, "r2_oracle": 0.1368, "ll_per_leaf": -3.6666, "secs_total": 50.4}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.1062, "r2_oracle": 0.1368, "ll_per_leaf": -1.218, "secs_total": 50.6}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1125, "r2_oracle": 0.1368, "ll_per_leaf": -1.8852, "secs_total": 50.7}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.0888, "r2_oracle": 0.1368, "ll_per_leaf": -2.55, "secs_total": 50.7}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.0632, "r2_oracle": 0.1368, "ll_per_leaf": -3.1728, "secs_total": 50.7}
+{"kernel": 1, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.0304, "r2_oracle": 0.1368, "ll_per_leaf": -3.6677, "secs_total": 50.8}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7064, "r2_oracle": 0.7113, "ll_per_leaf": -1.0646, "secs_total": 39.8}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.7118, "r2_oracle": 0.7113, "ll_per_leaf": -1.7076, "secs_total": 39.8}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.7111, "r2_oracle": 0.7113, "ll_per_leaf": -2.3796, "secs_total": 39.8}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.7106, "r2_oracle": 0.7113, "ll_per_leaf": -3.0474, "secs_total": 39.8}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.7154, "r2_oracle": 0.7113, "ll_per_leaf": -3.6648, "secs_total": 39.9}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7037, "r2_oracle": 0.7113, "ll_per_leaf": -1.0675, "secs_total": 38.2}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.7057, "r2_oracle": 0.7113, "ll_per_leaf": -1.7095, "secs_total": 38.2}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.7062, "r2_oracle": 0.7113, "ll_per_leaf": -2.3825, "secs_total": 38.2}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.7086, "r2_oracle": 0.7113, "ll_per_leaf": -3.05, "secs_total": 38.3}
+{"kernel": 0, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.7083, "r2_oracle": 0.7113, "ll_per_leaf": -3.6677, "secs_total": 38.3}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.1143, "r2_oracle": 0.1368, "ll_per_leaf": -1.2205, "secs_total": 48.7}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1194, "r2_oracle": 0.1368, "ll_per_leaf": -1.8925, "secs_total": 48.8}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.1244, "r2_oracle": 0.1368, "ll_per_leaf": -2.5711, "secs_total": 48.8}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.1258, "r2_oracle": 0.1368, "ll_per_leaf": -3.237, "secs_total": 48.8}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.0975, "r2_oracle": 0.1368, "ll_per_leaf": -3.8455, "secs_total": 48.9}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.1171, "r2_oracle": 0.1368, "ll_per_leaf": -1.2231, "secs_total": 46.1}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1253, "r2_oracle": 0.1368, "ll_per_leaf": -1.8919, "secs_total": 46.2}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.119, "r2_oracle": 0.1368, "ll_per_leaf": -2.5705, "secs_total": 46.2}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.1139, "r2_oracle": 0.1368, "ll_per_leaf": -3.2373, "secs_total": 46.2}
+{"kernel": 1, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.11, "r2_oracle": 0.1368, "ll_per_leaf": -3.8441, "secs_total": 46.3}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7054, "r2_oracle": 0.7113, "ll_per_leaf": -1.0648, "secs_total": 52.0}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.71, "r2_oracle": 0.7113, "ll_per_leaf": -1.7091, "secs_total": 52.0}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.7101, "r2_oracle": 0.7113, "ll_per_leaf": -2.3854, "secs_total": 52.0}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.7103, "r2_oracle": 0.7113, "ll_per_leaf": -3.0672, "secs_total": 52.1}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.7101, "r2_oracle": 0.7113, "ll_per_leaf": -3.7328, "secs_total": 52.1}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 128, "init": "quantized_coarse_to_fine", "r2": 0.7122, "r2_oracle": 0.7113, "ll_per_leaf": -4.338, "secs_total": 52.2}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.7036, "r2_oracle": 0.7113, "ll_per_leaf": -1.0708, "secs_total": 48.8}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.7069, "r2_oracle": 0.7113, "ll_per_leaf": -1.7171, "secs_total": 48.8}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.7067, "r2_oracle": 0.7113, "ll_per_leaf": -2.3942, "secs_total": 48.9}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.7071, "r2_oracle": 0.7113, "ll_per_leaf": -3.0758, "secs_total": 48.9}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.7076, "r2_oracle": 0.7113, "ll_per_leaf": -3.7404, "secs_total": 49.0}
+{"kernel": 0, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 128, "init": "quantized_coarse_to_fine", "r2": 0.7045, "r2_oracle": 0.7113, "ll_per_leaf": -4.3466, "secs_total": 49.1}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.1139, "r2_oracle": 0.1368, "ll_per_leaf": -1.2215, "secs_total": 62.7}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1251, "r2_oracle": 0.1368, "ll_per_leaf": -1.8915, "secs_total": 62.7}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.1299, "r2_oracle": 0.1368, "ll_per_leaf": -2.5746, "secs_total": 62.8}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.1308, "r2_oracle": 0.1368, "ll_per_leaf": -3.2567, "secs_total": 62.8}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.13, "r2_oracle": 0.1368, "ll_per_leaf": -3.9172, "secs_total": 62.9}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 0, "v": 128, "init": "quantized_coarse_to_fine", "r2": 0.0847, "r2_oracle": 0.1368, "ll_per_leaf": -4.5119, "secs_total": 63.0}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 4, "init": "quantized_coarse_to_fine", "r2": 0.113, "r2_oracle": 0.1368, "ll_per_leaf": -1.2197, "secs_total": 58.6}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 8, "init": "quantized_coarse_to_fine", "r2": 0.1257, "r2_oracle": 0.1368, "ll_per_leaf": -1.8905, "secs_total": 58.6}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 16, "init": "quantized_coarse_to_fine", "r2": 0.1315, "r2_oracle": 0.1368, "ll_per_leaf": -2.5735, "secs_total": 58.6}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 32, "init": "quantized_coarse_to_fine", "r2": 0.1295, "r2_oracle": 0.1368, "ll_per_leaf": -3.2555, "secs_total": 58.7}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 64, "init": "quantized_coarse_to_fine", "r2": 0.1131, "r2_oracle": 0.1368, "ll_per_leaf": -3.9161, "secs_total": 58.7}
+{"kernel": 1, "U": 27, "L": 8, "N1": 59049, "seed": 1, "v": 128, "init": "quantized_coarse_to_fine", "r2": 0.0789, "r2_oracle": 0.1368, "ll_per_leaf": -4.5111, "secs_total": 58.8}
+{"event": "done"}

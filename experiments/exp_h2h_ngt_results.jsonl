@@ -1,0 +1,67 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "device": "cuda"}
+{"rule": "local", "L": 4, "P": 2, "seed": 0, "labels": 0, "r2": 0.0753, "r2_oracle": 0.7159, "secs": 9.9}
+{"rule": "bp", "L": 4, "P": 2, "seed": 0, "labels": 2, "lr": 0.03, "val_r2": -0.4623, "r2": -0.7027, "r2_oracle": 0.7159, "secs": 86.9}
+{"rule": "local", "L": 4, "P": 2, "seed": 1, "labels": 0, "r2": 0.0943, "r2_oracle": 0.7159, "secs": 4.7}
+{"rule": "bp", "L": 4, "P": 2, "seed": 1, "labels": 2, "lr": 0.03, "val_r2": -0.0646, "r2": -0.154, "r2_oracle": 0.7159, "secs": 79.5}
+{"rule": "local", "L": 4, "P": 8, "seed": 0, "labels": 0, "r2": 0.53, "r2_oracle": 0.7159, "secs": 15.9}
+{"rule": "bp", "L": 4, "P": 8, "seed": 0, "labels": 8, "lr": 0.1, "val_r2": -0.0549, "r2": -0.0371, "r2_oracle": 0.7159, "secs": 79.0}
+{"rule": "local", "L": 4, "P": 8, "seed": 1, "labels": 0, "r2": 0.5809, "r2_oracle": 0.7159, "secs": 10.7}
+{"rule": "bp", "L": 4, "P": 8, "seed": 1, "labels": 8, "lr": 0.03, "val_r2": 0.2512, "r2": 0.2094, "r2_oracle": 0.7159, "secs": 79.3}
+{"rule": "local", "L": 4, "P": 32, "seed": 0, "labels": 0, "r2": 0.6679, "r2_oracle": 0.7159, "secs": 20.4}
+{"rule": "bp", "L": 4, "P": 32, "seed": 0, "labels": 32, "lr": 0.03, "val_r2": -0.1761, "r2": -0.2407, "r2_oracle": 0.7159, "secs": 80.3}
+{"rule": "local", "L": 4, "P": 32, "seed": 1, "labels": 0, "r2": 0.6749, "r2_oracle": 0.7159, "secs": 19.2}
+{"rule": "bp", "L": 4, "P": 32, "seed": 1, "labels": 32, "lr": 0.3, "val_r2": -0.0843, "r2": -0.1131, "r2_oracle": 0.7159, "secs": 79.6}
+{"rule": "local", "L": 4, "P": 128, "seed": 0, "labels": 0, "r2": 0.7074, "r2_oracle": 0.7159, "secs": 15.6}
+{"rule": "bp", "L": 4, "P": 128, "seed": 0, "labels": 128, "lr": 0.03, "val_r2": 0.6261, "r2": 0.601, "r2_oracle": 0.7159, "secs": 79.3}
+{"rule": "local", "L": 4, "P": 128, "seed": 1, "labels": 0, "r2": 0.6973, "r2_oracle": 0.7159, "secs": 15.5}
+{"rule": "bp", "L": 4, "P": 128, "seed": 1, "labels": 128, "lr": 0.03, "val_r2": 0.6453, "r2": 0.5411, "r2_oracle": 0.7159, "secs": 79.1}
+{"rule": "local", "L": 4, "P": 512, "seed": 0, "labels": 0, "r2": 0.7143, "r2_oracle": 0.7159, "secs": 16.5}
+{"rule": "bp", "L": 4, "P": 512, "seed": 0, "labels": 512, "lr": 0.1, "val_r2": 0.6959, "r2": 0.6738, "r2_oracle": 0.7159, "secs": 79.5}
+{"rule": "local", "L": 4, "P": 512, "seed": 1, "labels": 0, "r2": 0.7131, "r2_oracle": 0.7159, "secs": 16.0}
+{"rule": "bp", "L": 4, "P": 512, "seed": 1, "labels": 512, "lr": 0.03, "val_r2": 0.7257, "r2": 0.6561, "r2_oracle": 0.7159, "secs": 79.4}
+{"rule": "local", "L": 6, "P": 2, "seed": 0, "labels": 0, "r2": 0.6734, "r2_oracle": 0.7114, "secs": 17.9}
+{"rule": "bp", "L": 6, "P": 2, "seed": 0, "labels": 2, "lr": 0.03, "val_r2": -0.0022, "r2": -0.0101, "r2_oracle": 0.7114, "secs": 83.9}
+{"rule": "local", "L": 6, "P": 2, "seed": 1, "labels": 0, "r2": 0.6714, "r2_oracle": 0.7114, "secs": 14.8}
+{"rule": "bp", "L": 6, "P": 2, "seed": 1, "labels": 2, "lr": 0.03, "val_r2": -1.6406, "r2": -2.1796, "r2_oracle": 0.7114, "secs": 83.5}
+{"rule": "local", "L": 6, "P": 8, "seed": 0, "labels": 0, "r2": 0.7014, "r2_oracle": 0.7114, "secs": 13.5}
+{"rule": "bp", "L": 6, "P": 8, "seed": 0, "labels": 8, "lr": 0.03, "val_r2": -0.3985, "r2": -0.4849, "r2_oracle": 0.7114, "secs": 83.5}
+{"rule": "local", "L": 6, "P": 8, "seed": 1, "labels": 0, "r2": 0.7059, "r2_oracle": 0.7114, "secs": 15.5}
+{"rule": "bp", "L": 6, "P": 8, "seed": 1, "labels": 8, "lr": 0.03, "val_r2": 0.6222, "r2": 0.5245, "r2_oracle": 0.7114, "secs": 83.4}
+{"rule": "local", "L": 6, "P": 32, "seed": 0, "labels": 0, "r2": 0.7106, "r2_oracle": 0.7114, "secs": 18.2}
+{"rule": "bp", "L": 6, "P": 32, "seed": 0, "labels": 32, "lr": 0.3, "val_r2": 0.1437, "r2": -0.03, "r2_oracle": 0.7114, "secs": 83.8}
+{"rule": "local", "L": 6, "P": 32, "seed": 1, "labels": 0, "r2": 0.7014, "r2_oracle": 0.7114, "secs": 18.4}
+{"rule": "bp", "L": 6, "P": 32, "seed": 1, "labels": 32, "lr": 0.03, "val_r2": 0.6192, "r2": 0.6135, "r2_oracle": 0.7114, "secs": 84.0}
+{"rule": "local", "L": 6, "P": 128, "seed": 0, "labels": 0, "r2": 0.7106, "r2_oracle": 0.7114, "secs": 18.1}
+{"rule": "bp", "L": 6, "P": 128, "seed": 0, "labels": 128, "lr": 0.03, "val_r2": -0.0869, "r2": -0.0827, "r2_oracle": 0.7114, "secs": 83.7}
+{"rule": "local", "L": 6, "P": 128, "seed": 1, "labels": 0, "r2": 0.7062, "r2_oracle": 0.7114, "secs": 19.2}
+{"rule": "bp", "L": 6, "P": 128, "seed": 1, "labels": 128, "lr": 0.03, "val_r2": 0.673, "r2": 0.6579, "r2_oracle": 0.7114, "secs": 83.6}
+{"rule": "local", "L": 6, "P": 512, "seed": 0, "labels": 0, "r2": 0.7124, "r2_oracle": 0.7114, "secs": 18.8}
+{"rule": "bp", "L": 6, "P": 512, "seed": 0, "labels": 512, "lr": 0.03, "val_r2": 0.7006, "r2": 0.6629, "r2_oracle": 0.7114, "secs": 84.1}
+{"rule": "local", "L": 6, "P": 512, "seed": 1, "labels": 0, "r2": 0.7054, "r2_oracle": 0.7114, "secs": 16.1}
+{"rule": "bp", "L": 6, "P": 512, "seed": 1, "labels": 512, "lr": 0.03, "val_r2": 0.7144, "r2": 0.69, "r2_oracle": 0.7114, "secs": 83.8}
+{"rule": "local", "L": 8, "P": 2, "seed": 0, "labels": 0, "r2": 0.7101, "r2_oracle": 0.7113, "secs": 21.2}
+{"rule": "bp", "L": 8, "P": 2, "seed": 0, "labels": 2, "lr": 0.3, "val_r2": -0.0403, "r2": -0.0248, "r2_oracle": 0.7113, "secs": 88.9}
+{"rule": "local", "L": 8, "P": 2, "seed": 1, "labels": 0, "r2": 0.6996, "r2_oracle": 0.7113, "secs": 18.2}
+{"rule": "bp", "L": 8, "P": 2, "seed": 1, "labels": 2, "lr": 0.1, "val_r2": 0.591, "r2": 0.5943, "r2_oracle": 0.7113, "secs": 88.5}
+{"rule": "local", "L": 8, "P": 8, "seed": 0, "labels": 0, "r2": 0.7099, "r2_oracle": 0.7113, "secs": 18.6}
+{"rule": "bp", "L": 8, "P": 8, "seed": 0, "labels": 8, "lr": 0.03, "val_r2": -0.2424, "r2": -0.33, "r2_oracle": 0.7113, "secs": 90.2}
+{"rule": "local", "L": 8, "P": 8, "seed": 1, "labels": 0, "r2": 0.7009, "r2_oracle": 0.7113, "secs": 19.6}
+{"rule": "bp", "L": 8, "P": 8, "seed": 1, "labels": 8, "lr": 0.03, "val_r2": 0.5799, "r2": 0.442, "r2_oracle": 0.7113, "secs": 89.4}
+{"rule": "local", "L": 8, "P": 32, "seed": 0, "labels": 0, "r2": 0.712, "r2_oracle": 0.7113, "secs": 21.1}
+{"rule": "bp", "L": 8, "P": 32, "seed": 0, "labels": 32, "lr": 0.1, "val_r2": 0.2027, "r2": 0.153, "r2_oracle": 0.7113, "secs": 89.6}
+{"rule": "local", "L": 8, "P": 32, "seed": 1, "labels": 0, "r2": 0.7053, "r2_oracle": 0.7113, "secs": 17.7}
+{"rule": "bp", "L": 8, "P": 32, "seed": 1, "labels": 32, "lr": 0.03, "val_r2": 0.6707, "r2": 0.6126, "r2_oracle": 0.7113, "secs": 90.0}
+{"rule": "local", "L": 8, "P": 128, "seed": 0, "labels": 0, "r2": 0.7121, "r2_oracle": 0.7113, "secs": 23.5}
+{"rule": "bp", "L": 8, "P": 128, "seed": 0, "labels": 128, "lr": 0.3, "val_r2": 0.4906, "r2": 0.4255, "r2_oracle": 0.7113, "secs": 91.3}
+{"rule": "local", "L": 8, "P": 128, "seed": 1, "labels": 0, "r2": 0.7048, "r2_oracle": 0.7113, "secs": 18.4}
+{"rule": "bp", "L": 8, "P": 128, "seed": 1, "labels": 128, "lr": 0.03, "val_r2": 0.6789, "r2": 0.6616, "r2_oracle": 0.7113, "secs": 89.8}
+{"rule": "local", "L": 8, "P": 512, "seed": 0, "labels": 0, "r2": 0.7121, "r2_oracle": 0.7113, "secs": 40.1}
+{"rule": "bp", "L": 8, "P": 512, "seed": 0, "labels": 512, "lr": 0.03, "val_r2": 0.7046, "r2": 0.6418, "r2_oracle": 0.7113, "secs": 89.5}
+{"rule": "local", "L": 8, "P": 512, "seed": 1, "labels": 0, "r2": 0.7043, "r2_oracle": 0.7113, "secs": 34.0}
+{"rule": "bp", "L": 8, "P": 512, "seed": 1, "labels": 512, "lr": 0.03, "val_r2": 0.7067, "r2": 0.6759, "r2_oracle": 0.7113, "secs": 89.9}
+{"event": "done"}

@@ -1,0 +1,15 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"dev": "cuda", "corpus": "stdlib", "stage": "mid", "pool": 849, "test_units": 2692632, "val_units": 40019, "C": 613, "T": 145, "t": 1.6}
+{"cfg": true, "files": 256, "seed": 0, "size": "small", "drop": 0.1, "lr": 0.0005, "val": 1.17862, "steps": 2800, "test": 1.24994, "t": 109.0}
+{"cfg": true, "files": 256, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0005, "val": 1.15002, "steps": 4400, "test": 1.23972, "t": 266.9}
+{"cfg": true, "files": 256, "seed": 0, "size": "medium", "drop": 0.1, "lr": 0.0005, "val": 1.16621, "steps": 2400, "t": 473.7}
+{"cfg": true, "files": 256, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.0005, "val": 1.16127, "steps": 2800, "t": 714.8}
+{"cfg": true, "files": 256, "seed": 0, "size": "large", "drop": 0.1, "lr": 0.0005, "val": 1.14589, "steps": 2000, "test": 1.21642, "t": 1073.8}
+{"cfg": true, "files": 256, "seed": 0, "size": "large", "drop": 0.3, "lr": 0.0005, "val": 1.13875, "steps": 2400, "test": 1.22717, "t": 1501.1}
+{"result": true, "corpus": "stdlib", "files": 256, "seed": 0, "train_units": 679033, "size": "large", "drop": 0.3, "lr": 0.0005, "val": 1.13875, "test": 1.22717, "steps": 2400, "t": 1501.2}
+{"cfg": true, "files": 256, "seed": 1, "size": "large", "drop": 0.3, "lr": 0.0005, "val": 1.12039, "steps": 2200, "test": 1.21651, "t": 1894.2}
+{"result": true, "corpus": "stdlib", "files": 256, "seed": 1, "train_units": 662610, "size": "large", "drop": 0.3, "lr": 0.0005, "val": 1.12039, "test": 1.21651, "steps": 2200, "t": 1894.3}

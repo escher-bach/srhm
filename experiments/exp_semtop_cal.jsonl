@@ -1,0 +1,20 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "mode": "cal", "dev": "cuda", "budget": 1800.0, "t": 0.0}
+{"event": "data", "src": "hf", "n_train": 50000, "n_test": 10000, "t": 11.3}
+{"event": "train", "tag": "cal_H16_tied", "step": 0, "train_joint_bpd": 6.1322, "secs": 1.0, "t": 17.8}
+{"event": "train", "tag": "cal_H16_tied", "step": 500, "train_joint_bpd": 5.2992, "secs": 12.0, "t": 28.8}
+{"event": "train", "tag": "cal_H16_tied", "step": 1000, "train_joint_bpd": 5.2185, "secs": 23.2, "t": 40.0}
+{"event": "train", "tag": "cal_H16_tied", "step": 1500, "train_joint_bpd": 5.1707, "secs": 34.4, "t": 51.2}
+{"event": "train", "tag": "cal_H16_tied", "step": 2000, "train_joint_bpd": 5.1437, "secs": 45.5, "t": 62.3}
+{"event": "train", "tag": "cal_H16_tied", "step": 2500, "train_joint_bpd": 5.1233, "secs": 56.7, "t": 73.4}
+{"event": "train", "tag": "cal_H16_tied", "step": 2999, "train_joint_bpd": 5.1222, "secs": 67.7, "t": 84.5}
+{"event": "cal_model", "test_bpd": 5.1196, "per_height_bits": {"c0": -3.0717, "c1": -2.4686, "c2": -1.9463, "c3": -1.4299, "root": -1.4726}, "kappa": [0.9862, 0.979, 0.9873, 0.9835], "lambda_y": [9.44, 9.3, 8.52, 12.13, 10.57, 10.95, 10.3, 9.51, 9.14, 11.01], "certainty_eps": {"c0": 0.1366, "c1": 0.116, "c2": 0.1162, "c3": 0.1087, "root": 0.0666}, "root_entropy": 0.152, "t": 86.0}
+{"event": "grid", "c": "root", "n_nodes": 1, "thumb": {"lin": 0.3006, "mlp": 0.3609}, "state": {"lin": 0.3308, "mlp": 0.3797}, "t": 121.1}
+{"event": "grid", "c": 3, "n_nodes": 4, "thumb": {"lin": 0.3789, "mlp": 0.5381}, "msgs": {"lin": 0.286, "mlp": 0.3054}, "state": {"lin": 0.4324, "mlp": 0.5535}, "t": 173.6}
+{"event": "grid", "c": 2, "n_nodes": 16, "thumb": {"lin": 0.4087, "mlp": 0.589}, "msgs": {"lin": 0.3794, "mlp": 0.4295}, "state": {"lin": 0.5043, "mlp": 0.6224}, "t": 225.8}
+{"event": "grid", "c": 1, "n_nodes": 64, "thumb": {"lin": 0.4114, "mlp": 0.5822}, "msgs": {"lin": 0.451, "mlp": 0.5019}, "state": {"lin": 0.5287, "mlp": 0.6395}, "t": 279.1}
+{"event": "done", "t": 279.1}

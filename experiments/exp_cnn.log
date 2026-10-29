@@ -1,0 +1,15 @@
+{"exp": "cnn", "tied": false, "L": 2, "P": 32, "acc": 0.2718750089406967, "secs": 13.1}
+{"exp": "cnn", "tied": false, "L": 2, "P": 64, "acc": 0.3841250091791153, "secs": 8.2}
+{"exp": "cnn", "tied": false, "L": 2, "P": 128, "acc": 0.5631250143051147, "secs": 22.7}
+{"exp": "cnn", "tied": false, "L": 2, "P": 256, "acc": 0.8351249992847443, "secs": 18.1}
+{"exp": "cnn", "tied": false, "L": 2, "P": 512, "acc": 0.9658749997615814, "secs": 20.9}
+{"exp": "cnn", "tied": false, "L": 2, "P": 1024, "acc": 1.0, "secs": 20.9}
+{"exp": "cnn", "tied": true, "L": 2, "P": 32, "acc": 0.2523749992251396, "secs": 5.0}
+{"exp": "cnn", "tied": true, "L": 2, "P": 64, "acc": 0.3506249934434891, "secs": 4.1}
+{"exp": "cnn", "tied": true, "L": 2, "P": 128, "acc": 0.5244999825954437, "secs": 10.1}
+{"exp": "cnn", "tied": true, "L": 2, "P": 256, "acc": 0.8297500014305115, "secs": 14.6}
+{"exp": "cnn", "tied": true, "L": 2, "P": 512, "acc": 0.9507499933242798, "secs": 20.5}
+{"exp": "cnn", "tied": true, "L": 2, "P": 1024, "acc": 1.0, "secs": 29.5}
+{"exp": "cnn", "tied": false, "L": 3, "P": 32, "acc": 0.16324999928474426, "secs": 1.4}
+{"exp": "cnn", "tied": false, "L": 3, "P": 64, "acc": 0.16849999874830246, "secs": 2.0}
+{"exp": "cnn", "tied": false, "L": 3, "P": 128, "acc": 0.20162499696016312, "secs": 5.0}

@@ -1,0 +1,757 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Open problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\hgt}{\operatorname{ht}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Nint}{N_{L}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+
+\title{Self-Similar Recursive Grids:\\ Formalization, Symmetry, and Learning Rules Beyond Backpropagation}
+\author{Working notes on the ``recursive grid'' idea}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formalize the ``recursive grid'' idea. A grid of $n$ cells has a configuration $C$ and an
+outside state $f(C)$. Grids are the cells of larger grids, and one cell map $f$ is used at every
+position and every scale. We call the result a \emph{self-similar recursive grid} (SRG).
+Structurally, an SRG is a recurrent network unrolled in \emph{scale} instead of time, with
+branching~$n$. This one observation organizes everything else. An RNN has a single trajectory;
+an SRG has $n^{L}$ root-to-leaf trajectories and $\Nint=(n^L-1)/(n-1)$ copies of the same
+local problem per input.
+
+We prove a set of results that say exactly which non-backpropagation learning rules the symmetry
+makes possible, and when they win:
+(i)~the invariance group of an exchangeable SRG is exactly the iterated wreath product
+$\Aut(T_L)$, and an SRG with a multiset-injective cell map is a complete invariant for it;
+(ii)~every $\Aut(T_L)$-invariant covariance has exactly $L{+}1$ eigenvalues, one per scale,
+so linear learning dynamics decouple by scale and the optimal preconditioner is $L{+}1$ numbers;
+(iii)~a discrete SRG is a tree automaton, and a Myhill--Nerode theorem gives its minimal state
+space; the ``copy grids with equal histories'' idea is exactly this minimal quotient, and scale
+tying is precisely what makes cross-scale (``diagonal'') copying valid;
+(iv)~one constant $\kappa$ (the scale gain of $f$) bounds both how copy errors are amplified and
+how much each level contributes to the backprop gradient; in the stable regime $\kappa<1$,
+backprop trains the shared map almost entirely from the few top-level nodes;
+(v)~for self-similar generative processes, Bayes-optimal inference \emph{is} an SRG, the shared
+kernel is identifiable from the law of a single bottom grid, the latent labelling is pinned by
+self-similarity itself (so no labels are needed for generic kernels), and one unlabelled example
+supplies $n^{L-1}$ conditionally independent samples of the kernel;
+(vi)~three concrete local rules come with guarantees: frozen-input (``scale-equilibrium'')
+learning, scale-Bellman bootstrapping with error linear in depth, and node-parallel evolution
+strategies, which have a population of size $\Nint$ at the cost of two forward passes.
+We check every quantitative claim numerically at toy scale. In the headline demonstration, a
+single unlabelled tree with $19{,}683$ leaves yields a root classifier within $0.2$ points of the
+Bayes oracle, with zero labels and no backpropagation.
+\end{abstract}
+
+\tableofcontents
+
+%==========================================================================
+\section{The object, cleaned up}\label{sec:def}
+%==========================================================================
+
+\subsection{Trees and heights}
+Fix a branching factor $n\ge 2$ and a depth $L\ge1$. The complete rooted $n$-ary tree $T_L$ has
+node set $V=\bigcup_{\ell=0}^{L}[n]^\ell$ (words over $[n]=\{1,\dots,n\}$), root $\epsilon$,
+and children $w1,\dots,wn$ of each node $w$ with $|w|<L$. The \emph{height} is
+$\hgt(w)=L-|w|$, so leaves have height $0$ and the root has height $L$. Write $V^{(h)}$ for the
+$n^{L-h}$ nodes of height $h$, and $\Nint=\sum_{h=1}^{L}n^{L-h}=(n^L-1)/(n-1)$ for the number of
+internal nodes (grids). The leaves below a node $w$ form its \emph{block}.
+
+\subsection{Self-similar recursive grids}
+\begin{definition}[SRG]\label{def:srg}
+A \emph{self-similar recursive grid} is a tuple $(\Sigma,\cX,e,f,r)$ with an input alphabet
+$\Sigma$, a state space $\cX$, a leaf encoder $e:\Sigma\to\cX$, a \emph{cell map}
+$f:\cX^n\to\cX$, and a readout (observer) $r:\cX\to\mathcal Y$. Given an input
+$\sigma:[n]^L\to\Sigma$, define
+\[
+x_w=e(\sigma_w)\ \ (|w|=L),\qquad C_w=(x_{w1},\dots,x_{wn}),\qquad x_w=f(C_w)\ \ (|w|<L).
+\]
+$C_w$ is the \emph{configuration} of grid $w$, $x_w$ its \emph{outside state}, and $r(x_w)$ what
+the observer reports about grid $w$. The same $f$ is used at every position and at every height.
+\end{definition}
+
+\noindent Dictionary to the original notes:
+\begin{center}\begin{tabular}{ll}
+\toprule
+notes & formal object\\\midrule
+percepts of grid $i$ & cells $x_{w1},\dots,x_{wn}$\\
+configuration $C_i$ & $C_w\in\cX^n$\\
+outside state $f(C_i)$ & $x_w=f(C_w)\in\cX$\\
+``$f$ maps $C_i$ to a coordinate in the larger space'' & $\cX$ (lattice, $\R^d$, simplex, finite set)\\
+process $P_i$ & the law (and dynamics) of the leaf input $\sigma$\\
+observer $F(S,C_i)$, strategy $S$ from learner $\mathcal L$ & readout $r$ (and $f$), chosen by a learning rule\\
+history $H(G_i)$ & $H_w(t)=(C_w(t'))_{t'\le t}$ (\S\ref{sec:time})\\
+``the substrate is identical'' & one $f$ at all $\Nint$ nodes (scale tying)\\
+\bottomrule
+\end{tabular}\end{center}
+
+\paragraph{Height maps.} Let $F_0=e$ and
+$F_{h+1}(s)=f\big(F_h(s_1),\dots,F_h(s_n)\big)$ for $s\in\Sigma^{[n]^{h+1}}$, where $s_i$ is the
+$i$-th sub-block of $s$.
+\begin{lemma}[self-similarity]\label{lem:selfsim}
+$x_w=F_{\hgt(w)}(\sigma|_w)$, where $\sigma|_w(u)=\sigma_{wu}$ is the content of $w$'s block.
+In particular, every node of height $h$, at every position, computes the same function $F_h$,
+and $F_{h'}$ contains $n^{h'-h}$ copies of $F_h$ as subcomputations whenever $h\le h'$.
+\end{lemma}
+\begin{proof}Induction on height.\end{proof}
+
+\paragraph{Variants.}
+\begin{enumerate}
+\item \emph{Scale-untied}: height-dependent maps $f_h$ (weights still shared across positions).
+We use this only as a comparison point.
+\item \emph{Exchangeable}: $f(c_{\pi 1},\dots,c_{\pi n})=f(c)$ for all $\pi\in S_n$.
+The percepts of a grid then form an unordered set.
+\item \emph{Lattice (the ``simpler cousin'')}: $n=b^d$ and child $i$ is an offset in
+$\{0,\dots,b-1\}^d$. With $f(c)=\phi(\sum_i W_i c_i+\beta)$, an SRG is \emph{exactly} a depth-$L$
+CNN with kernel size $b$ and stride $b$ that uses the same weights at every layer.
+Grid $w$ of height $h$ is a $b^h\times\cdots\times b^h$ patch, and its ``coordinate in the
+larger grid'' is the point $\lfloor p/b^h\rfloor$ of the coarse lattice, where $p$ is any leaf
+position inside the patch.
+\item \emph{Temporal}: $x_w(t)=f(C_w(t),x_w(t-1))$ with leaf inputs $\sigma(t)$ (\S\ref{sec:time}).
+\end{enumerate}
+
+\subsection{The structural fact: an RNN in scale}\label{sec:rnn}
+\begin{proposition}\label{prop:rnn}
+The SRG is the depth-$L$ unrolling of a one-vertex graph with $n$ directed self-loops. For $n=1$
+it is the iterated map $x_L=f^{\circ L}(e(\sigma))$, i.e.\ an autonomous RNN unrolled for $L$
+steps. For $n\ge2$, the unrolling has $n^L$ root-to-leaf paths (``scale trajectories''), and the
+same map is applied at $\Nint$ nodes.
+\end{proposition}
+The whole theory of recurrent networks therefore has scale analogues, with \emph{time replaced
+by scale}. There is one crucial difference: an RNN sees \emph{one} trajectory, while an SRG
+sees an exponentially large \emph{ensemble} of trajectories that share the map.
+\begin{center}\begin{tabular}{lll}\toprule
+RNN (time) & SRG (scale) & where\\\midrule
+backprop through time & backprop through scale & \S\ref{sec:cont}\\
+exploding/vanishing gradients & scale gain $\kappa$; criticality & Prop.~\ref{prop:grad}\\
+TD / Bellman bootstrapping & scale-Bellman bootstrapping & \S\ref{sec:bellman}\\
+causal states / minimal automata & Myhill--Nerode for grids & \S\ref{sec:discrete}\\
+one trajectory & $n^L$ trajectories, $\Nint$ copies of $f$ & \S\ref{sec:sshp},\S\ref{sec:rules}\\
+\bottomrule\end{tabular}\end{center}
+
+%==========================================================================
+\section{Symmetry}\label{sec:sym}
+%==========================================================================
+Two different symmetries are easily conflated, so we separate them.
+\emph{Computational self-similarity} (Lemma~\ref{lem:selfsim}) holds for every SRG: the parameter
+$f$ has a single orbit, namely all nodes. \emph{Functional invariance} holds only for exchangeable
+SRGs: a group acts on inputs and leaves $F_L$ unchanged. The learning rules in
+\S\ref{sec:rules} mostly use the first; the spectral results below use the second.
+
+\subsection{The invariance group}
+Let $\Aut(T_L)$ act on leaves (permutations induced by tree automorphisms). Choosing a
+permutation of the children at each internal node gives
+\[
+\Aut(T_L)\cong \underbrace{S_n\wr S_n\wr\cdots\wr S_n}_{L},\qquad |\Aut(T_L)|=(n!)^{\Nint}.
+\]
+A leaf permutation lies in $\Aut(T_L)$ iff it maps every block to a block.
+
+\begin{proposition}\label{prop:inv}
+If $f$ is exchangeable, then $F_L(\sigma\circ g)=F_L(\sigma)$ for every $g\in\Aut(T_L)$.
+\end{proposition}
+\begin{proof}Induction: an automorphism permutes children and applies automorphisms inside
+each child's subtree. The children's states are invariant by induction, and $f$ ignores their
+order.\end{proof}
+
+\begin{proposition}[exactness and completeness]\label{prop:exact}
+Let $\Sigma\supseteq\{0,1\}$, let $e$ be injective, and let $f$ be \emph{multiset-injective}
+on reachable states: $f(c)=f(c')$ iff $c'$ is a permutation of $c$. Then
+\begin{enumerate}
+\item $F_L(s)=F_L(s')$ iff $s'=s\circ g$ for some $g\in\Aut(T_L)$ (complete invariant);
+\item $\{g\in\mathrm{Sym}(\text{leaves}):F_L\circ g=F_L\}=\Aut(T_L)$ exactly;
+\item every $\Aut(T_L)$-invariant function factors as $\tilde\phi\circ F_L$ (universality).
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(1) Induction on height. If $F_{h+1}(s)=F_{h+1}(s')$, multiset-injectivity gives a permutation
+$\pi$ with $F_h(s_i)=F_h(s'_{\pi i})$. By induction $s_i=s'_{\pi i}\circ g_i$, and $\pi$
+together with the $g_i$ is an automorphism.
+(2) Suppose $g\notin\Aut(T_L)$. Then some block $B$ (of height $1\le h<L$) has an image $g(B)$
+that is not a block. Put $\sigma=\mathbf 1_B$. If $F_L(\sigma\circ g^{-1})=F_L(\sigma)$, then
+by (1) $\mathbf 1_{g(B)}=\mathbf 1_{a(B)}$ for some automorphism $a$, so $g(B)=a(B)$ is a block,
+a contradiction.
+(3) follows from (1).
+\end{proof}
+Such $f$ exist on the countable reachable set of any finite $\Sigma$. Continuous injective $f$
+cannot exist on all of $(\R^d)^n$, for dimension reasons. \emph{Checked numerically for
+$(n,L)\in\{(2,2),(2,3),(3,2)\}$ by enumerating all $(n^L)!$ leaf permutations: the stabiliser
+orders are $8,128,1296=(n!)^{\Nint}$.}
+
+\subsection{Scale decomposition: the symmetry leaves exactly \texorpdfstring{$L+1$}{L+1} numbers}
+For $0\le k<L$, let $U_k$ be the functions on leaves that are constant on height-$k$ blocks and
+sum to zero on every height-$(k{+}1)$ block. Let $U_L$ be the constants. These are the tree-Haar
+(wavelet) detail spaces: $\R^{n^L}=\bigoplus_{k=0}^{L}U_k$ orthogonally, with
+$\dim U_k=(n-1)n^{L-k-1}$ and $\dim U_L=1$. Let $h(i,j)$ be the height of the lowest common
+ancestor of leaves $i$ and $j$.
+
+\begin{theorem}[scale spectrum]\label{thm:spec}
+Let $C$ be an $n^L\times n^L$ matrix with $C_{g i,g j}=C_{ij}$ for all $g\in\Aut(T_L)$.
+Then $C_{ij}=c_{h(i,j)}$ for some numbers $c_0,\dots,c_L$, and $C$ acts on $U_k$ as the scalar
+\[
+\sigma_k=\sum_{h=0}^{k}N'_h c_h-n^k c_{k+1}\quad(0\le k<L),\qquad
+\sigma_L=\sum_{h=0}^{L}N'_h c_h,
+\]
+where $N'_0=1$ and $N'_h=(n-1)n^{h-1}$. Hence the invariant matrices form a commutative algebra
+of dimension $L+1$, spanned by the orthogonal projections $P_k$ onto $U_k$.
+\end{theorem}
+\begin{proof}
+$\Aut(T_L)$ acts transitively on ordered pairs of leaves with a given LCA height. It is
+transitive on leaves, and the stabiliser of a leaf $i$ is transitive on the leaves at LCA height
+$h$ from $i$. This gives $C_{ij}=c_{h(i,j)}$. Now fix $u\in U_k$ and a leaf $i$.
+Leaves $j$ with $h(i,j)\le k$ lie in $i$'s height-$k$ block, where $u\equiv u_i$; there are
+$N'_h$ of them at each $h\le k$. Leaves with $h(i,j)=k+1$ lie in the rest of $i$'s
+height-$(k{+}1)$ block, where $u$ sums to $-n^ku_i$. For $h(i,j)>k+1$, $c$ is constant on whole
+height-$(k{+}1)$ blocks, on which $u$ sums to zero. So
+$(Cu)_i=\big(\sum_{h\le k}N'_hc_h-n^kc_{k+1}\big)u_i$.
+\end{proof}
+
+\begin{corollary}[learning decouples by scale]\label{cor:gd}
+For linear regression on inputs with $\Aut(T_L)$-invariant covariance $C$, gradient flow
+$\dot\beta=-(C\beta-b)$ satisfies $P_k(\beta_t-\beta^*)=e^{-\sigma_k t}P_k(\beta_0-\beta^*)$.
+The $L{+}1$ scales are learned independently, at rates $\sigma_k$. The preconditioner
+$\Pi=\sum_k\sigma_k^{-1}P_k$ is exact Newton, costs $O(n^L)$ to apply (one Haar pass), and is
+specified by $L{+}1$ numbers. Those numbers can be estimated by pooling over the orbit: a single
+input supplies $n^L N'_h$ leaf pairs for each $c_h$.
+\end{corollary}
+
+\begin{example}[broadcast data; the parameter $q=n\lambda^2$]\label{ex:bsc}
+Let the leaves be $\pm1$ spins from a binary symmetric broadcast on $T_L$ with edge
+correlation $\lambda$. Then $c_h=\lambda^{2h}$ and, with $q=n\lambda^2$,
+\[
+\sigma_k=1+\big(1-\tfrac1n\big)\sum_{h=1}^{k}q^h-\lambda^2q^k .
+\]
+If $q<1$, all $\sigma_k$ are $\Theta(1)$ and the problem is well conditioned. If $q>1$, then
+$\sigma_k\approx\lambda^2\frac{n-q}{q-1}q^k$ grows geometrically. Coarse scales are learned
+exponentially faster than fine ones (a \emph{spectral bias across scales}), and the condition
+number is $\Theta(q^L)$. The same $q$ is the Kesten--Stigum parameter that decides whether the
+root can be reconstructed (\S\ref{sec:sshp}).
+\end{example}
+\noindent\emph{Checked numerically: eigenvalues of random invariant matrices match the formula to
+$10^{-14}$ for $(n,L)\in\{(2,4),(3,3),(4,2)\}$.}
+
+%==========================================================================
+\section{Discrete grids: automata, minimality, and the ``copy'' idea}\label{sec:discrete}
+%==========================================================================
+Let $\Sigma$ and $\cX$ be finite. An SRG is then a deterministic bottom-up tree automaton on
+complete $n$-ary trees with a height-independent transition $f$. This identification makes the
+``if histories are similar, copy the grid'' idea exact.
+
+\begin{definition}[context equivalence]
+Fix a target $\phi:\Sigma^{[n]^L}\to\mathcal Y$. For block contents $s,s'\in\Sigma^{[n]^h}$ put
+$s\equiv_h s'$ iff $\phi(\sigma[w\!\leftarrow\! s])=\phi(\sigma[w\!\leftarrow\! s'])$ for every
+node $w$ of height $h$ and every input $\sigma$ (here $\sigma[w\leftarrow s]$ overwrites $w$'s
+block). Let $k_h(\phi)$ be the number of classes.
+Two grids are equivalent iff no context, anywhere, can tell them apart.
+\end{definition}
+
+\begin{theorem}[Myhill--Nerode for SRGs]\label{thm:mn}
+\begin{enumerate}
+\item $\equiv_h$ is a congruence: if $s_i\equiv_h s'_i$ for all $i$, then
+$(s_1,\dots,s_n)\equiv_{h+1}(s'_1,\dots,s'_n)$.
+\item If a (possibly scale-untied) SRG computes $\phi=r\circ F_L$, then $F_h(s)=F_h(s')$
+implies $s\equiv_h s'$. Hence it has at least $k_h(\phi)$ reachable states at height $h$.
+\item The quotient SRG with states $\Sigma^{[n]^h}/\!\equiv_h$ and
+$f_h([s_1],\dots,[s_n])=[(s_1,\dots,s_n)]$ computes $\phi$, attains every bound in (2), and
+every SRG for $\phi$ with reachable states maps homomorphically onto it. It is the unique
+minimal SRG.
+\item With scale tying: $\max_h k_h\le\min|\cX|\le\sum_{h=0}^{L}k_h$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(1) Replace children one at a time. Each replacement swaps a height-$h$ block inside some
+context, which by hypothesis leaves $\phi$ unchanged.
+(2) Equal states at $w$ give equal states at every ancestor, whatever the context.
+(3) $f_h$ is well defined by (1). By induction the quotient's state at $w$ is the class of
+$\sigma|_w$, and $\equiv_L$ is equality of $\phi$. The homomorphism sends a state to the class of
+any preimage, which is well defined by (2).
+(4) The lower bound is (2). For the upper bound, use the disjoint union of the height-wise
+quotients.
+\end{proof}
+
+\begin{example}[which tasks are ``self-similar'']\label{ex:tasks}
+Global parity and recursive majority have $k_h=2$ at every height, and tied $f$ with two states
+suffices. \emph{Global} majority (over all $n^L$ leaves) has $k_h=n^h+1$ for all $h<L$, which is
+exponential in height. Every pair of block counts is separated by some context because
+$n^h\le n^L/2$. The SRG's natural task class is therefore the tasks whose \emph{context rank}
+$k_h$ stays bounded across scales. \emph{Checked by brute force: $(2,2,2,2)$, $(2,2,2)$ and
+$(2,4,2)$ respectively, and $k_h\le3$ for a random 3-state tied automaton.}
+\end{example}
+
+\paragraph{Copying grids is lossless exactly on $\equiv_h$-classes.}
+Replacing grid $v$ by grid $u$ (reusing $u$'s outside state) never changes any output if and
+only if their contents are context-equivalent. This is the formal content of ``replace one grid
+with another'': the minimal SRG is the quotient of all grids by indistinguishability in every
+context.
+
+\begin{proposition}[memoized cost]\label{prop:memo}
+Let $f$ be scale-tied with finite $\cX$.
+(i)~Over \emph{all inputs of all depths}, at most $|\cX|^n$ distinct evaluations of $f$ are ever
+needed, because $f$ is a table.
+(ii)~On an input given as a hash-consed DAG with $S(\sigma)$ distinct subtrees, memoized
+evaluation costs $O(S(\sigma))$ lookups. $S(\sigma)$ can be $O(L)$ for highly regular inputs,
+against $\Nint\sim n^{L-1}$ nodes.
+(iii)~A scale-untied SRG needs separate tables per height. Only tying allows a configuration
+seen at height $h$ to be reused at height $h'\ne h$: if $C_u=C_v$ then $x_u=x_v$ whatever the
+heights and positions (\S\ref{sec:transfer}).
+\end{proposition}
+
+\begin{remark}[Hashlife is this idea]\label{rem:hashlife}
+Gosper's Hashlife \cite{gosper1984} simulates a radius-1 cellular automaton on a quadtree.
+By the light cone, the map $\Psi_k$ from a $2^k$-block to its central $2^{k-1}$-block after
+$2^{k-2}$ steps is well defined. $\Psi_k$ is built from $13$ applications of $\Psi_{k-1}$ to
+sub-blocks by the \emph{same rule at every level}, and nodes are memoized by content. This is a
+(slightly generalized) scale-tied SRG in which the outside state is ``the future of my centre'',
+and it achieves exponential speedups on regular patterns. It is a working existence proof that
+the ``copy identical grids'' idea, combined with scale tying, yields exponential savings.
+\end{remark}
+
+\paragraph{Learning.}
+Learning a discrete SRG from data means learning a tree automaton. The idea of merging states
+whose contexts agree is the basis of provably correct non-gradient algorithms: identification in
+the limit by state merging \cite{garcia1993}, and polynomial-time learning of regular tree
+languages with membership and equivalence queries \cite{sakakibara1990,drewes2003}. The notes'
+``history coupling'' is, in this language, \emph{state merging}.
+
+\subsection{Histories: the temporal version}\label{sec:time}
+In the temporal SRG, grid $w$ has a history $H_w(t)$. Call two histories \emph{causally
+equivalent} if they induce the same conditional law of the future configuration process. The
+quotient is the minimal sufficient statistic of the past for the future: the causal states, or
+$\varepsilon$-machine \cite{crutchfield1989,shalizi2001}. It is the temporal twin of
+Theorem~\ref{thm:mn}, with ``every context'' replaced by ``every future''.
+
+\begin{proposition}[what copying histories does and does not preserve]\label{prop:hist}
+Suppose grids $u,v$ share dynamics (identical substrate) and have causally equivalent histories.
+Then substituting $u$'s predictive state for $v$'s is \emph{exact for every marginal prediction
+about $v$}. However, generating $v$'s future \emph{by copying $u$'s trajectory} gives the right
+marginal law for $v$ while introducing an artificial dependence between $u$ and $v$. Joint
+statistics of $(u,v)$ can then be wrong, unless the true futures are conditionally independent
+given the histories and the copy uses fresh randomness.
+\end{proposition}
+\begin{proof}The predictive law of $v$ depends on its history only through its causal state.
+For the joint claim, take two independent fair coins with identical (empty) histories: copying
+makes them perfectly correlated.\end{proof}
+\noindent So ``enforce coupling in future trajectories'' is safe for predicting each grid and
+unsafe for predicting how grids co-vary. The exact deterministic case is Hashlife.
+
+%==========================================================================
+\section{Continuous grids: the scale gain \texorpdfstring{$\kappa$}{kappa}}\label{sec:cont}
+%==========================================================================
+Let $\cX$ be a normed space, $f_\theta$ differentiable with $J_i=\partial f/\partial c_i$, and
+define the \emph{scale gain}
+\[
+\kappa=\sup_{c}\sum_{i=1}^{n}\norm{J_i(c)}_{\mathrm{op}},\qquad
+B=\sup_c\norm{\partial_\theta f_\theta(c)}_{\mathrm{op}} .
+\]
+By the mean value inequality, $f$ is $\kappa$-Lipschitz in the max-over-children norm.
+
+\begin{proposition}[approximate copying budget]\label{prop:copy}
+Suppose that at every internal node of height $h$ the computed value is replaced by any value
+within $\eps_h$ of $f(\tilde C_w)$, where $\tilde C_w$ are the (possibly already perturbed)
+children, for example a cached state of a nearby configuration. Then
+$\norm{\tilde x_w-x_w}\le\sum_{j=1}^{\hgt(w)}\kappa^{\hgt(w)-j}\eps_j$.
+\end{proposition}
+\begin{proof}$e_h\le\eps_h+\kappa e_{h-1}$ with $e_0=0$.\end{proof}
+\noindent If $\kappa<1$, tolerances can grow like $\kappa^{-(L-h)}$ towards the leaves.
+Aggressive approximate copying is safest exactly where the grids are most numerous. If
+$\kappa>1$ (chaotic scale dynamics), only exact copying is safe, which is the discrete regime of
+\S\ref{sec:discrete}.
+
+\begin{proposition}[anatomy of backprop through scale]\label{prop:grad}
+For a loss $\ell(x_\epsilon)$, $\nabla_\theta\ell=\sum_{h=1}^{L}G_h$ with
+$G_h=\sum_{w\in V^{(h)}}\partial_\theta f(C_w)^{\!\top}\delta_w$, where
+$\delta_\epsilon=\nabla\ell$ and $\delta_{wi}=J_i(C_w)^{\!\top}\delta_w$. Moreover
+\[
+\sum_{w\in V^{(h)}}\norm{\delta_w}\le\kappa^{L-h}\norm{\nabla\ell},\qquad
+\norm{G_h}\le B\,\kappa^{L-h}\norm{\nabla\ell}.
+\]
+\end{proposition}
+\begin{proof}$\sum_i\norm{\delta_{wi}}\le\sum_i\norm{J_i}\norm{\delta_w}\le\kappa\norm{\delta_w}$;
+iterate, then sum over the level.\end{proof}
+
+\begin{corollary}[scale starvation]\label{cor:starve}
+If $\kappa<1$, the bottom $m$ levels contain a fraction $\approx1-n^{-m}$ of all grids but contribute at
+most $B\norm{\nabla\ell}\kappa^{L-m}/(1-\kappa)$ to the gradient of the shared parameter.
+Backprop trains $f$ mainly on the few top-level configurations and discards the statistical
+wealth at the bottom. Local rules (\S\ref{sec:rules}) weight every grid equally.
+\end{corollary}
+\begin{remark}[criticality]
+$\kappa$ is a worst case. For typical, weakly correlated Jacobians, the mean-field analogue
+replaces $\kappa$ by $\chi=\E\sum_i\norm{J_i^\top u}^2/\norm u^2$ in
+$\sum_{w\in V^{(h)}}\norm{\delta_w}^2\approx\chi^{L-h}\norm{\nabla\ell}^2$. Backprop is balanced
+across scales only near $\chi=1$, the tree analogue of the edge of chaos \cite{schoenholz2017}.
+Because $f$ is tied, criticality must hold at the \emph{fixed-point distribution of states} that
+$f$ itself induces deep in the tree (its renormalization-group fixed point), not merely at
+initialization.
+\end{remark}
+\noindent The same $\kappa$ therefore governs forward robustness (copying) and backward credit
+assignment. The regime where copying is cheap ($\kappa<1$) is exactly the regime where
+backprop starves the bottom levels.
+
+%==========================================================================
+\section{Self-similar processes: where the symmetry pays off}\label{sec:sshp}
+%==========================================================================
+Up to now, symmetry has been a property of the architecture. It pays off statistically when the
+\emph{process} generating the percepts is itself self-similar.
+
+\begin{definition}[self-similar hierarchical process, SSHP]
+Let $|\cX|=k$ and fix a root prior $\pi$. Draw $z_\epsilon\sim\pi$, and for each node draw
+$(z_{w1},\dots,z_{wn})\sim K(\cdot\mid z_w)$ with the \emph{same} kernel $K$ at every node. The
+leaves $\sigma_w=z_w$ are observed. In the \emph{broadcast} (CI) case,
+$K(a\mid z)=\prod_iM_i(a_i\mid z)$ with column-stochastic $M_i\in\R^{k\times k}$.
+\end{definition}
+
+\begin{theorem}[exact inference is an SRG]\label{thm:bp}
+Let $\beta_w(z)=P(\sigma|_w\mid z_w=z)$. Then $\beta_w=\Phi(\beta_{w1},\dots,\beta_{wn})$ with
+$\Phi(\beta_1,\dots,\beta_n)(z)=\sum_aK(a\mid z)\prod_i\beta_i(a_i)$, which is
+$\bigodot_i M_i^\top\beta_i$ in the CI case. Leaves have $\beta_w=\mathbf e_{\sigma_w}$.
+Because $\Phi$ is multilinear, the normalized messages obey the tied recursion
+$x_w=f(C_w)$ with $f=\mathrm{normalize}\circ\Phi$ on the simplex. The Bayes posterior of the
+root is $r(x_\epsilon)\propto\pi\odot x_\epsilon$. The downward (context) messages
+$\gamma_{wi}=M_i\big(\gamma_w\odot\bigodot_{j\ne i}M_j^\top\beta_{wj}\big)$ are also
+height-independent.
+\end{theorem}
+\begin{proof}Conditional independence of subtrees given $z_w$ (standard belief propagation).
+\end{proof}
+\noindent So for an SSHP, the tied SRG is not merely a plausible inductive bias: its cell map is
+the Bayes-optimal one, a tied sum--product cell.
+
+\begin{theorem}[identifiability from the bottom, and labels from self-similarity]\label{thm:ident}
+Consider a CI SSHP with $n\ge3$, invertible $M_i$, and height-1 and height-2 latent marginals
+with full support.
+\begin{enumerate}
+\item The law of a \emph{single bottom grid}, $\sum_zp_1(z)\bigotimes_iM_i[:,z]$, determines
+$(p_1,M_1,\dots,M_n)$ up to one common permutation $P$ of the latent labels
+(Kruskal \cite{kruskal1977,allman2009}). Jennrich's simultaneous diagonalization recovers them
+efficiently.
+\item Let $R$ range over permutation matrices. If there is no pair $(R\ne I,S)$ with
+$R^\top M_iS=M_iR$ for all $i$, then the laws of height-1 and height-2 grids determine $P$.
+The kernel is then identified \emph{including its labels} with no labelled data. This condition
+fails only on a Lebesgue-null set of kernels.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(1) The children are CI given the parent, and three invertible factors have Kruskal ranks
+summing to $3k\ge2k+2$.
+(2) Level 1 gives $\hat M_j=M_jP$. Child $i$ of a height-2 grid emits the leaf tuple of a
+height-1 grid through the channel $A M_i$, where $A=M_1\odot\cdots\odot M_n$ (column-wise
+Khatri--Rao) has full column rank. Kruskal at height 2 gives $AM_iQ$ for an unknown
+permutation $Q$. Since $\hat A=AP$ is known, we obtain $D_i=\hat A^{+}AM_iQ=P^\top M_iQ$.
+A candidate labelling $P'$ asserts the kernel $M_jR$, where $R=PP'^\top$. Self-similarity
+requires the height-2$\to$1 channel in leaf labels, $P'D_iQ'^\top$, to equal $M_iR$ for some
+$Q'$. That is $R^\top M_iS=M_iR$ with $S=QQ'^\top$. The truth $R=I$ satisfies this with $S=I$.
+For each fixed $(R\ne I,S)$ the condition is a linear subspace; it excludes some elementary
+matrix $E_{ab}$, so it is proper. The column-stochastic matrices span the matrix space, so the
+subspace meets them in a null set. There are finitely many $(R,S)$.
+\end{proof}
+\begin{remark}
+The symmetric channel $M=aI+b\mathbf 1\mathbf 1^\top$ is degenerate ($S=R^2$ works). Indeed,
+``child copies parent'' and ``child copies $r(\text{parent})$'' then produce the same leaf law.
+Top-down information (labels) is needed exactly to break this residual ambiguity, which consists
+of at most $k!$ hypotheses. \emph{Checked: the demo kernel is non-degenerate, and
+likelihood selection among the $k!$ candidates recovers the true labelling.}
+\end{remark}
+
+\begin{theorem}[bottom statistics: effective sample size]\label{thm:neff}
+Let $\lambda$ be the largest maximal (Hirschfeld--Gebelein--R\'enyi) correlation of a
+parent--child pair, $q=n\lambda^2$, $N_1=n^{L-1}$, and $g$ any function of a bottom
+configuration with $\Var g(C_w)\le V$. For $\hat g=N_1^{-1}\sum_{w\in V^{(1)}}g(C_w)$,
+\[
+\Var\hat g\le\frac{V}{N_1}\Big[1+\big(1-\tfrac1n\big)\sum_{j=1}^{L-1}q^j\Big].
+\]
+Hence $N_{\mathrm{eff}}=V/\Var\hat g$ is at least $\frac{1-q}{1-q/n}\,n^{L-1}$ if $q<1$, at least
+$n^{L-1}/L$ if $q=1$, and at least $c_q\,\lambda^{-2(L-1)}$ with $c_q=\frac{q-1}{(1-1/n)q}$
+(asymptotically in $L$) if $q>1$. In every regime it grows
+exponentially with depth, whereas root supervision provides one label per example.
+\end{theorem}
+\begin{proof}
+For $u\ne v$ at height 1 with LCA at height $j+1$,
+$g(C_u)-z_u-\cdots-z_{\mathrm{lca}}-\cdots-z_v-g(C_v)$ is a Markov chain with $2j$ latent
+edges. Maximal correlation is submultiplicative along Markov chains \cite{witsenhausen1975},
+so $|\Cov|\le\lambda^{2j}V$. Each $u$ has $(n-1)n^{j-1}$ such partners. Sum.
+\end{proof}
+\noindent\emph{Checked: for the binary broadcast the bound is within a factor $1.2$--$1.6$ of
+the exact variance for $q\in\{0.48,1,1.92\}$ and $L$ up to $12$, and the exact formula matches
+Monte Carlo.}
+
+\medskip
+Theorem~\ref{thm:neff} is pessimistic for learning the \emph{kernel}. The next result is the
+one that matters.
+
+\begin{theorem}[one example contains $n^{L-1}$ independent kernel samples]\label{thm:ci}
+Conditioned on the height-1 latents $Z_1=(z_w)_{w\in V^{(1)}}$, the bottom configurations are
+\emph{independent}, with $C_w\sim K(\cdot\mid z_w)$. Consequently the empirical moment tensor is
+\[
+\hat T=\sum_z\hat p_z\bigotimes_iM_i[:,z]+E,\qquad \E\big[\norm E_F^2\,\big|\,Z_1\big]\le\frac1{N_1},
+\]
+where $\hat p$ is the empirical histogram of $Z_1$. All correlation between bottom grids enters
+through $\hat p$, and it leaves the rank-$k$ factors \emph{unchanged}. Any factor-recovery method
+that allows arbitrary positive weights (Jennrich, tensor power iteration, EM with free weights)
+therefore sees noise of order $N_1^{-1/2}=n^{-(L-1)/2}$, independently of $q$. The only
+requirement is that $\min_z\hat p_z$ stays bounded away from zero.
+\end{theorem}
+\begin{proof}
+Tree Markov property. $E=N_1^{-1}\sum_w(\mathbf e_{C_w}-\mu_{z_w})$ is a sum of conditionally
+independent, conditionally centred terms of norm at most 1.
+\end{proof}
+
+\paragraph{Demonstration.} We use $k=n=3$ and a generic diagonally dominant kernel with
+$\lambda_2=0.72$ ($q=1.56$, above Kesten--Stigum). The task is to classify the root latent.
+The Bayes oracle scores $0.724$, census (leaf majority) $0.527$, and chance $0.333$.
+\begin{center}\begin{tabular}{lll}\toprule
+method & data & root accuracy\\\midrule
+\multicolumn{3}{l}{\emph{bottom-level learning (Jennrich + EM on height-1 grids), labels pinned by Thm.~\ref{thm:ident}; zero labels}}\\
+\quad one tree of depth 6 / 7 / 8 / 9 & $0$ labels & $0.47$ / $0.40$ / $0.706$ / $\mathbf{0.722}$\\
+\quad labels correctly pinned (of 5 runs) & & 3 / 2 / 5 / 5\\
+\quad kernel error (up to relabelling), same trees & & $0.076$ / $0.044$ / $0.025$ / $0.013$\\
+\quad 20 / 50 / 100 trees of depth 5 & $0$ labels & $0.634$ / $0.706$ / $0.718$\\
+\multicolumn{3}{l}{\emph{backprop from root labels, exact tied BP architecture (best of 3 inits)}}\\
+\quad 10 / 30 / 100 / 300 / 1000 trees & labelled & $0.515$ / $0.655$ / $0.712$ / $0.723$ / $0.662$\\
+\multicolumn{3}{l}{\emph{backprop from root labels, generic neural tied SRG}}\\
+\quad 100 / 1000 / 10000 trees & labelled & $0.553$ / $0.618$ / $0.684$\\
+\bottomrule\end{tabular}\end{center}
+Kernel error from a single tree falls by about $1/\sqrt3$ per level of depth, the $N_1^{-1/2}$
+rate of Theorem~\ref{thm:ci}. An ablation comparing $81U$ bottom grids taken from $U$ trees with
+$81U$ \emph{independent} grids gives the same kernel error (e.g.\ $0.146$ vs.\ $0.171$ at
+$U=1$; $0.017$ vs.\ $0.013$ at $U=100$), as the theorem predicts. Pinning the labels
+(Thm.~\ref{thm:ident}(2)) uses height-2 statistics, which are fewer and correlated, and so needs
+more depth. The kernel learned at the bottom level alone, then deployed at every level, reaches
+the oracle without a single label or backward pass. Backprop through the \emph{same} ideal
+architecture needs on the order of $100$--$300$ labels and suffers from local optima (the
+non-monotone $1000$ entry). A generic network is far worse. These are toy-scale numbers. They
+illustrate the theorems and are not benchmarks.
+
+\begin{remark}[Kesten--Stigum duality]
+For the binary broadcast, the root is reconstructible from the leaves as $L\to\infty$ iff $q>1$
+\cite{kesten1966,evans2000,mossel2004}. The same $q$ appears in Theorem~\ref{thm:neff}
+(redundancy of bottom statistics) and in Example~\ref{ex:bsc} (conditioning across scales).
+Below the threshold, bottom statistics are almost independent but the top-level task
+disappears. Above it, the task is solvable and plain averages become correlated. The kernel
+itself (Thm.~\ref{thm:ci}) is protected from this trade-off.
+\end{remark}
+
+%==========================================================================
+\section{Learning rules that exploit the symmetry}\label{sec:rules}
+%==========================================================================
+In a tied SRG, one input presents the \emph{same} local problem ``map a configuration to an
+outside state'' $\Nint$ times. Backprop sums the corresponding gradients through products of up
+to $L$ Jacobians (Prop.~\ref{prop:grad}). Each rule below exploits the repetition differently.
+
+\subsection{Frozen-input learning and scale equilibria}
+Give every grid a local loss $\ell_w(f_\theta(C_w))$, for example a self-supervised prediction by
+the observer. The \emph{local rule} updates $\theta$ with
+$g_{\mathrm{loc}}=\sum_w\partial_\theta\ell_w(f_\theta(C_w))$, treating the inputs $C_w$ as
+constants (stop-gradient). There is no backward pass across scales, all $\Nint$ grids update in
+parallel, and memory is $O(1)$ per grid.
+
+\begin{definition}[scale equilibrium]
+$\theta^*$ is a \emph{scale equilibrium} if
+$\theta^*\in\arg\min_\theta\sum_w\E\,\ell_w(f_\theta(C_w(\theta^*)))$: the shared strategy is a
+best response to the inputs it itself produces. This is a symmetric equilibrium of the game whose
+players are the grids and whose common strategy is the notes' $S$.
+\end{definition}
+Fixed points of the local rule are scale equilibria. They generally differ from minimizers of the
+end-to-end loss, just as TD fixed points differ from minimizers of the value error. They
+coincide under \emph{local realizability}: if $\ell_w\ge0$ and $\ell_w=0$ almost surely at
+$\theta^*$ for every $w$, then $\theta^*$ is both a global minimizer and a scale equilibrium.
+The SSHP results of \S\ref{sec:sshp} are a case where local, moment-based estimation is provably
+consistent.
+
+\subsection{Scale-Bellman bootstrapping}\label{sec:bellman}
+Suppose the observer's target is consistent across scales: $y^*_w=g(y^*_{w1},\dots,y^*_{wn})$
+for a known aggregator $g$ (counts, maxima, logical rules, averages). Ground truth is available
+only at small scales, which is cheap. Train with the one-level loss
+$\norm{r(x_w)-g(\overline{r(x_{w1})},\dots,\overline{r(x_{wn})})}^2$, where the bar denotes a
+stopped gradient, exactly as a TD target.
+
+\begin{proposition}\label{prop:bellman}
+If the consistency residual is at most $\eps$ at every internal node, the leaf error is at most
+$\eps_0$, and $g$ is $\Lambda_g$-Lipschitz in the max norm, then
+$|r(x_w)-y^*_w|\le\Lambda_g^{h}\eps_0+\eps\sum_{j<h}\Lambda_g^j$ at height $h$. For averaging
+aggregators ($\Lambda_g=1$) the error grows only linearly in depth, as $\eps_0+h\eps$. This is the
+scale analogue of the $1/(1-\gamma)$ horizon factor.
+\end{proposition}
+\begin{proof}$e_h\le\eps+\Lambda_g e_{h-1}$.\end{proof}
+
+\subsection{Node-parallel evolution strategies}\label{sec:es}
+Untie temporarily: give node $w$ the copy $\theta_w=\theta+s\xi_w$ with $\xi_w\sim N(0,I)$
+i.i.d., run a forward pass with $+\xi$ and one with $-\xi$, and set
+$\hat g=\frac1{2s\Nint}\sum_w(\ell^+_w-\ell^-_w)\xi_w$.
+\begin{proposition}\label{prop:es}
+$\E\hat g=\frac1{\Nint}\sum_w\partial_{\theta_w}\ell_w\big|_{\theta_w\equiv\theta}+O(s^2)$.
+This is exactly the frozen-input gradient $g_{\mathrm{loc}}/\Nint$, computed with two forward
+passes, no backward pass, and a population of size $\Nint$ at no extra cost.
+\end{proposition}
+\begin{proof}
+$\ell_w$ depends on its own copy and on its descendants' copies. Expand to first order: since
+$\E\,\xi_u\xi_w^\top=\delta_{uw}I$, only the own-copy term survives in the mean. Descendants add
+variance but no first-order bias, and antithetic pairs cancel the even-order terms.
+\end{proof}
+\noindent Descendant cross-terms add variance scaled by path sensitivities, which again are
+bounded by powers of $\kappa$. Heuristically, the relative error behaves like
+$\sqrt{\dim\theta/\Nint}$, which makes ES practical once $\Nint\gg\dim\theta$. The same
+machinery supports \emph{untie--diversify--select--retie}: keep different $\theta_w$ in
+different grids, score them with local losses, and copy the winners everywhere. Self-similarity
+guarantees that a copy which works in one grid is admissible in every grid.
+\emph{Checked: with $\Nint=63$, the ES estimate is within 8\% of the frozen-input gradient
+(Monte Carlo noise) and 65\% away from the full backprop gradient, which itself differs from
+the frozen-input gradient by 63\%.}
+
+\subsection{Summary of rules}
+\begin{center}\begin{tabular}{p{3.6cm}p{5.2cm}p{5.4cm}}\toprule
+rule & what it uses & guarantee\\\midrule
+bottom-level moments + BP & $N_1$ CI copies of the kernel per example & identifiable, labels pinned by self-similarity (Thms.~\ref{thm:ident},~\ref{thm:ci})\\
+frozen-input (local) & all $\Nint$ grids weighted equally & scale equilibrium; exact under local realizability\\
+scale-Bellman & consistency of targets across scale & error $\le\eps_0+h\eps$ (Prop.~\ref{prop:bellman})\\
+node-parallel ES & $\Nint$-sized population for free & unbiased local gradient to $O(s^2)$ (Prop.~\ref{prop:es})\\
+copy / merge & context or history equivalence & lossless iff equivalent; minimal machine (Thm.~\ref{thm:mn})\\
+approximate copy & contraction $\kappa<1$ & root error $\le\sum_h\kappa^{L-h}\eps_h$ (Prop.~\ref{prop:copy})\\
+scale preconditioning & $L{+}1$-dim commutant & exact Newton for invariant quadratics (Cor.~\ref{cor:gd})\\
+\bottomrule\end{tabular}\end{center}
+
+%==========================================================================
+\section{Transfer, including ``diagonal'' transfer}\label{sec:transfer}
+%==========================================================================
+\begin{proposition}\label{prop:transfer}
+In a position-shared, scale-tied SRG:
+\begin{enumerate}
+\item At the level of parameters, transfer between any two grids is total and blind to position
+and scale. Their quotient is a single vertex with $n$ loops (Prop.~\ref{prop:rnn}), so
+``diagonal'' transfer between non-ancestral grids at different heights is indistinguishable
+from vertical transfer.
+\item Upward transfer is exact: by Lemma~\ref{lem:selfsim}, $F_{h'}$ contains $n^{h'-h}$
+copies of $F_h$.
+\item At the level of \emph{states}, tying is what makes diagonal transfer possible: if
+$C_u=C_v$, then $x_u=x_v$ for \emph{any} heights and positions. A scale-untied SRG has no such
+property. Memo tables, merged states and coupled histories can therefore be shared across
+scales (Prop.~\ref{prop:memo}(iii)).
+\end{enumerate}
+\end{proposition}
+\noindent The genuinely new content of ``diagonal transfer'' in the notes is therefore
+state- or history-level transfer (\S\ref{sec:discrete}), not parameter-level transfer.
+Self-similarity of the \emph{input} decides how much of it there is. On a fractal input, every
+level can reuse the same few table entries.
+
+%==========================================================================
+\section{Relation to prior work, and what is new}\label{sec:related}
+%==========================================================================
+Most ingredients have precedents. Recursive and tree-structured networks and backprop through
+structure \cite{goller1996,socher2011} already use this kind of architecture. Weight tying
+across depth appears in Universal Transformers and deep equilibrium models
+\cite{dehghani2019,bai2019}. Local tied update rules appear in neural cellular automata
+\cite{mordvintsev2020}. Same-network-at-every-level part--whole hierarchies appear in GLOM
+\cite{hinton2023}. The mapping between deep learning and the real-space renormalization group
+is due to \cite{mehta2014}, and a mutual-information RG learning rule to \cite{koch2018}. The
+Random Hierarchy Model \cite{cagnetta2024} studies how backprop-trained CNNs learn hierarchical
+grammars, with rules drawn independently per level, i.e.\ \emph{untied}. On the statistical
+side, reconstruction on trees \cite{kesten1966,evans2000,mossel2004} and spectral/tensor learning
+of latent trees \cite{kruskal1977,allman2009,anandkumar2014} are also established. Hashlife
+\cite{gosper1984} is the computational precedent for ``copy identical grids''. The idea that one
+algorithm is reused across the cortical hierarchy is Mountcastle's.
+
+What these notes add is a single formal object that ties these threads together, plus the
+following specific results, which we have not seen stated in this form:
+the exact invariance group and completeness of exchangeable SRGs (Prop.~\ref{prop:exact});
+the $(L{+}1)$-dimensional scale spectrum and its link to $q=n\lambda^2$ (Thm.~\ref{thm:spec},
+Ex.~\ref{ex:bsc}); Myhill--Nerode minimality for scale-tied grids as the formal version of grid
+copying, and the observation that tying is what makes cross-scale copying valid
+(Thm.~\ref{thm:mn}, Prop.~\ref{prop:transfer}); the single constant $\kappa$ governing both copy
+error and backprop's scale starvation (Props.~\ref{prop:copy},~\ref{prop:grad}); label
+identification by self-similarity (Thm.~\ref{thm:ident}(2)); the conditional-independence
+argument that one deep example supplies $n^{L-1}$ independent kernel samples (Thm.~\ref{thm:ci});
+and node-parallel ES as a backward-free estimator of the frozen-input gradient
+(Prop.~\ref{prop:es}). A literature search before publication is still advisable. Some of these
+may exist in scattered form.
+
+%==========================================================================
+\section{Open problems}\label{sec:open}
+%==========================================================================
+\begin{problem}[the gap between scale equilibria and backprop optima]
+Bound the distance between the fixed point of frozen-input learning and the end-to-end optimum
+in terms of $\kappa$ (or $\chi$) and a measure of local realizability, in analogy with the TD
+fixed-point bound $\norm{V_{TD}-V^*}\le(1-\gamma^2)^{-1/2}\norm{\Pi V^*-V^*}$.
+\end{problem}
+\begin{problem}[tied Random Hierarchy Model]
+In the RHM with rules \emph{tied} across levels, show that bottom-level learning (clustering
+synonymous tuples by sibling co-occurrence) has sample complexity independent of $L$. Compare
+this with the $\propto m^{L}$ scaling reported for backprop-trained CNNs on the untied model
+\cite{cagnetta2024}. A separation would be a clean ``backprop is not optimal here'' theorem.
+\emph{Largely addressed in the companion note \texttt{srhm.pdf}.} There, the number of
+unlabelled examples needed falls like $s^{-(L-2)}$, down to one example, with zero labels. In
+the untied model every learner needs $\Omega(vm)$ labels. A lower bound for backprop itself
+remains open.
+\end{problem}
+\begin{problem}[continuous Myhill--Nerode]
+Define $\eps$-context equivalence for real-valued SRGs and relate its covering numbers to the
+minimal dimension of $\cX$ and to the cost of approximate memoization.
+\end{problem}
+\begin{problem}[time $\times$ scale]
+When do the causal states of a parent grid factor through the causal states of its children?
+(Sufficient: independent children processes.) Build a learned, stochastic Hashlife.
+\end{problem}
+\begin{problem}[criticality without backprop]
+The sibling ensemble at each height gives free estimates of Jacobian statistics. Design a local
+rule that keeps $\chi\approx1$ at the self-induced fixed-point distribution.
+\end{problem}
+\begin{problem}[lattice symmetry]
+Extend the harmonic analysis of \S\ref{sec:sym} from $S_n\wr\cdots\wr S_n$ to the
+position-aware group $\mathbb Z_b^d\wr\cdots\wr\mathbb Z_b^d$ of the lattice variant.
+\end{problem}
+
+\appendix
+\section{Reproducibility}
+All checks run on a laptop CPU. \texttt{verify/checks.py} covers Props.~\ref{prop:exact}
+and~\ref{prop:es}, Thms.~\ref{thm:spec}, \ref{thm:mn} and~\ref{thm:neff}, and runs in about 25\,s.
+\texttt{verify/demo\_sshp.py} runs the SSHP demonstration and backprop baselines, and
+\texttt{verify/demo\_one\_tree.py} the single-tree experiment (Thm.~\ref{thm:ci}).
+Outputs are saved next to the scripts.
+
+\begin{thebibliography}{99}\small
+\bibitem{allman2009} E.~Allman, C.~Matias, J.~Rhodes. Identifiability of parameters in latent structure models with many observed variables. \emph{Ann.\ Statist.} 37, 2009.
+\bibitem{anandkumar2014} A.~Anandkumar, R.~Ge, D.~Hsu, S.~Kakade, M.~Telgarsky. Tensor decompositions for learning latent variable models. \emph{JMLR} 15, 2014.
+\bibitem{bai2019} S.~Bai, J.~Z.~Kolter, V.~Koltun. Deep equilibrium models. \emph{NeurIPS} 2019.
+\bibitem{cagnetta2024} F.~Cagnetta, L.~Petrini, U.~Tomasini, A.~Favero, M.~Wyart. How deep neural networks learn compositional data: the random hierarchy model. \emph{Phys.\ Rev.\ X} 14, 2024.
+\bibitem{crutchfield1989} J.~Crutchfield, K.~Young. Inferring statistical complexity. \emph{Phys.\ Rev.\ Lett.} 63, 1989.
+\bibitem{dehghani2019} M.~Dehghani et al. Universal transformers. \emph{ICLR} 2019.
+\bibitem{drewes2003} F.~Drewes, J.~H\"ogberg. Learning a regular tree language from a teacher. \emph{DLT} 2003.
+\bibitem{evans2000} W.~Evans, C.~Kenyon, Y.~Peres, L.~Schulman. Broadcasting on trees and the Ising model. \emph{Ann.\ Appl.\ Probab.} 10, 2000.
+\bibitem{garcia1993} P.~Garc\'ia, J.~Oncina. Inference of recognizable tree sets. Tech.\ report DSIC-II/47/93, Univ.\ Polit\`ecnica de Val\`encia, 1993.
+\bibitem{goller1996} C.~Goller, A.~K\"uchler. Learning task-dependent distributed representations by backpropagation through structure. \emph{ICNN} 1996.
+\bibitem{gosper1984} R.~W.~Gosper. Exploiting regularities in large cellular spaces. \emph{Physica D} 10, 1984.
+\bibitem{hinton2023} G.~Hinton. How to represent part-whole hierarchies in a neural network. \emph{Neural Computation} 35, 2023.
+\bibitem{kesten1966} H.~Kesten, B.~Stigum. Additional limit theorems for indecomposable multidimensional Galton--Watson processes. \emph{Ann.\ Math.\ Statist.} 37, 1966.
+\bibitem{koch2018} M.~Koch-Janusz, Z.~Ringel. Mutual information, neural networks and the renormalization group. \emph{Nature Physics} 14, 2018.
+\bibitem{kruskal1977} J.~Kruskal. Three-way arrays: rank and uniqueness of trilinear decompositions. \emph{Linear Algebra Appl.} 18, 1977.
+\bibitem{mehta2014} P.~Mehta, D.~Schwab. An exact mapping between the variational renormalization group and deep learning. arXiv:1410.3831, 2014.
+\bibitem{mordvintsev2020} A.~Mordvintsev, E.~Randazzo, E.~Niklasson, M.~Levin. Growing neural cellular automata. \emph{Distill}, 2020.
+\bibitem{mossel2004} E.~Mossel. Survey: information flow on trees. \emph{DIMACS Series} 63, 2004.
+\bibitem{sakakibara1990} Y.~Sakakibara. Learning context-free grammars from structural data in polynomial time. \emph{Theoret.\ Comput.\ Sci.} 76, 1990.
+\bibitem{schoenholz2017} S.~Schoenholz, J.~Gilmer, S.~Ganguli, J.~Sohl-Dickstein. Deep information propagation. \emph{ICLR} 2017.
+\bibitem{shalizi2001} C.~Shalizi, J.~Crutchfield. Computational mechanics: pattern and prediction, structure and simplicity. \emph{J.\ Stat.\ Phys.} 104, 2001.
+\bibitem{socher2011} R.~Socher, C.~Lin, A.~Ng, C.~Manning. Parsing natural scenes and natural language with recursive neural networks. \emph{ICML} 2011.
+\bibitem{witsenhausen1975} H.~Witsenhausen. On sequences of pairs of dependent random variables. \emph{SIAM J.\ Appl.\ Math.} 28, 1975.
+\end{thebibliography}
+\end{document}

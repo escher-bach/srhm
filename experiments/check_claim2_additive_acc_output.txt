@@ -1,0 +1,12 @@
+{"grammar": 0, "L": 2, "additive_acc": 0.4936}
+{"grammar": 0, "L": 3, "additive_acc": 0.3159}
+{"grammar": 0, "L": 4, "additive_acc": 0.2314}
+{"grammar": 0, "L": 5, "additive_acc": 0.1795}
+{"grammar": 0, "L": 6, "additive_acc": 0.1484}
+{"grammar": 0, "L": 7, "additive_acc": 0.1329}
+{"grammar": 2, "L": 2, "additive_acc": 0.6464}
+{"grammar": 2, "L": 3, "additive_acc": 0.5084}
+{"grammar": 2, "L": 4, "additive_acc": 0.427}
+{"grammar": 2, "L": 5, "additive_acc": 0.3752}
+{"grammar": 2, "L": 6, "additive_acc": 0.3424}
+{"grammar": 2, "L": 7, "additive_acc": 0.3026}

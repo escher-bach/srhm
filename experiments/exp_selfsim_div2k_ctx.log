@@ -1,0 +1,21 @@
+streamed in 298s
+context      0->1: sigma=1.011+/-0.019 pink=0.738 own R2=0.044
+context      1->0: sigma=0.988+/-0.012 pink=0.738 own R2=0.059
+context      0->3: sigma=1.082+/-0.023 pink=0.857 own R2=0.028
+context      3->0: sigma=0.917+/-0.014 pink=0.756 own R2=0.057
+context      1->4: sigma=1.021+/-0.035 pink=0.865 own R2=0.023
+context      4->1: sigma=0.924+/-0.018 pink=0.874 own R2=0.040
+context      0->5: sigma=1.045+/-0.092 pink=0.907 own R2=0.007
+context      5->0: sigma=0.956+/-0.033 pink=1.255 own R2=0.034
+context      2->4: sigma=1.029+/-0.020 pink=0.895 own R2=0.022
+context      4->2: sigma=0.953+/-0.020 pink=0.920 own R2=0.035
+parent_only  0->1: sigma=1.014+/-0.015 pink=0.763 own R2=0.137
+parent_only  1->0: sigma=0.984+/-0.008 pink=0.782 own R2=0.168
+parent_only  0->3: sigma=1.029+/-0.025 pink=0.823 own R2=0.117
+parent_only  3->0: sigma=0.969+/-0.015 pink=0.794 own R2=0.167
+parent_only  1->4: sigma=1.021+/-0.023 pink=0.861 own R2=0.099
+parent_only  4->1: sigma=0.967+/-0.013 pink=0.891 own R2=0.128
+parent_only  0->5: sigma=1.042+/-0.028 pink=0.959 own R2=0.067
+parent_only  5->0: sigma=0.955+/-0.023 pink=1.000 own R2=0.120
+parent_only  2->4: sigma=1.015+/-0.020 pink=0.884 own R2=0.098
+parent_only  4->2: sigma=0.981+/-0.011 pink=0.906 own R2=0.124

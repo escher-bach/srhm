@@ -1,0 +1,105 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "device": "cuda"}
+{"event": "oracle", "kernel": 200, "r2_oracle": 0.5398}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 8, "r2": 0.4581, "r2_oracle": 0.5398, "phi_err": 2.8274, "psi_hat": 0.5665, "secs_total": 122.5}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 16, "r2": 0.4967, "r2_oracle": 0.5398, "phi_err": 1.132, "psi_hat": 0.4209, "secs_total": 122.6}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 32, "r2": 0.5114, "r2_oracle": 0.5398, "phi_err": 0.7755, "psi_hat": 0.3918, "secs_total": 122.6}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 64, "r2": 0.5115, "r2_oracle": 0.5398, "phi_err": 0.694, "psi_hat": 0.3641, "secs_total": 122.6}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 128, "r2": 0.5004, "r2_oracle": 0.5398, "phi_err": 0.7292, "psi_hat": 0.3435, "secs_total": 122.6}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 256, "r2": 0.486, "r2_oracle": 0.5398, "phi_err": 0.8271, "psi_hat": 0.3318, "secs_total": 122.6}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 8, "r2": 0.4479, "r2_oracle": 0.5398, "phi_err": 1.9309, "psi_hat": 0.5457, "secs_total": 125.3}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 16, "r2": 0.5156, "r2_oracle": 0.5398, "phi_err": 1.2766, "psi_hat": 0.4594, "secs_total": 125.4}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 32, "r2": 0.5117, "r2_oracle": 0.5398, "phi_err": 0.8575, "psi_hat": 0.3642, "secs_total": 125.4}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 64, "r2": 0.4961, "r2_oracle": 0.5398, "phi_err": 1.0411, "psi_hat": 0.3324, "secs_total": 125.4}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 128, "r2": 0.4813, "r2_oracle": 0.5398, "phi_err": 1.1914, "psi_hat": 0.3342, "secs_total": 125.4}
+{"kernel": 200, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 256, "r2": 0.472, "r2_oracle": 0.5398, "phi_err": 1.241, "psi_hat": 0.3215, "secs_total": 125.4}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 8, "r2": 0.4561, "r2_oracle": 0.5398, "phi_err": 2.8423, "psi_hat": 0.6049, "secs_total": 108.3}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 16, "r2": 0.5195, "r2_oracle": 0.5398, "phi_err": 1.5864, "psi_hat": 0.4926, "secs_total": 108.3}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 32, "r2": 0.5303, "r2_oracle": 0.5398, "phi_err": 0.7489, "psi_hat": 0.4132, "secs_total": 108.3}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 64, "r2": 0.5344, "r2_oracle": 0.5398, "phi_err": 0.6075, "psi_hat": 0.3981, "secs_total": 108.4}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 128, "r2": 0.5359, "r2_oracle": 0.5398, "phi_err": 0.5394, "psi_hat": 0.3839, "secs_total": 108.4}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 256, "r2": 0.5364, "r2_oracle": 0.5398, "phi_err": 0.5554, "psi_hat": 0.3789, "secs_total": 108.4}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 8, "r2": 0.4519, "r2_oracle": 0.5398, "phi_err": 3.8354, "psi_hat": 0.6917, "secs_total": 109.1}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 16, "r2": 0.5163, "r2_oracle": 0.5398, "phi_err": 1.696, "psi_hat": 0.5076, "secs_total": 109.2}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 32, "r2": 0.5298, "r2_oracle": 0.5398, "phi_err": 0.8056, "psi_hat": 0.4207, "secs_total": 109.2}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 64, "r2": 0.5277, "r2_oracle": 0.5398, "phi_err": 0.5848, "psi_hat": 0.3848, "secs_total": 109.2}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 128, "r2": 0.5303, "r2_oracle": 0.5398, "phi_err": 0.6269, "psi_hat": 0.3866, "secs_total": 109.2}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 256, "r2": 0.53, "r2_oracle": 0.5398, "phi_err": 0.6263, "psi_hat": 0.3839, "secs_total": 109.2}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "r2": 0.467, "r2_oracle": 0.5398, "phi_err": 3.2905, "psi_hat": 0.6447, "secs_total": 116.0}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "r2": 0.5244, "r2_oracle": 0.5398, "phi_err": 1.4662, "psi_hat": 0.4935, "secs_total": 116.1}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "r2": 0.5368, "r2_oracle": 0.5398, "phi_err": 0.7204, "psi_hat": 0.4236, "secs_total": 116.1}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 64, "r2": 0.5418, "r2_oracle": 0.5398, "phi_err": 0.508, "psi_hat": 0.3968, "secs_total": 116.1}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 128, "r2": 0.5423, "r2_oracle": 0.5398, "phi_err": 0.5242, "psi_hat": 0.3965, "secs_total": 116.1}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 256, "r2": 0.5434, "r2_oracle": 0.5398, "phi_err": 0.5146, "psi_hat": 0.3943, "secs_total": 116.1}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "r2": 0.4713, "r2_oracle": 0.5398, "phi_err": 3.3278, "psi_hat": 0.6549, "secs_total": 119.2}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "r2": 0.5264, "r2_oracle": 0.5398, "phi_err": 1.3853, "psi_hat": 0.4854, "secs_total": 119.3}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "r2": 0.5354, "r2_oracle": 0.5398, "phi_err": 0.6696, "psi_hat": 0.418, "secs_total": 119.3}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 64, "r2": 0.538, "r2_oracle": 0.5398, "phi_err": 0.5005, "psi_hat": 0.3961, "secs_total": 119.3}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 128, "r2": 0.5377, "r2_oracle": 0.5398, "phi_err": 0.48, "psi_hat": 0.3927, "secs_total": 119.3}
+{"kernel": 200, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 256, "r2": 0.537, "r2_oracle": 0.5398, "phi_err": 0.5142, "psi_hat": 0.3939, "secs_total": 119.3}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "r2": 0.47, "r2_oracle": 0.5398, "phi_err": 3.0752, "psi_hat": 0.6318, "secs_total": 116.2}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "r2": 0.5193, "r2_oracle": 0.5398, "phi_err": 1.4186, "psi_hat": 0.4904, "secs_total": 116.2}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "r2": 0.5327, "r2_oracle": 0.5398, "phi_err": 0.6928, "psi_hat": 0.423, "secs_total": 116.2}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 64, "r2": 0.537, "r2_oracle": 0.5398, "phi_err": 0.51, "psi_hat": 0.4009, "secs_total": 116.2}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 128, "r2": 0.539, "r2_oracle": 0.5398, "phi_err": 0.5036, "psi_hat": 0.3981, "secs_total": 116.3}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 256, "r2": 0.5386, "r2_oracle": 0.5398, "phi_err": 0.53, "psi_hat": 0.3987, "secs_total": 116.3}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "r2": 0.4659, "r2_oracle": 0.5398, "phi_err": 3.2888, "psi_hat": 0.6595, "secs_total": 108.6}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "r2": 0.5225, "r2_oracle": 0.5398, "phi_err": 1.4658, "psi_hat": 0.4947, "secs_total": 108.6}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "r2": 0.5338, "r2_oracle": 0.5398, "phi_err": 0.6776, "psi_hat": 0.4221, "secs_total": 108.6}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 64, "r2": 0.538, "r2_oracle": 0.5398, "phi_err": 0.4534, "psi_hat": 0.3949, "secs_total": 108.7}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 128, "r2": 0.5388, "r2_oracle": 0.5398, "phi_err": 0.4754, "psi_hat": 0.3943, "secs_total": 108.7}
+{"kernel": 200, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 256, "r2": 0.5394, "r2_oracle": 0.5398, "phi_err": 0.4841, "psi_hat": 0.3934, "secs_total": 108.7}
+{"event": "oracle", "kernel": 201, "r2_oracle": 0.7437}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 8, "r2": 0.5035, "r2_oracle": 0.7437, "phi_err": 3.3237, "psi_hat": 0.5604, "secs_total": 123.3}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 16, "r2": 0.6951, "r2_oracle": 0.7437, "phi_err": 2.5412, "psi_hat": 0.467, "secs_total": 123.4}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 32, "r2": 0.6677, "r2_oracle": 0.7437, "phi_err": 1.965, "psi_hat": 0.3723, "secs_total": 123.4}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 64, "r2": 0.6643, "r2_oracle": 0.7437, "phi_err": 1.8556, "psi_hat": 0.3399, "secs_total": 123.4}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 128, "r2": 0.6792, "r2_oracle": 0.7437, "phi_err": 1.9229, "psi_hat": 0.315, "secs_total": 123.4}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 0, "v": 256, "r2": 0.6619, "r2_oracle": 0.7437, "phi_err": 1.9593, "psi_hat": 0.3006, "secs_total": 123.4}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 8, "r2": 0.284, "r2_oracle": 0.7437, "phi_err": 4.298, "psi_hat": 0.4751, "secs_total": 134.0}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 16, "r2": 0.5771, "r2_oracle": 0.7437, "phi_err": 4.744, "psi_hat": 0.4206, "secs_total": 134.0}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 32, "r2": 0.63, "r2_oracle": 0.7437, "phi_err": 4.7187, "psi_hat": 0.3715, "secs_total": 134.0}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 64, "r2": 0.6409, "r2_oracle": 0.7437, "phi_err": 4.645, "psi_hat": 0.3492, "secs_total": 134.0}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 128, "r2": 0.6515, "r2_oracle": 0.7437, "phi_err": 4.7043, "psi_hat": 0.346, "secs_total": 134.1}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "seed": 1, "v": 256, "r2": 0.6356, "r2_oracle": 0.7437, "phi_err": 4.682, "psi_hat": 0.3285, "secs_total": 134.1}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 8, "r2": 0.5331, "r2_oracle": 0.7437, "phi_err": 2.5362, "psi_hat": 0.5689, "secs_total": 122.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 16, "r2": 0.6931, "r2_oracle": 0.7437, "phi_err": 1.7746, "psi_hat": 0.4485, "secs_total": 122.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 32, "r2": 0.7211, "r2_oracle": 0.7437, "phi_err": 1.273, "psi_hat": 0.3961, "secs_total": 122.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 64, "r2": 0.7264, "r2_oracle": 0.7437, "phi_err": 1.0521, "psi_hat": 0.3824, "secs_total": 122.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 128, "r2": 0.7301, "r2_oracle": 0.7437, "phi_err": 0.8759, "psi_hat": 0.3696, "secs_total": 122.5}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 0, "v": 256, "r2": 0.7337, "r2_oracle": 0.7437, "phi_err": 0.8036, "psi_hat": 0.3656, "secs_total": 122.5}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 8, "r2": 0.5198, "r2_oracle": 0.7437, "phi_err": 2.5861, "psi_hat": 0.5356, "secs_total": 119.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 16, "r2": 0.6826, "r2_oracle": 0.7437, "phi_err": 2.3391, "psi_hat": 0.4479, "secs_total": 119.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 32, "r2": 0.7043, "r2_oracle": 0.7437, "phi_err": 1.9999, "psi_hat": 0.3973, "secs_total": 119.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 64, "r2": 0.7145, "r2_oracle": 0.7437, "phi_err": 1.8151, "psi_hat": 0.3781, "secs_total": 119.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 128, "r2": 0.7175, "r2_oracle": 0.7437, "phi_err": 1.7457, "psi_hat": 0.3701, "secs_total": 119.4}
+{"kernel": 201, "U": 1, "L": 8, "N1": 2187, "seed": 1, "v": 256, "r2": 0.7168, "r2_oracle": 0.7437, "phi_err": 1.6619, "psi_hat": 0.3653, "secs_total": 119.5}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 8, "r2": 0.6608, "r2_oracle": 0.7437, "phi_err": 2.4431, "psi_hat": 0.5369, "secs_total": 134.3}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 16, "r2": 0.7268, "r2_oracle": 0.7437, "phi_err": 1.7269, "psi_hat": 0.4587, "secs_total": 134.3}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 32, "r2": 0.7329, "r2_oracle": 0.7437, "phi_err": 1.2233, "psi_hat": 0.401, "secs_total": 134.3}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 64, "r2": 0.7368, "r2_oracle": 0.7437, "phi_err": 0.8756, "psi_hat": 0.3876, "secs_total": 134.3}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 128, "r2": 0.7387, "r2_oracle": 0.7437, "phi_err": 0.6642, "psi_hat": 0.3798, "secs_total": 134.3}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 0, "v": 256, "r2": 0.7397, "r2_oracle": 0.7437, "phi_err": 0.5974, "psi_hat": 0.3763, "secs_total": 134.4}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 8, "r2": 0.5672, "r2_oracle": 0.7437, "phi_err": 2.2786, "psi_hat": 0.5504, "secs_total": 128.6}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 16, "r2": 0.7347, "r2_oracle": 0.7437, "phi_err": 1.8066, "psi_hat": 0.4834, "secs_total": 128.7}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 32, "r2": 0.7365, "r2_oracle": 0.7437, "phi_err": 1.0592, "psi_hat": 0.4107, "secs_total": 128.7}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 64, "r2": 0.7407, "r2_oracle": 0.7437, "phi_err": 0.8029, "psi_hat": 0.3856, "secs_total": 128.7}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 128, "r2": 0.7431, "r2_oracle": 0.7437, "phi_err": 0.6358, "psi_hat": 0.3764, "secs_total": 128.7}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "seed": 1, "v": 256, "r2": 0.7437, "r2_oracle": 0.7437, "phi_err": 0.5943, "psi_hat": 0.3751, "secs_total": 128.7}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 8, "r2": 0.5644, "r2_oracle": 0.7437, "phi_err": 2.4783, "psi_hat": 0.5695, "secs_total": 147.5}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 16, "r2": 0.7151, "r2_oracle": 0.7437, "phi_err": 1.7435, "psi_hat": 0.4673, "secs_total": 147.5}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 32, "r2": 0.734, "r2_oracle": 0.7437, "phi_err": 1.306, "psi_hat": 0.4162, "secs_total": 147.5}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 64, "r2": 0.7424, "r2_oracle": 0.7437, "phi_err": 0.9178, "psi_hat": 0.3879, "secs_total": 147.6}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 128, "r2": 0.7432, "r2_oracle": 0.7437, "phi_err": 0.6766, "psi_hat": 0.3797, "secs_total": 147.6}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 0, "v": 256, "r2": 0.7427, "r2_oracle": 0.7437, "phi_err": 0.5992, "psi_hat": 0.3754, "secs_total": 147.6}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 8, "r2": 0.5734, "r2_oracle": 0.7437, "phi_err": 2.516, "psi_hat": 0.5596, "secs_total": 142.3}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 16, "r2": 0.7139, "r2_oracle": 0.7437, "phi_err": 1.8118, "psi_hat": 0.4659, "secs_total": 142.3}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 32, "r2": 0.7361, "r2_oracle": 0.7437, "phi_err": 1.2363, "psi_hat": 0.4225, "secs_total": 142.3}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 64, "r2": 0.7409, "r2_oracle": 0.7437, "phi_err": 0.8163, "psi_hat": 0.3898, "secs_total": 142.3}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 128, "r2": 0.7425, "r2_oracle": 0.7437, "phi_err": 0.611, "psi_hat": 0.3811, "secs_total": 142.3}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "seed": 1, "v": 256, "r2": 0.7427, "r2_oracle": 0.7437, "phi_err": 0.543, "psi_hat": 0.3791, "secs_total": 142.4}
+{"event": "done"}

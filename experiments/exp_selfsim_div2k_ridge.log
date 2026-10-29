@@ -1,0 +1,17 @@
+streamed in 212s
+ridge-context 0->1: sigma=1.035+/-0.016 pink=1.002 own R2=0.192
+ridge-context 1->0: sigma=0.970+/-0.011 pink=1.011 own R2=0.249
+ridge-context 0->3: sigma=1.041+/-0.014 pink=1.004 own R2=0.185
+ridge-context 3->0: sigma=0.976+/-0.023 pink=1.017 own R2=0.242
+ridge-context 1->4: sigma=0.988+/-0.023 pink=1.026 own R2=0.135
+ridge-context 4->1: sigma=1.007+/-0.022 pink=1.021 own R2=0.176
+ridge-context 0->5: sigma=1.046+/-0.038 pink=1.037 own R2=-0.124
+ridge-context 5->0: sigma=0.964+/-0.030 pink=1.036 own R2=-0.003
+ridge-context 2->4: sigma=1.008+/-0.018 pink=1.042 own R2=0.132
+ridge-context 4->2: sigma=1.012+/-0.016 pink=1.018 own R2=0.178
+scale 0: residual kurtosis=11.28 energy=1.3572
+scale 1: residual kurtosis=11.50 energy=1.5038
+scale 2: residual kurtosis=10.55 energy=1.665
+scale 3: residual kurtosis=8.53 energy=1.8785
+scale 4: residual kurtosis=13.18 energy=2.4381
+scale 5: residual kurtosis=6.99 energy=3.1216

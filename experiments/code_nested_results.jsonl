@@ -1,0 +1,11 @@
+{"data": "nested", "files": 1, "seed": 0, "alpha_tied": 32, "test_tied": 1.4625, "alpha_untied": [8, 64], "test_untied": 1.46252, "t": 39.4}
+{"data": "nested", "files": 1, "seed": 1, "alpha_tied": 8, "test_tied": 1.69521, "alpha_untied": [1, 64], "test_untied": 1.59395, "t": 77.7}
+{"data": "nested", "files": 4, "seed": 0, "alpha_tied": 32, "test_tied": 1.45373, "alpha_untied": [16, 64], "test_untied": 1.45475, "t": 116.4}
+{"data": "nested", "files": 4, "seed": 1, "alpha_tied": 32, "test_tied": 1.48459, "alpha_untied": [16, 64], "test_untied": 1.48288, "t": 155.1}
+{"data": "nested", "files": 16, "seed": 0, "alpha_tied": 32, "test_tied": 1.40617, "alpha_untied": [16, 64], "test_untied": 1.40839, "t": 193.3}
+{"data": "nested", "files": 16, "seed": 1, "alpha_tied": 32, "test_tied": 1.4166, "alpha_untied": [16, 64], "test_untied": 1.41841, "t": 231.7}
+{"data": "nested", "files": 64, "seed": 0, "alpha_tied": 32, "test_tied": 1.35543, "alpha_untied": [16, 64], "test_untied": 1.35789, "t": 271.6}
+{"data": "nested", "files": 64, "seed": 1, "alpha_tied": 32, "test_tied": 1.36575, "alpha_untied": [16, 64], "test_untied": 1.36836, "t": 313.2}
+{"data": "nested", "files": 256, "seed": 0, "alpha_tied": 32, "test_tied": 1.31523, "alpha_untied": [16, 64], "test_untied": 1.318, "t": 351.7}
+{"data": "nested", "files": 256, "seed": 1, "alpha_tied": 32, "test_tied": 1.31541, "alpha_untied": [16, 64], "test_untied": 1.3182, "t": 390.0}
+{"data": "nested", "files": 849, "seed": 0, "alpha_tied": 32, "test_tied": 1.29517, "alpha_untied": [32, 64], "test_untied": 1.29494, "t": 428.7}

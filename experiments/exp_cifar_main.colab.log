@@ -1,0 +1,22 @@
+[colab] Creating session 'pa-0930-140709-11874'...
+[colab] Session READY (pa-0930-140709-11874). Executing exp_cifar_bundle.py...
+[colab] Stopping session 'pa-0930-140709-11874'...
+[colab] Session terminated.
+[safe_run] cleanup: stopping pa-0930-140709-11874
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Session 'pa-0930-140709-11874' not found.
+[safe_run] server audit:
+
+
+[pa-0930-140730-18751] gpu-l4-s-kkb-usw4a0-wun9rssr5qji | Hardware: L4 | Shape: Standard | Variant: GPU
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Stopping session 'pa-0930-140730-18751'...
+[colab] Session terminated.

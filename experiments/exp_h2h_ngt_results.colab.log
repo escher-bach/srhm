@@ -1,0 +1,16 @@
+[colab] Creating session 'pa-0929-224418-16552'...
+[colab] Session READY (pa-0929-224418-16552). Executing exp_h2h_ngt_bundle.py...
+[colab] Stopping session 'pa-0929-224418-16552'...
+[colab] Session terminated.
+[safe_run] cleanup: stopping pa-0929-224418-16552
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] You can run 'colab update --install' to upgrade in place.
+[colab] Run 'uv tool install -U google-colab-cli' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Session 'pa-0929-224418-16552' not found.
+[safe_run] server audit:
+
+
+[colab] No active sessions found on server.

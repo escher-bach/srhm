@@ -1,0 +1,39 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"dev": "cuda", "pool": 849, "test_units": 2692632, "val_units": 40019, "t": 0.6}
+{"stage": true, "files": 1, "seed": 0, "size": "tiny", "val": 2.2531, "steps": 800, "test": 2.47727, "t": 16.6}
+{"stage": true, "files": 1, "seed": 0, "size": "small", "val": 2.15451, "steps": 700, "test": 2.39549, "t": 44.1}
+{"files": 1, "seed": 0, "train_units": 2336, "by_size": {"tiny": {"val": 2.2531, "steps": 800, "test": 2.47727}, "small": {"val": 2.15451, "steps": 700, "test": 2.39549}}, "best_size": "small", "best_test": 2.39549, "t": 44.1}
+{"stage": true, "files": 1, "seed": 1, "size": "tiny", "val": 5.35803, "steps": 700, "test": 5.44335, "t": 52.7}
+{"stage": true, "files": 1, "seed": 1, "size": "small", "val": 6.0866, "steps": 700, "test": 6.21828, "t": 79.7}
+{"files": 1, "seed": 1, "train_units": 2, "by_size": {"tiny": {"val": 5.35803, "steps": 700, "test": 5.44335}, "small": {"val": 6.0866, "steps": 700, "test": 6.21828}}, "best_size": "tiny", "best_test": 5.44335, "t": 79.8}
+{"stage": true, "files": 4, "seed": 0, "size": "tiny", "val": 2.08869, "steps": 800, "test": 2.14021, "t": 89.5}
+{"stage": true, "files": 4, "seed": 0, "size": "small", "val": 2.04793, "steps": 700, "test": 2.11791, "t": 117.4}
+{"files": 4, "seed": 0, "train_units": 14650, "by_size": {"tiny": {"val": 2.08869, "steps": 800, "test": 2.14021}, "small": {"val": 2.04793, "steps": 700, "test": 2.11791}}, "best_size": "small", "best_test": 2.11791, "t": 117.5}
+{"stage": true, "files": 4, "seed": 1, "size": "tiny", "val": 2.17328, "steps": 800, "test": 2.42786, "t": 127.3}
+{"stage": true, "files": 4, "seed": 1, "size": "small", "val": 2.13438, "steps": 700, "test": 2.37583, "t": 155.3}
+{"files": 4, "seed": 1, "train_units": 4748, "by_size": {"tiny": {"val": 2.17328, "steps": 800, "test": 2.42786}, "small": {"val": 2.13438, "steps": 700, "test": 2.37583}}, "best_size": "small", "best_test": 2.37583, "t": 155.3}
+{"stage": true, "files": 16, "seed": 0, "size": "tiny", "val": 1.8308, "steps": 900, "test": 1.84651, "t": 166.3}
+{"stage": true, "files": 16, "seed": 0, "size": "small", "val": 1.80633, "steps": 800, "test": 1.82147, "t": 198.0}
+{"files": 16, "seed": 0, "train_units": 42751, "by_size": {"tiny": {"val": 1.8308, "steps": 900, "test": 1.84651}, "small": {"val": 1.80633, "steps": 800, "test": 1.82147}}, "best_size": "small", "best_test": 1.82147, "t": 198.0}
+{"stage": true, "files": 16, "seed": 1, "size": "tiny", "val": 1.94582, "steps": 900, "test": 1.9841, "t": 209.0}
+{"stage": true, "files": 16, "seed": 1, "size": "small", "val": 1.92041, "steps": 800, "test": 1.97165, "t": 240.9}
+{"files": 16, "seed": 1, "train_units": 23096, "by_size": {"tiny": {"val": 1.94582, "steps": 900, "test": 1.9841}, "small": {"val": 1.92041, "steps": 800, "test": 1.97165}}, "best_size": "small", "best_test": 1.97165, "t": 240.9}
+{"stage": true, "files": 64, "seed": 0, "size": "tiny", "val": 1.62014, "steps": 1200, "test": 1.67414, "t": 255.1}
+{"stage": true, "files": 64, "seed": 0, "size": "small", "val": 1.56731, "steps": 900, "test": 1.63988, "t": 290.6}
+{"files": 64, "seed": 0, "train_units": 130022, "by_size": {"tiny": {"val": 1.62014, "steps": 1200, "test": 1.67414}, "small": {"val": 1.56731, "steps": 900, "test": 1.63988}}, "best_size": "small", "best_test": 1.63988, "t": 290.7}
+{"stage": true, "files": 64, "seed": 1, "size": "tiny", "val": 1.65164, "steps": 1100, "test": 1.70138, "t": 303.8}
+{"stage": true, "files": 64, "seed": 1, "size": "small", "val": 1.61089, "steps": 900, "test": 1.67361, "t": 339.4}
+{"files": 64, "seed": 1, "train_units": 126045, "by_size": {"tiny": {"val": 1.65164, "steps": 1100, "test": 1.70138}, "small": {"val": 1.61089, "steps": 900, "test": 1.67361}}, "best_size": "small", "best_test": 1.67361, "t": 339.5}
+{"stage": true, "files": 256, "seed": 0, "size": "small", "val": 1.24709, "steps": 3100, "test": 1.29905, "t": 452.1}
+{"stage": true, "files": 256, "seed": 0, "size": "medium", "val": 1.21711, "steps": 1800, "test": 1.27115, "t": 617.9}
+{"files": 256, "seed": 0, "train_units": 679033, "by_size": {"small": {"val": 1.24709, "steps": 3100, "test": 1.29905}, "medium": {"val": 1.21711, "steps": 1800, "test": 1.27115}}, "best_size": "medium", "best_test": 1.27115, "t": 618.0}
+{"stage": true, "files": 256, "seed": 1, "size": "small", "val": 1.21823, "steps": 2800, "test": 1.29886, "t": 720.2}
+{"stage": true, "files": 256, "seed": 1, "size": "medium", "val": 1.18919, "steps": 1600, "test": 1.27105, "t": 868.8}
+{"files": 256, "seed": 1, "train_units": 662610, "by_size": {"small": {"val": 1.21823, "steps": 2800, "test": 1.29886}, "medium": {"val": 1.18919, "steps": 1600, "test": 1.27105}}, "best_size": "medium", "best_test": 1.27105, "t": 868.8}
+{"stage": true, "files": 849, "seed": 0, "size": "small", "val": 0.89857, "steps": 6000, "test": 0.98958, "t": 1082.9}
+{"stage": true, "files": 849, "seed": 0, "size": "medium", "val": 0.7774, "steps": 5800, "test": 0.86228, "t": 1597.3}
+{"files": 849, "seed": 0, "train_units": 2454384, "by_size": {"small": {"val": 0.89857, "steps": 6000, "test": 0.98958}, "medium": {"val": 0.7774, "steps": 5800, "test": 0.86228}}, "best_size": "medium", "best_test": 0.86228, "t": 1597.3}

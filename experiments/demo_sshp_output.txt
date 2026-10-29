@@ -1,0 +1,24 @@
+k=3 n=3 L=5  leaves=243  lambda_2=0.720  q=n*lambda^2=1.56  degenerate=False
+oracle BP (true kernel)     : 0.724
+census (leaf majority)      : 0.527
+chance                      : 0.333
+
+(A) bottom-level learning, ZERO labels, U unlabelled trees
+    U=   1 trees (   81 bottom grids): acc=0.314  max|M_hat-M|=0.632
+    U=   5 trees (  405 bottom grids): acc=0.296  max|M_hat-M|=0.497
+    U=  20 trees ( 1620 bottom grids): acc=0.634  max|M_hat-M|=0.056
+    U=  50 trees ( 4050 bottom grids): acc=0.706  max|M_hat-M|=0.019
+    U= 100 trees ( 8100 bottom grids): acc=0.718  max|M_hat-M|=0.018
+    U= 200 trees (16200 bottom grids): acc=0.721  max|M_hat-M|=0.007
+
+(B1) backprop through the exact-BP tied architecture, P labelled trees
+    P=   10: acc=0.515
+    P=   30: acc=0.655
+    P=  100: acc=0.712
+    P=  300: acc=0.723
+    P= 1000: acc=0.662
+
+(B2) backprop through a generic neural tied SRG, P labelled trees
+    P=  100: acc=0.553
+    P= 1000: acc=0.618
+    P=10000: acc=0.684

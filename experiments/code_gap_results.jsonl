@@ -1,0 +1,16 @@
+{"data": "sibling_mi", "pairs": 756475, "units": 2454384, "mi_per_pair": 0.27703244902833857, "mi_per_unit": 0.08538522165998165, "plugin_per_pair": 0.30806607172763, "baseline_per_pair": 0.03103362269929145, "t": 3.6}
+{"data": "cache", "mode": "all", "K": 64, "lam": 0.1, "h1_test": 1.73112, "cache_test": 1.62898, "gain": 0.10214, "t": 13.7}
+{"data": "cache", "mode": "all", "K": 512, "lam": 0.05, "h1_test": 1.73112, "cache_test": 1.64772, "gain": 0.0834, "t": 24.0}
+{"data": "cache", "mode": "context", "K": 64, "lam": 0.4, "h1_test": 1.73112, "cache_test": 1.43478, "gain": 0.29634, "t": 34.3}
+{"data": "cache", "mode": "context", "K": 512, "lam": 0.5, "h1_test": 1.73112, "cache_test": 1.33159, "gain": 0.39953, "t": 44.5}
+{"data": "polya", "files": 1, "seed": 0, "alpha": 8, "val": 1.4528, "h1_test": 2.61353, "test": 1.52895, "t": 10.9}
+{"data": "polya", "files": 1, "seed": 1, "alpha": 1, "val": 1.64639, "h1_test": 6.05458, "test": 1.65666, "t": 21.7}
+{"data": "polya", "files": 4, "seed": 0, "alpha": 8, "val": 1.44072, "h1_test": 2.48968, "test": 1.5244, "t": 32.0}
+{"data": "polya", "files": 4, "seed": 1, "alpha": 8, "val": 1.46928, "h1_test": 2.71917, "test": 1.55059, "t": 42.5}
+{"data": "polya", "files": 16, "seed": 0, "alpha": 8, "val": 1.38607, "h1_test": 2.23802, "test": 1.47962, "t": 52.6}
+{"data": "polya", "files": 16, "seed": 1, "alpha": 8, "val": 1.40602, "h1_test": 2.34786, "test": 1.48909, "t": 62.6}
+{"data": "polya", "files": 64, "seed": 0, "alpha": 8, "val": 1.34045, "h1_test": 2.01465, "test": 1.42926, "t": 72.4}
+{"data": "polya", "files": 64, "seed": 1, "alpha": 8, "val": 1.34655, "h1_test": 2.05382, "test": 1.43965, "t": 83.6}
+{"data": "polya", "files": 256, "seed": 0, "alpha": 8, "val": 1.29454, "h1_test": 1.82303, "test": 1.38942, "t": 94.2}
+{"data": "polya", "files": 256, "seed": 1, "alpha": 8, "val": 1.29283, "h1_test": 1.82103, "test": 1.38977, "t": 104.3}
+{"data": "polya", "files": 849, "seed": 0, "alpha": 16, "val": 1.26964, "h1_test": 1.73112, "test": 1.36628, "t": 114.1}

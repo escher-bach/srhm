@@ -1,0 +1,31 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Creating session 'pa-1001-140855-13735'...
+[colab] Session READY.
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Uploaded 'astcache.npz' to '/content/astcache.npz'
+[safe_run2] cleanup: fetching progress, stopping pa-1001-140855-13735
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Download failed: File or directory not found: /content/progress.jsonl
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Stopping session 'pa-1001-140855-13735'...
+[colab] Session terminated.
+[safe_run2] server audit:
+
+
+[pa-1001-140827-23380] gpu-l4-s-kkb-ass1b1-biogjj4lbldi | Hardware: L4 | Shape: Standard | Variant: GPU

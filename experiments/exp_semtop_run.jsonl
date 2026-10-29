@@ -1,0 +1,80 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "mode": "run", "dev": "cuda", "budget": 3000.0, "t": 0.0}
+{"event": "data", "src": "hf", "n_train": 50000, "n_test": 10000, "t": 10.4}
+{"event": "train", "tag": "ST5_P0", "step": 0, "train_joint_bpd": 6.1322, "secs": 1.0, "t": 16.7}
+{"event": "train", "tag": "ST5_P0", "step": 500, "train_joint_bpd": 5.2992, "secs": 11.9, "t": 27.6}
+{"event": "train", "tag": "ST5_P0", "step": 1000, "train_joint_bpd": 5.2185, "secs": 23.0, "t": 38.7}
+{"event": "train", "tag": "ST5_P0", "step": 1500, "train_joint_bpd": 5.1707, "secs": 34.0, "t": 49.7}
+{"event": "train", "tag": "ST5_P0", "step": 2000, "train_joint_bpd": 5.1437, "secs": 45.0, "t": 60.7}
+{"event": "train", "tag": "ST5_P0", "step": 2500, "train_joint_bpd": 5.1233, "secs": 56.0, "t": 71.7}
+{"event": "train", "tag": "ST5_P0", "step": 2999, "train_joint_bpd": 5.1222, "secs": 66.9, "t": 82.5}
+{"event": "eval", "tag": "ST16_c5_P0", "cstar": 5, "P": 0, "nparams": 26192, "test_bpd": 5.1196, "per_height_bits": {"c0": -3.0717, "c1": -2.4686, "c2": -1.9463, "c3": -1.4299, "root": -1.4726}, "bayes_head_posthoc": {"1000": 0.1656, "50000": 0.1763}, "logistic_head": {"1000": 0.3012, "50000": 0.3383}, "root_belief_entropy": 0.152, "kappa": [[0.9862, 0.979, 0.9873, 0.9835]], "certainty_eps": {"c0": 0.1366, "c1": 0.116, "c2": 0.1162, "c3": 0.1087, "root": 0.0666}, "t": 85.1}
+{"event": "train", "tag": "ST5_P1000", "step": 0, "train_joint_bpd": 6.0285, "secs": 0.0, "t": 85.2}
+{"event": "train", "tag": "ST5_P1000", "step": 500, "train_joint_bpd": 5.3051, "secs": 10.9, "t": 96.0}
+{"event": "train", "tag": "ST5_P1000", "step": 1000, "train_joint_bpd": 5.212, "secs": 21.7, "t": 106.8}
+{"event": "train", "tag": "ST5_P1000", "step": 1500, "train_joint_bpd": 5.1673, "secs": 32.6, "t": 117.7}
+{"event": "train", "tag": "ST5_P1000", "step": 2000, "train_joint_bpd": 5.1322, "secs": 43.4, "t": 128.5}
+{"event": "train", "tag": "ST5_P1000", "step": 2500, "train_joint_bpd": 5.1292, "secs": 54.2, "t": 139.3}
+{"event": "train", "tag": "ST5_P1000", "step": 2999, "train_joint_bpd": 5.123, "secs": 65.0, "t": 150.2}
+{"event": "eval", "tag": "ST16_c5_P1000", "cstar": 5, "P": 1000, "nparams": 26192, "test_bpd": 5.1214, "per_height_bits": {"c0": -3.0701, "c1": -2.4662, "c2": -1.9435, "c3": -1.4277, "root": -1.4772}, "bayes_head_joint": 0.1688, "bayes_head_posthoc": {"1000": 0.1765, "50000": 0.1817}, "logistic_head": {"1000": 0.2983, "50000": 0.3368}, "root_belief_entropy": 0.148, "kappa": [[0.9831, 0.9828, 0.9859, 0.9763]], "certainty_eps": {"c0": 0.1368, "c1": 0.117, "c2": 0.1208, "c3": 0.1124, "root": 0.067}, "reach": {"root": {"tv": 0.0235, "dH": 1.127, "lam": 1.127}, "c3": {"tv": 0.000597, "tv_max": 0.0539, "dH": 0.0375, "bound": 0.125, "D": 1.11, "viol": 0}, "c2": {"tv": 3.52e-05, "tv_max": 0.0104, "dH": 0.00164, "bound": 0.132, "D": 1.09, "viol": 0}, "c1": {"tv": 1.58e-06, "tv_max": 0.0014, "dH": 0.000101, "bound": 0.128, "D": 1.07, "viol": 0}, "c0": {"tv": 9.56e-08, "tv_max": 0.000331, "dH": 5.21e-06, "bound": 0.144, "D": 1.05, "viol": 0}}, "t": 152.8}
+{"event": "train", "tag": "ST5_P50000", "step": 0, "train_joint_bpd": 6.1145, "secs": 0.0, "t": 152.8}
+{"event": "train", "tag": "ST5_P50000", "step": 500, "train_joint_bpd": 5.2949, "secs": 10.9, "t": 163.7}
+{"event": "train", "tag": "ST5_P50000", "step": 1000, "train_joint_bpd": 5.2225, "secs": 21.7, "t": 174.5}
+{"event": "train", "tag": "ST5_P50000", "step": 1500, "train_joint_bpd": 5.1716, "secs": 32.5, "t": 185.3}
+{"event": "train", "tag": "ST5_P50000", "step": 2000, "train_joint_bpd": 5.1451, "secs": 43.3, "t": 196.2}
+{"event": "train", "tag": "ST5_P50000", "step": 2500, "train_joint_bpd": 5.1304, "secs": 54.2, "t": 207.0}
+{"event": "train", "tag": "ST5_P50000", "step": 2999, "train_joint_bpd": 5.1195, "secs": 65.0, "t": 217.8}
+{"event": "eval", "tag": "ST16_c5_P50000", "cstar": 5, "P": 50000, "nparams": 26192, "test_bpd": 5.1198, "per_height_bits": {"c0": -3.0713, "c1": -2.4685, "c2": -1.9477, "c3": -1.4381, "root": -1.4735}, "bayes_head_joint": 0.1671, "bayes_head_posthoc": {"1000": 0.1534, "50000": 0.1748}, "logistic_head": {"1000": 0.3002, "50000": 0.3342}, "root_belief_entropy": 0.11, "kappa": [[0.9839, 0.9834, 0.9871, 0.9799]], "certainty_eps": {"c0": 0.1349, "c1": 0.1175, "c2": 0.1149, "c3": 0.1086, "root": 0.0429}, "reach": {"root": {"tv": 0.0276, "dH": 2.9, "lam": 2.9}, "c3": {"tv": 0.0018, "tv_max": 0.137, "dH": 0.104, "bound": 0.343, "D": 2.85, "viol": 0}, "c2": {"tv": 9.6e-05, "tv_max": 0.0452, "dH": 0.00554, "bound": 0.349, "D": 2.81, "viol": 0}, "c1": {"tv": 4.74e-06, "tv_max": 0.00762, "dH": 0.000277, "bound": 0.348, "D": 2.76, "viol": 0}, "c0": {"tv": 2.42e-07, "tv_max": 0.001, "dH": 1.42e-05, "bound": 0.387, "D": 2.71, "viol": 0}}, "t": 220.3}
+{"event": "train", "tag": "ST4_P0", "step": 0, "train_joint_bpd": 6.3322, "secs": 0.0, "t": 220.3}
+{"event": "train", "tag": "ST4_P0", "step": 500, "train_joint_bpd": 5.3008, "secs": 10.9, "t": 231.1}
+{"event": "train", "tag": "ST4_P0", "step": 1000, "train_joint_bpd": 5.2206, "secs": 21.7, "t": 242.0}
+{"event": "train", "tag": "ST4_P0", "step": 1500, "train_joint_bpd": 5.1695, "secs": 32.5, "t": 252.8}
+{"event": "train", "tag": "ST4_P0", "step": 2000, "train_joint_bpd": 5.1375, "secs": 43.4, "t": 263.7}
+{"event": "train", "tag": "ST4_P0", "step": 2500, "train_joint_bpd": 5.1202, "secs": 54.2, "t": 274.5}
+{"event": "train", "tag": "ST4_P0", "step": 2999, "train_joint_bpd": 5.1213, "secs": 65.0, "t": 285.3}
+{"event": "eval", "tag": "ST16_c4_P0", "cstar": 4, "P": 0, "nparams": 50768, "test_bpd": 5.1156, "per_height_bits": {"c0": -3.0739, "c1": -2.4684, "c2": -1.9515, "c3": -1.5987, "root": -1.5214}, "bayes_head_posthoc": {"1000": 0.2048, "50000": 0.2206}, "logistic_head": {"1000": 0.2966, "50000": 0.3356}, "root_belief_entropy": 0.291, "kappa": [[0.9799, 0.9873, 0.9926, 0.983], [0.9386, 0.9353, 0.9331, 0.9145]], "certainty_eps": {"c0": 0.1416, "c1": 0.1186, "c2": 0.1135, "c3": 0.1157, "root": 0.119}, "t": 287.7}
+{"event": "train", "tag": "ST4_P1000", "step": 0, "train_joint_bpd": 6.2354, "secs": 0.0, "t": 287.7}
+{"event": "train", "tag": "ST4_P1000", "step": 500, "train_joint_bpd": 5.2972, "secs": 10.8, "t": 298.5}
+{"event": "train", "tag": "ST4_P1000", "step": 1000, "train_joint_bpd": 5.2048, "secs": 21.6, "t": 309.3}
+{"event": "train", "tag": "ST4_P1000", "step": 1500, "train_joint_bpd": 5.1541, "secs": 32.4, "t": 320.0}
+{"event": "train", "tag": "ST4_P1000", "step": 2000, "train_joint_bpd": 5.1285, "secs": 43.1, "t": 330.8}
+{"event": "train", "tag": "ST4_P1000", "step": 2500, "train_joint_bpd": 5.1095, "secs": 53.9, "t": 341.6}
+{"event": "train", "tag": "ST4_P1000", "step": 2999, "train_joint_bpd": 5.11, "secs": 64.7, "t": 352.4}
+{"event": "eval", "tag": "ST16_c4_P1000", "cstar": 4, "P": 1000, "nparams": 50768, "test_bpd": 5.1126, "per_height_bits": {"c0": -3.0774, "c1": -2.469, "c2": -1.9551, "c3": -1.5993, "root": -1.5312}, "bayes_head_joint": 0.1893, "bayes_head_posthoc": {"1000": 0.1966, "50000": 0.2114}, "logistic_head": {"1000": 0.3048, "50000": 0.3444}, "root_belief_entropy": 0.25, "kappa": [[0.9839, 0.9914, 0.9937, 0.9914], [0.943, 0.9507, 0.9273, 0.9521]], "certainty_eps": {"c0": 0.1371, "c1": 0.1152, "c2": 0.1111, "c3": 0.1148, "root": 0.1048}, "reach": {"root": {"tv": 0.0309, "dH": 1.232, "lam": 1.232}, "c3": {"tv": 0.00223, "tv_max": 0.128, "dH": 0.095, "bound": 0.138, "D": 1.16, "viol": 0}, "c2": {"tv": 0.000127, "tv_max": 0.04, "dH": 0.00598, "bound": 0.13, "D": 1.15, "viol": 0}, "c1": {"tv": 6.73e-06, "tv_max": 0.00778, "dH": 0.000385, "bound": 0.133, "D": 1.14, "viol": 0}, "c0": {"tv": 4.61e-07, "tv_max": 0.00153, "dH": 2.33e-05, "bound": 0.156, "D": 1.13, "viol": 0}}, "t": 354.9}
+{"event": "train", "tag": "ST4_P50000", "step": 0, "train_joint_bpd": 6.2107, "secs": 0.0, "t": 355.0}
+{"event": "train", "tag": "ST4_P50000", "step": 500, "train_joint_bpd": 5.2988, "secs": 10.8, "t": 365.8}
+{"event": "train", "tag": "ST4_P50000", "step": 1000, "train_joint_bpd": 5.2049, "secs": 21.6, "t": 376.6}
+{"event": "train", "tag": "ST4_P50000", "step": 1500, "train_joint_bpd": 5.1515, "secs": 32.5, "t": 387.4}
+{"event": "train", "tag": "ST4_P50000", "step": 2000, "train_joint_bpd": 5.1265, "secs": 43.2, "t": 398.2}
+{"event": "train", "tag": "ST4_P50000", "step": 2500, "train_joint_bpd": 5.1227, "secs": 54.0, "t": 408.9}
+{"event": "train", "tag": "ST4_P50000", "step": 2999, "train_joint_bpd": 5.1079, "secs": 64.7, "t": 419.7}
+{"event": "eval", "tag": "ST16_c4_P50000", "cstar": 4, "P": 50000, "nparams": 50768, "test_bpd": 5.1093, "per_height_bits": {"c0": -3.0812, "c1": -2.4722, "c2": -1.953, "c3": -1.6065, "root": -1.5221}, "bayes_head_joint": 0.2469, "bayes_head_posthoc": {"1000": 0.2286, "50000": 0.2418}, "logistic_head": {"1000": 0.2994, "50000": 0.3393}, "root_belief_entropy": 0.32, "kappa": [[0.9878, 0.987, 0.9921, 0.9865], [0.9248, 0.9219, 0.9467, 0.9591]], "certainty_eps": {"c0": 0.1365, "c1": 0.1153, "c2": 0.1101, "c3": 0.1208, "root": 0.1302}, "reach": {"root": {"tv": 0.0677, "dH": 3.092, "lam": 3.092}, "c3": {"tv": 0.00446, "tv_max": 0.174, "dH": 0.202, "bound": 0.377, "D": 2.9, "viol": 0}, "c2": {"tv": 0.000223, "tv_max": 0.0475, "dH": 0.0118, "bound": 0.341, "D": 2.87, "viol": 0}, "c1": {"tv": 1.22e-05, "tv_max": 0.0116, "dH": 0.000655, "bound": 0.349, "D": 2.83, "viol": 0}, "c0": {"tv": 8.42e-07, "tv_max": 0.00175, "dH": 3.9e-05, "bound": 0.399, "D": 2.8, "viol": 0}}, "t": 422.2}
+{"event": "train", "tag": "ST3_P0", "step": 0, "train_joint_bpd": 6.4972, "secs": 0.0, "t": 422.2}
+{"event": "train", "tag": "ST3_P0", "step": 500, "train_joint_bpd": 5.3138, "secs": 10.8, "t": 433.0}
+{"event": "train", "tag": "ST3_P0", "step": 1000, "train_joint_bpd": 5.2282, "secs": 21.6, "t": 443.8}
+{"event": "train", "tag": "ST3_P0", "step": 1500, "train_joint_bpd": 5.1791, "secs": 32.4, "t": 454.6}
+{"event": "train", "tag": "ST3_P0", "step": 2000, "train_joint_bpd": 5.1459, "secs": 43.2, "t": 465.4}
+{"event": "train", "tag": "ST3_P0", "step": 2500, "train_joint_bpd": 5.1329, "secs": 54.1, "t": 476.2}
+{"event": "train", "tag": "ST3_P0", "step": 2999, "train_joint_bpd": 5.1273, "secs": 64.8, "t": 487.0}
+{"event": "eval", "tag": "ST16_c3_P0", "cstar": 3, "P": 0, "nparams": 75344, "test_bpd": 5.1303, "per_height_bits": {"c0": -3.0524, "c1": -2.4617, "c2": -2.0027, "c3": -1.6177, "root": -1.5323}, "bayes_head_posthoc": {"1000": 0.2134, "50000": 0.2255}, "logistic_head": {"1000": 0.3085, "50000": 0.3482}, "root_belief_entropy": 0.3, "kappa": [[0.9748, 0.9778, 0.9839, 0.9766], [0.9382, 0.9239, 0.8032, 0.8519], [0.8092, 0.9185, 0.8228, 0.8769]], "certainty_eps": {"c0": 0.134, "c1": 0.1191, "c2": 0.1326, "c3": 0.1575, "root": 0.1273}, "t": 489.4}
+{"event": "train", "tag": "ST3_P1000", "step": 0, "train_joint_bpd": 6.3589, "secs": 0.0, "t": 489.5}
+{"event": "train", "tag": "ST3_P1000", "step": 500, "train_joint_bpd": 5.315, "secs": 10.8, "t": 500.3}
+{"event": "train", "tag": "ST3_P1000", "step": 1000, "train_joint_bpd": 5.2213, "secs": 21.7, "t": 511.1}
+{"event": "train", "tag": "ST3_P1000", "step": 1500, "train_joint_bpd": 5.1777, "secs": 32.4, "t": 521.9}
+{"event": "train", "tag": "ST3_P1000", "step": 2000, "train_joint_bpd": 5.1402, "secs": 43.2, "t": 532.6}
+{"event": "train", "tag": "ST3_P1000", "step": 2500, "train_joint_bpd": 5.1276, "secs": 54.0, "t": 543.5}
+{"event": "train", "tag": "ST3_P1000", "step": 2999, "train_joint_bpd": 5.1221, "secs": 64.8, "t": 554.2}
+{"event": "eval", "tag": "ST16_c3_P1000", "cstar": 3, "P": 1000, "nparams": 75344, "test_bpd": 5.1171, "per_height_bits": {"c0": -3.069, "c1": -2.4678, "c2": -1.995, "c3": -1.623, "root": -1.5293}, "bayes_head_joint": 0.21, "bayes_head_posthoc": {"1000": 0.2147, "50000": 0.2286}, "logistic_head": {"1000": 0.3154, "50000": 0.3564}, "root_belief_entropy": 0.309, "kappa": [[0.9735, 0.983, 0.9873, 0.986], [0.9143, 0.9096, 0.8996, 0.8289], [0.8484, 0.8845, 0.7931, 0.8581]], "certainty_eps": {"c0": 0.1378, "c1": 0.1148, "c2": 0.1351, "c3": 0.1476, "root": 0.1202}, "reach": {"root": {"tv": 0.032, "dH": 1.351, "lam": 1.351}, "c3": {"tv": 0.00138, "tv_max": 0.0408, "dH": 0.0653, "bound": 0.165, "D": 1.14, "viol": 0}, "c2": {"tv": 6.51e-05, "tv_max": 0.0104, "dH": 0.00287, "bound": 0.136, "D": 1.02, "viol": 0}, "c1": {"tv": 2.9e-06, "tv_max": 0.00284, "dH": 0.00016, "bound": 0.115, "D": 0.997, "viol": 0}, "c0": {"tv": 1.81e-07, "tv_max": 0.000909, "dH": 7.68e-06, "bound": 0.134, "D": 0.98, "viol": 0}}, "t": 556.7}
+{"event": "train", "tag": "ST3_P50000", "step": 0, "train_joint_bpd": 6.3137, "secs": 0.0, "t": 556.8}
+{"event": "train", "tag": "ST3_P50000", "step": 500, "train_joint_bpd": 5.3062, "secs": 10.9, "t": 567.6}
+{"event": "train", "tag": "ST3_P50000", "step": 1000, "train_joint_bpd": 5.2046, "secs": 21.7, "t": 578.5}
+{"event": "train", "tag": "ST3_P50000", "step": 1500, "train_joint_bpd": 5.1743, "secs": 32.5, "t": 589.3}
+{"event": "train", "tag": "ST3_P50000", "step": 2000, "train_joint_bpd": 5.1401, "secs": 43.3, "t": 600.1}
+{"event": "train", "tag": "ST3_P50000", "step": 2500, "train_joint_bpd": 5.1172, "secs": 54.2, "t": 610.9}
+{"event": "train", "tag": "ST3_P50000", "step": 2999, "train_joint_bpd": 5.116, "secs": 65.0, "t": 621.7}
+{"event": "eval", "tag": "ST16_c3_P50000", "cstar": 3, "P": 50000, "nparams": 75344, "test_bpd": 5.115, "per_height_bits": {"c0": -3.072, "c1": -2.4665, "c2": -1.996, "c3": -1.6219, "root": -1.5217}, "bayes_head_joint": 0.2515, "bayes_head_posthoc": {"1000": 0.2369, "50000": 0.2515}, "logistic_head": {"1000": 0.3166, "50000": 0.3546}, "root_belief_entropy": 0.373, "kappa": [[0.9757, 0.9817, 0.975, 0.9856], [0.8981, 0.8687, 0.8385, 0.9028], [0.8781, 0.882, 0.7734, 0.8465]], "certainty_eps": {"c0": 0.1376, "c1": 0.1167, "c2": 0.1349, "c3": 0.1412, "root": 0.152}, "reach": {"root": {"tv": 0.0675, "dH": 2.91, "lam": 2.91}, "c3": {"tv": 0.00403, "tv_max": 0.177, "dH": 0.162, "bound": 0.355, "D": 2.46, "viol": 0}, "c2": {"tv": 0.000203, "tv_max": 0.0454, "dH": 0.00872, "bound": 0.297, "D": 2.16, "viol": 0}, "c1": {"tv": 8.62e-06, "tv_max": 0.00603, "dH": 0.000452, "bound": 0.257, "D": 2.11, "viol": 0}, "c0": {"tv": 5.03e-07, "tv_max": 0.00274, "dH": 2.49e-05, "bound": 0.29, "D": 2.07, "viol": 0}}, "t": 624.2}
+{"event": "done", "t": 624.2}

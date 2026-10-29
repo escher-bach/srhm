@@ -1,0 +1,20 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "loaded", "n_train": 50000, "n_test": 10000, "dev": "cuda", "t": 588.1}
+{"event": "detail_stats", "h_child": 0, "energy": 0.050492, "kurtosis_mean": 9.43, "t": 588.7}
+{"event": "detail_stats", "h_child": 1, "energy": 0.085543, "kurtosis_mean": 7.66, "t": 589.0}
+{"event": "detail_stats", "h_child": 2, "energy": 0.117728, "kurtosis_mean": 5.85, "t": 589.2}
+{"event": "detail_stats", "h_child": 3, "energy": 0.150401, "kurtosis_mean": 4.21, "t": 589.2}
+{"event": "mn_witness", "h_child": 0, "sibling_corr": 0.2499, "resid_var_frac": 0.4255, "cousin_corr_adjacent": 0.4462, "cousin_corr_diag_far": 0.0663, "t": 595.1}
+{"event": "mn_witness", "h_child": 1, "sibling_corr": 0.2323, "resid_var_frac": 0.4999, "cousin_corr_adjacent": 0.3881, "cousin_corr_diag_far": 0.0536, "t": 599.7}
+{"event": "mn_witness", "h_child": 2, "sibling_corr": 0.2222, "resid_var_frac": 0.6426, "cousin_corr_adjacent": 0.3977, "cousin_corr_diag_far": 0.2284, "t": 604.3}
+{"event": "mn_witness", "h_child": 3, "sibling_corr": 0.3538, "resid_var_frac": 0.8318, "t": 608.8}
+{"event": "thumb_acc", "k": 1, "linear": 0.239, "mlp": 0.2576, "t": 618.0}
+{"event": "thumb_acc", "k": 2, "linear": 0.3015, "mlp": 0.3756, "t": 626.9}
+{"event": "thumb_acc", "k": 4, "linear": 0.3784, "mlp": 0.5307, "t": 635.6}
+{"event": "thumb_acc", "k": 8, "linear": 0.4126, "mlp": 0.5675, "t": 644.7}
+{"event": "thumb_acc", "k": 32, "linear": 0.3901, "mlp": 0.5403, "t": 657.3}
+{"event": "done", "t": 657.3}

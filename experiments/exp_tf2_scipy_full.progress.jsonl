@@ -1,0 +1,7 @@
+{"dev": "cuda", "corpus": "scipy", "stage": "full", "pool": 436, "test_units": 1259217, "val_units": 35981, "C": 351, "T": 118, "t": 0.9}
+{"cfg": true, "files": 436, "seed": 0, "size": "medium", "drop": 0.1, "lr": 0.0005, "max_steps": 6000, "val": 1.01459, "steps": 4250, "test": 1.0528, "t": 367.8}
+{"cfg": true, "files": 436, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.0005, "max_steps": 8000, "val": 0.98703, "steps": 6500, "test": 1.02251, "t": 920.9}
+{"cfg": true, "files": 436, "seed": 0, "size": "small", "drop": 0.3, "lr": 0.0005, "max_steps": 20000, "val": 0.9768, "steps": 11750, "test": 1.00726, "t": 1315.4}
+{"cfg": true, "files": 436, "seed": 0, "size": "medium", "drop": 0.3, "lr": 0.0005, "max_steps": 20000, "val": 0.99267, "steps": 6000, "t": 1822.0}
+{"cfg": true, "files": 436, "seed": 0, "size": "large", "drop": 0.3, "lr": 0.0005, "max_steps": 8000, "val": 1.00563, "steps": 4250, "t": 2542.3}
+{"result": true, "corpus": "scipy", "files": 436, "seed": 0, "train_units": 1434982, "size": "small", "drop": 0.3, "lr": 0.0005, "val": 0.9768, "test": 1.00726, "steps": 11750, "t": 2542.4}

@@ -1,0 +1,39 @@
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+{"event": "start", "device": "cuda"}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 0, "ll8_per_leaf": -1.6739, "ll256_per_leaf": -4.6362, "r2_256": -2.3135, "phi_err_256": 3.681}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 1, "ll8_per_leaf": -1.69909, "ll256_per_leaf": -4.63501, "r2_256": -0.923, "phi_err_256": 3.417}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 2, "ll8_per_leaf": -1.53341, "ll256_per_leaf": -4.48061, "r2_256": 0.7393, "phi_err_256": 5.174}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 3, "ll8_per_leaf": -1.55834, "ll256_per_leaf": -4.49386, "r2_256": 0.7261, "phi_err_256": 4.822}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 4, "ll8_per_leaf": -1.69332, "ll256_per_leaf": -4.54657, "r2_256": -3.2711, "phi_err_256": 3.734}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 5, "ll8_per_leaf": -1.64574, "ll256_per_leaf": -4.61401, "r2_256": -0.09, "phi_err_256": 4.236}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 6, "ll8_per_leaf": -1.53881, "ll256_per_leaf": -4.4653, "r2_256": 0.7437, "phi_err_256": 0.594}
+{"kernel": 201, "U": 3, "L": 8, "N1": 6561, "data_seed": 1, "restart": 7, "ll8_per_leaf": -1.63435, "ll256_per_leaf": -4.49293, "r2_256": 0.7245, "phi_err_256": 2.673}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 0, "ll8_per_leaf": -1.67869, "ll256_per_leaf": -4.64171, "r2_256": -1.8637, "phi_err_256": 3.457}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 1, "ll8_per_leaf": -1.6972, "ll256_per_leaf": -4.49221, "r2_256": 0.7133, "phi_err_256": 2.385}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 2, "ll8_per_leaf": -1.53458, "ll256_per_leaf": -4.47413, "r2_256": 0.7408, "phi_err_256": 5.144}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 3, "ll8_per_leaf": -1.56025, "ll256_per_leaf": -4.479, "r2_256": 0.7376, "phi_err_256": 5.036}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 4, "ll8_per_leaf": -1.68976, "ll256_per_leaf": -4.60695, "r2_256": -2.2649, "phi_err_256": 2.933}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 5, "ll8_per_leaf": -1.60616, "ll256_per_leaf": -4.54266, "r2_256": -0.0575, "phi_err_256": 5.033}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 6, "ll8_per_leaf": -1.54179, "ll256_per_leaf": -4.45905, "r2_256": 0.7427, "phi_err_256": 0.543}
+{"kernel": 201, "U": 9, "L": 8, "N1": 19683, "data_seed": 1, "restart": 7, "ll8_per_leaf": -1.64439, "ll256_per_leaf": -4.47471, "r2_256": 0.7351, "phi_err_256": 1.779}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 0, "ll8_per_leaf": -1.77905, "ll256_per_leaf": -4.95568, "r2_256": 0.3103, "phi_err_256": 3.487}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 1, "ll8_per_leaf": -1.72164, "ll256_per_leaf": -4.87976, "r2_256": 0.53, "phi_err_256": 0.626}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 2, "ll8_per_leaf": -1.70117, "ll256_per_leaf": -4.88169, "r2_256": 0.5316, "phi_err_256": 0.558}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 3, "ll8_per_leaf": -1.70299, "ll256_per_leaf": -4.87983, "r2_256": 0.5275, "phi_err_256": 0.631}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 4, "ll8_per_leaf": -1.7706, "ll256_per_leaf": -4.97249, "r2_256": -0.0924, "phi_err_256": 3.331}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 5, "ll8_per_leaf": -1.7006, "ll256_per_leaf": -4.88022, "r2_256": 0.5314, "phi_err_256": 0.663}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 6, "ll8_per_leaf": -1.76466, "ll256_per_leaf": -4.95879, "r2_256": 0.2963, "phi_err_256": 3.236}
+{"kernel": 200, "U": 1, "L": 8, "N1": 2187, "data_seed": 1, "restart": 7, "ll8_per_leaf": -1.7029, "ll256_per_leaf": -4.88123, "r2_256": 0.5279, "phi_err_256": 0.605}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 0, "ll8_per_leaf": -1.70553, "ll256_per_leaf": -4.52359, "r2_256": -0.1668, "phi_err_256": 3.364}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 1, "ll8_per_leaf": -1.70651, "ll256_per_leaf": -4.5643, "r2_256": -0.0882, "phi_err_256": 3.474}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 2, "ll8_per_leaf": -1.57848, "ll256_per_leaf": -4.42597, "r2_256": 0.6356, "phi_err_256": 4.682}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 3, "ll8_per_leaf": -1.66616, "ll256_per_leaf": -4.49145, "r2_256": -2.5462, "phi_err_256": 4.149}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 4, "ll8_per_leaf": -1.70236, "ll256_per_leaf": -4.56065, "r2_256": -0.1628, "phi_err_256": 3.275}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 5, "ll8_per_leaf": -1.64027, "ll256_per_leaf": -4.53, "r2_256": -1.1851, "phi_err_256": 3.457}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 6, "ll8_per_leaf": -1.71422, "ll256_per_leaf": -4.49967, "r2_256": 0.2919, "phi_err_256": 3.984}
+{"kernel": 201, "U": 1, "L": 7, "N1": 729, "data_seed": 1, "restart": 7, "ll8_per_leaf": -1.65891, "ll256_per_leaf": -4.47069, "r2_256": 0.5357, "phi_err_256": 2.776}
+{"event": "done"}

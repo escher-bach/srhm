@@ -1,0 +1,18 @@
+[colab] Creating session 'pa-0930-161438-26861'...
+[colab] Session READY (pa-0930-161438-26861). Executing exp_semtop_run_bundle.py...
+/tmp/ipykernel_2176/1784817488.py:158: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  res["kappa"] = [[round(float(v), 4) for v in row] for row in model.kappa()]
+[colab] Stopping session 'pa-0930-161438-26861'...
+[colab] Session terminated.
+[safe_run] cleanup: stopping pa-0930-161438-26861
+
+[colab] A new version of Colab CLI is available: 0.7.4 (current: 0.7.2)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Session 'pa-0930-161438-26861' not found.
+[safe_run] server audit:
+
+
+[colab] No active sessions found on server.
